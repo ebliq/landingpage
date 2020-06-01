@@ -19,17 +19,17 @@ const MobileNavigation = () => {
         </div>
         <div className="w-2/4  flex items-end flex-col">
           <button
-            className="pointer flex  w-12 h-12 items-center flex-col py-4 justify-between active:py-32"
+            className="pointer flex  w-12 h-12 items-center flex-col justify-between active:py-32"
             onClick={() => {
               setToggle(!toggle)
             }}>
-            {!toggle ? <MenuIcon /> : <CrossIcon />}
+            {!toggle ? <MenuIcon className="h-full w-8" /> : <CrossIcon className="h-full w-8" />}
           </button>
         </div>
       </div>
       {toggle && (
-        <nav className="w-full h-screen flex items-center flex-col fixed bg-nav z-50 justify-center">
-          <ul className="block ">
+        <nav className="w-full h-screen flex items-center flex-col fixed bg-nav z-50 ">
+          <ul className="block my-32">
             {items.map((item: any, index: any) => (
               <li
                 className="nav-item-mobile hover:text-primary transition ease-in duration-200 text-black"

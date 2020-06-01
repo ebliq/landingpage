@@ -5,7 +5,7 @@ const Register = () => (
   <div id="demo" className="flex justify-center flex-col py-12">
     <h3 className="text-center">Unsere Beta erscheint am 10 Juni</h3>
     <div className="mt-12 h-12 flex justify-center">
-      <div className="bg-light-gray rounded-full md:w-2/5">
+      <div className="bg-light-gray rounded-full md:w-2/5 mx-2 md:mx-0 p-1">
         <input
           className="h-full bg-light-gray w-3/5 md:2/3 rounded-full  px-4 outline-none"
           placeholder="Max.Mustermann@email.de"
