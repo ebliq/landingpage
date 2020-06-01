@@ -13,6 +13,7 @@ import {StaticQuery, graphql} from 'gatsby'
 import Footer from './footer'
 import '../styles/default.css'
 import Navigation from './Navigation'
+import MobileNavigation from './MobileNavigation'
 
 const Layout = ({children}) => (
   <StaticQuery
@@ -28,6 +29,7 @@ const Layout = ({children}) => (
     render={data => (
       <>
         <Navigation />
+        <MobileNavigation />
         <main className="flex justify-center flex-col ">{children}</main>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>

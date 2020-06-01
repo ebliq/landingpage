@@ -57,3 +57,18 @@ b {
 .nav-item {
   @apply float-left mx-2;
 }
+
+.nav-item-mobile {
+  @apply text-center my-8;
+}
+
+[aria-current]:not([aria-current='false']) {
+  @apply text-primary;
+}
+.h-2px {
+  height: 2px;
+}
+
+.bg-nav {
+  background: rgba(255, 255, 255, 0.95);
+}
