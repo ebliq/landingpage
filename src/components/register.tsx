@@ -2,7 +2,7 @@
 
 import React from 'react'
 const Register = () => (
-  <div className="flex justify-center flex-col my-12">
+  <div id="demo" className="flex justify-center flex-col py-12">
     <h3 className="text-center">Unsere Beta erscheint am 10 Juni</h3>
     <div className="mt-12 h-12 flex justify-center">
       <div className="bg-light-gray rounded-full md:w-2/5">
