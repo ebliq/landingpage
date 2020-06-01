@@ -4,12 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+* {
+  @apply font-sans font-normal text-lg text-black antialiased m-0;
   scroll-behavior: smooth;
-}
-
-body {
-  @apply font-sans font-normal text-lg text-black antialiased;
 }
 
 h1,
@@ -64,9 +61,6 @@ b {
 
 [aria-current]:not([aria-current='false']) {
   @apply text-primary;
-}
-.h-2px {
-  height: 2px;
 }
 
 .bg-nav {

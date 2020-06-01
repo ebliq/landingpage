@@ -7,10 +7,11 @@ import SEO from '../components/seo'
 import Hero from '../components/hero'
 import Header from '../components/header'
 import Register from '../components/register'
-import Content from '../components/featureSection'
+import Features from '../components/featureSection'
 import CallToAction from '../components/ContactUs'
 import LaunchImage from '../assets/launch.svg'
 import BackgroundImage from '../images/bg.png'
+import UseCase from '../components/UseCases'
 
 const IndexPage = () => (
   <Layout>
@@ -31,7 +32,8 @@ const IndexPage = () => (
       <Hero />
     </div>
 
-    <Content />
+    <Features />
+    <UseCase />
     <CallToAction />
   </Layout>
 )

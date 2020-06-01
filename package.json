@@ -34,7 +34,7 @@
     "prettier": "^1.16.4"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": " rm -rf .cache &&  rm -rf public && gatsby build",
     "start": "rm -rf .cache && gatsby develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

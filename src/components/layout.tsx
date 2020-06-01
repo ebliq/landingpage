@@ -31,7 +31,7 @@ const Layout = ({children}) => (
         <Navigation />
         <MobileNavigation />
         <main className="flex justify-center flex-col ">{children}</main>
-        <Footer siteTitle={data.site.siteMetadata.title} />
+        <Footer author={data.site.siteMetadata.author} />
       </>
     )}
   />

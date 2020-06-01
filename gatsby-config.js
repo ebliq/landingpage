@@ -2,11 +2,11 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Starter Landing Page`,
+    title: `Ebliq Landingpage`,
     description: `A barebone landing page starter with some minimal styles.`,
-    author: `@Ebliq`,
-    siteUrl: `https://gatsby-starter-landing-page.netlify.com`,
-    keywords: ['starter'],
+    author: `Ebliq`,
+    siteUrl: `https://d1ai9rv3pcocry.cloudfront.net`,
+    keywords: ['SaaS'],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
