@@ -1,12 +1,16 @@
 /** @format */
 
 import React from 'react'
-import LaunchImage from '../assets/launch.svg'
+import LogoImage from '../assets/logo-text.svg'
 import CrossIcon from '../assets/close.svg'
 import MenuIcon from '../assets/menu.svg'
 
-const items = [{id: 'demo', label: 'Demo'}, {id: 'feature', label: 'Features'}, {id: 'contact', label: 'Contact Us'}]
-
+const items = [
+  {id: 'demo', label: 'Demo'},
+  {id: 'feature', label: 'Features'},
+  {id: 'usecase', label: 'Usecase'},
+  {id: 'contact', label: 'Contact Us'},
+]
 const MobileNavigation = () => {
   const [toggle, setToggle]: any = React.useState(false)
   const [checkedIndex, setCheckedIndex]: any = React.useState(-1)
@@ -15,7 +19,7 @@ const MobileNavigation = () => {
     <React.Fragment>
       <div className="md:hidden top-0 pointer h-12 w-full z-50 shadow sticky bg-nav flex  flex-row items-center">
         <div className="h-full w-2/4 flex  ">
-          <LaunchImage className="h-full w-32" />
+          <LogoImage className="h-full w-32 p-2" />
         </div>
         <div className="w-2/4  flex items-end flex-col">
           <button

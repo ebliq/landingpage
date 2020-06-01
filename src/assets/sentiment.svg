@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="608.157" height="787.141" viewBox="0 0 608.157 787.141">
+  <defs>
+    <filter id="Pfad_23" x="66.5" y="261.5" width="245.466" height="269" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_23-2" x="47.5" y="300.5" width="245.466" height="269" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Gruppe_14" data-name="Gruppe 14" transform="translate(1487 -654)">
+    <path id="Pfad_1" data-name="Pfad 1" d="M904.078,564.467,795.186,485.176s-62.375-105.721-72.947-173.382-58.146-188.183-58.146-188.183V60.178s-54.975-21.144-59.2,37,11.629,133.208,11.629,133.208,15.858,95.149-20.087,119.465L465.337,564.467S591.145,679.7,689.465,694.5L904.078,843.57Z" transform="translate(-1782.922 597.57)" fill="#ffcece"/>
+    <path id="Pfad_2" data-name="Pfad 2" d="M337.943,260.519h-3.59c-32.341,0-50.52,38.182-29.27,62.561,6.84,7.847,17.236,13.279,32.859,13.558Z" transform="translate(-1782.922 597.57)" fill="#ffcece"/>
+    <path id="Pfad_3" data-name="Pfad 3" d="M337.943,336.638h-3.59c-32.341,0-50.52,38.182-29.27,62.561,6.84,7.847,17.236,13.279,32.859,13.558Z" transform="translate(-1782.922 597.57)" fill="#ffcece"/>
+    <path id="Pfad_4" data-name="Pfad 4" d="M337.943,412.758h-3.59c-32.341,0-50.52,38.182-29.27,62.561,6.84,7.847,17.236,13.279,32.859,13.558Z" transform="translate(-1782.922 597.57)" fill="#ffcece"/>
+    <path id="Pfad_5" data-name="Pfad 5" d="M337.943,488.877h-3.59c-32.341,0-50.52,38.182-29.27,62.561,6.84,7.847,17.236,13.279,32.859,13.558Z" transform="translate(-1782.922 597.57)" fill="#ffcece"/>
+    <path id="Pfad_6" data-name="Pfad 6" d="M618.632,242.345h-3.146V156.152A49.886,49.886,0,0,0,565.6,106.266H382.989A49.886,49.886,0,0,0,333.1,156.152v472.86A49.886,49.886,0,0,0,382.989,678.9H565.6a49.886,49.886,0,0,0,49.886-49.886V303.7h3.146Z" transform="translate(-1782.922 597.57)" fill="#3f3d56"/>
+    <path id="Pfad_7" data-name="Pfad 7" d="M604.867,156.5v472.16a37.4,37.4,0,0,1-13.68,28.862,34.592,34.592,0,0,1-2.95,2.167,37.085,37.085,0,0,1-20.626,6.227H384.122a36.826,36.826,0,0,1-8.828-1.057,37.255,37.255,0,0,1-28.428-36.2V156.5a37.259,37.259,0,0,1,37.253-37.256h22.268a17.7,17.7,0,0,0,16.387,24.379H527.384a17.717,17.717,0,0,0,16.4-24.379h23.829A37.259,37.259,0,0,1,604.867,156.5Z" transform="translate(-1782.922 597.57)" fill="#5ab1ba"/>
+    <path id="Pfad_15" data-name="Pfad 15" d="M383.89,252.59a21.144,21.144,0,1,1,21.144-21.144A21.144,21.144,0,0,1,383.89,252.59Zm0-40.174a19.03,19.03,0,1,0,19.03,19.03,19.03,19.03,0,0,0-19.03-19.03Z" transform="translate(-1782.922 597.57)" opacity="0.2"/>
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="3.172" cy="3.172" r="3.172" transform="translate(-1410.661 820.559)" opacity="0.2"/>
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="3.172" cy="3.172" r="3.172" transform="translate(-1394.802 820.559)" opacity="0.2"/>
+    <path id="Pfad_16" data-name="Pfad 16" d="M391.291,238.847H375.432a1.057,1.057,0,1,1,0-2.114h15.858a1.057,1.057,0,1,1,0,2.114Z" transform="translate(-1782.922 597.57)" opacity="0.2"/>
+    <path id="Pfad_17" data-name="Pfad 17" d="M567.845,252.59a21.144,21.144,0,1,1,21.144-21.144A21.144,21.144,0,0,1,567.845,252.59Zm0-40.174a19.03,19.03,0,1,0,19.03,19.03,19.03,19.03,0,0,0-19.03-19.03Z" transform="translate(-1782.922 597.57)" opacity="0.2"/>
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="3.172" cy="3.172" r="3.172" transform="translate(-1226.706 820.559)" opacity="0.2"/>
+    <circle id="Ellipse_7" data-name="Ellipse 7" cx="3.172" cy="3.172" r="3.172" transform="translate(-1210.848 820.559)" opacity="0.2"/>
+    <path id="Pfad_18" data-name="Pfad 18" d="M575.244,240.961a1.055,1.055,0,0,1-.526-.141,13.822,13.822,0,0,0-14.8,0,1.057,1.057,0,0,1-1.055-1.833,15.978,15.978,0,0,1,16.913,0,1.057,1.057,0,0,1-.529,1.973Z" transform="translate(-1782.922 597.57)" opacity="0.2"/>
+    <path id="Pfad_19" data-name="Pfad 19" d="M476.925,274.375a42.929,42.929,0,1,1,42.929-42.929A42.929,42.929,0,0,1,476.925,274.375Zm0-81.565a38.636,38.636,0,1,0,38.636,38.636,38.636,38.636,0,0,0-38.636-38.636Z" transform="translate(-1782.922 597.57)" fill="#fff"/>
+    <circle id="Ellipse_8" data-name="Ellipse 8" cx="6.439" cy="6.439" r="6.439" transform="translate(-1329.608 811.845)" fill="#fff"/>
+    <circle id="Ellipse_9" data-name="Ellipse 9" cx="6.439" cy="6.439" r="6.439" transform="translate(-1297.411 811.845)" fill="#fff"/>
+    <path id="Pfad_20" data-name="Pfad 20" d="M476.948,252.4q-8.661,0-18.362-6.279a2.146,2.146,0,1,1,2.335-3.6c11.377,7.375,21.07,7.429,29.642.163a2.146,2.146,0,1,1,2.775,3.274C488.273,250.257,482.795,252.4,476.948,252.4Z" transform="translate(-1782.922 597.57)" fill="#fff"/>
+    <path id="Pfad_21" data-name="Pfad 21" d="M251.836,245.849h-27.9v-4.292h23.611V217.946h4.293Z" transform="translate(-1487 654)" fill="#fff"/>
+    <path id="Pfad_22" data-name="Pfad 22" d="M114.463,132.087H110.17v-27.9h27.9v4.293H114.463Z" transform="translate(-1487 654)" fill="#fff"/>
+    <g id="Gruppe_3" data-name="Gruppe 3" transform="translate(-427 -993)">
+      <g transform="matrix(1, 0, 0, 1, -1060, 1647)" filter="url(#Pfad_23)">
+        <path id="Pfad_23-3" data-name="Pfad 23" d="M0,0H226.466V250H0Z" transform="translate(76 268)" fill="#fff" stroke="#3f3d56" stroke-width="1"/>
+      </g>
+      <rect id="Rechteck_34" data-name="Rechteck 34" width="71.759" height="58.256" transform="translate(-967.603 1952.423)" fill="#5ab1ba"/>
+      <rect id="Rechteck_35" data-name="Rechteck 35" width="198.688" height="6.173" transform="translate(-967.603 2028.426)" fill="#f2f2f2"/>
+      <rect id="Rechteck_36" data-name="Rechteck 36" width="71.759" height="58.256" transform="translate(-972.619 1948.951)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_37" data-name="Rechteck 37" width="69.444" height="6.173" transform="translate(-867.295 1968.434)" fill="#f2f2f2"/>
+      <rect id="Rechteck_38" data-name="Rechteck 38" width="98.38" height="6.173" transform="translate(-867.295 1985.023)" fill="#f2f2f2"/>
+      <rect id="Rechteck_39" data-name="Rechteck 39" width="69.444" height="6.173" transform="translate(-872.31 1964.961)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_40" data-name="Rechteck 40" width="98.38" height="6.173" transform="translate(-872.31 1981.551)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_41" data-name="Rechteck 41" width="198.688" height="6.173" transform="translate(-972.619 2024.954)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_42" data-name="Rechteck 42" width="198.688" height="6.173" transform="translate(-967.603 2047.716)" fill="#f2f2f2"/>
+      <rect id="Rechteck_43" data-name="Rechteck 43" width="198.688" height="6.173" transform="translate(-972.619 2044.244)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_44" data-name="Rechteck 44" width="198.688" height="6.173" transform="translate(-967.603 2067.006)" fill="#f2f2f2"/>
+      <rect id="Rechteck_45" data-name="Rechteck 45" width="198.688" height="6.173" transform="translate(-972.619 2063.534)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_46" data-name="Rechteck 46" width="198.688" height="6.173" transform="translate(-967.603 2086.296)" fill="#f2f2f2"/>
+      <rect id="Rechteck_47" data-name="Rechteck 47" width="198.688" height="6.173" transform="translate(-972.619 2082.824)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_48" data-name="Rechteck 48" width="198.688" height="6.173" transform="translate(-967.603 2105.586)" fill="#f2f2f2"/>
+      <rect id="Rechteck_49" data-name="Rechteck 49" width="198.688" height="6.173" transform="translate(-972.619 2102.114)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_50" data-name="Rechteck 50" width="198.688" height="6.173" transform="translate(-967.603 2124.876)" fill="#f2f2f2"/>
+      <rect id="Rechteck_51" data-name="Rechteck 51" width="198.688" height="6.173" transform="translate(-972.619 2121.404)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <g id="Gruppe_4" data-name="Gruppe 4" transform="translate(-446 -954)">
+      <g transform="matrix(1, 0, 0, 1, -1041, 1608)" filter="url(#Pfad_23-2)">
+        <path id="Pfad_23-4" data-name="Pfad 23" d="M0,0H226.466V250H0Z" transform="translate(57 307)" fill="#fff" stroke="#3f3d56" stroke-width="1"/>
+      </g>
+      <rect id="Rechteck_34-2" data-name="Rechteck 34" width="71.759" height="58.256" transform="translate(-967.603 1952.423)" fill="#ffd368"/>
+      <rect id="Rechteck_35-2" data-name="Rechteck 35" width="198.688" height="6.173" transform="translate(-967.603 2028.426)" fill="#f2f2f2"/>
+      <rect id="Rechteck_36-2" data-name="Rechteck 36" width="71.759" height="58.256" transform="translate(-972.619 1948.951)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_37-2" data-name="Rechteck 37" width="69.444" height="6.173" transform="translate(-867.295 1968.434)" fill="#f2f2f2"/>
+      <rect id="Rechteck_38-2" data-name="Rechteck 38" width="98.38" height="6.173" transform="translate(-867.295 1985.023)" fill="#f2f2f2"/>
+      <rect id="Rechteck_39-2" data-name="Rechteck 39" width="69.444" height="6.173" transform="translate(-872.31 1964.961)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_40-2" data-name="Rechteck 40" width="98.38" height="6.173" transform="translate(-872.31 1981.551)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_41-2" data-name="Rechteck 41" width="198.688" height="6.173" transform="translate(-972.619 2024.954)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_42-2" data-name="Rechteck 42" width="198.688" height="6.173" transform="translate(-967.603 2047.716)" fill="#f2f2f2"/>
+      <rect id="Rechteck_43-2" data-name="Rechteck 43" width="198.688" height="6.173" transform="translate(-972.619 2044.244)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_44-2" data-name="Rechteck 44" width="198.688" height="6.173" transform="translate(-967.603 2067.006)" fill="#f2f2f2"/>
+      <rect id="Rechteck_45-2" data-name="Rechteck 45" width="198.688" height="6.173" transform="translate(-972.619 2063.534)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_46-2" data-name="Rechteck 46" width="198.688" height="6.173" transform="translate(-967.603 2086.296)" fill="#f2f2f2"/>
+      <rect id="Rechteck_47-2" data-name="Rechteck 47" width="198.688" height="6.173" transform="translate(-972.619 2082.824)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_48-2" data-name="Rechteck 48" width="198.688" height="6.173" transform="translate(-967.603 2105.586)" fill="#f2f2f2"/>
+      <rect id="Rechteck_49-2" data-name="Rechteck 49" width="198.688" height="6.173" transform="translate(-972.619 2102.114)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rechteck_50-2" data-name="Rechteck 50" width="198.688" height="6.173" transform="translate(-967.603 2124.876)" fill="#f2f2f2"/>
+      <rect id="Rechteck_51-2" data-name="Rechteck 51" width="198.688" height="6.173" transform="translate(-972.619 2121.404)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="79.819" cy="178.668" rx="79.819" ry="178.668" transform="translate(-1191.777 894.563)" fill="#ffcece"/>
+  </g>
+</svg>

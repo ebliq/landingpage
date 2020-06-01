@@ -9,9 +9,9 @@ import Header from '../components/header'
 import Register from '../components/register'
 import Features from '../components/featureSection'
 import CallToAction from '../components/ContactUs'
-import LaunchImage from '../assets/launch.svg'
+import LogoImage from '../assets/logo-text.svg'
 import BackgroundImage from '../images/background.png'
-import UseCase from '../components/UseCases'
+import UsecaseSection from '../components/useCaseSection'
 
 const IndexPage = () => (
   <Layout>
@@ -25,7 +25,8 @@ const IndexPage = () => (
         <div className="w-full md:w-2/3 ">
           <Header />
         </div>
-        <LaunchImage className="h-0 w-0  md:p-12 md:w-1/3 md:h-full" />
+
+        <LogoImage className="h-0 w-0  md:p-12 md:w-1/3 md:h-full" />
       </div>
 
       <Register />
@@ -33,7 +34,7 @@ const IndexPage = () => (
     </div>
 
     <Features />
-    <UseCase />
+    <UsecaseSection />
     <CallToAction />
   </Layout>
 )
