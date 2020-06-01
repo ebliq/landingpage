@@ -10,7 +10,7 @@ import Register from '../components/register'
 import Features from '../components/featureSection'
 import CallToAction from '../components/ContactUs'
 import LaunchImage from '../assets/launch.svg'
-import BackgroundImage from '../images/bg.png'
+import BackgroundImage from '../images/background.png'
 import UseCase from '../components/UseCases'
 
 const IndexPage = () => (
