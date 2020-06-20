@@ -40,6 +40,7 @@ module.exports = {
       'light-gray': '#edf2f7',
       gray: '#A0A4A6',
       mediumGray: '#B0B8BA',
+      error: '#ff0000',
     },
     screens: {
       sm: '640px',
