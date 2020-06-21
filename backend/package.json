@@ -1,0 +1,12 @@
+{
+  "name": "landingpage-mailer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "sls": "serverless"
+  },
+  "devDependencies": {
+    "serverless": "^1.72.0"
+  }
+}
