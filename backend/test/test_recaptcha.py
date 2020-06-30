@@ -1,0 +1,7 @@
+
+from recaptcha import validate_robot
+
+
+def test_recaptcha():
+    response = validate_robot('03AGdBq24Hsct8VBEsDHEZq2x5xTj4m8xiyb9oW4lE56kFh4YmFKZcSgb-5fwnr5tYKsWM2Zq9ggIPOz5yf4_jDl_fe0ccR5DWO5KkfrxyGi3Qrw96sdg6EMhoG7yFaEhyg_lBeXCUlzhIXy-GstywRmAtKiuMkyR8_3yn5n7yY5jZxffjGHxQsiUdwDNFsrdYfSjnfsMMfzaMiD6Vf2RWtLNznHgZ7N4XVj8tuSoRJNFry2GdwOIt1I2CHU1oatZ9f4DBrA4GNUMGELh9PWbyKPXh5Hy0lWX--GEjHRTqlzydcDkEOQrQNox9NrViWRyUpRX4rhUiuroVpG7JnZQkUN4F6pYvlVOTvnLjgio5lQvvBL0lrsb0d1IEgJJ9C8g9u-vPTRL3VYz6')
+    assert response == {"success": True, "score": 0.1}
