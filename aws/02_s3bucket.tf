@@ -1,9 +1,8 @@
 
 // Hosting - homepage
 resource "aws_s3_bucket" "landingpage" {
-  bucket = "${var.prefix}-${terraform.workspace}-${var.random_id}"
+  bucket = "ebliq-landingpage-nd23h47328420zfg"
   acl    = "private"
-  region = var.default_region
 
   website {
     index_document = "index.html"
@@ -11,13 +10,13 @@ resource "aws_s3_bucket" "landingpage" {
   }
 }
 
-# resource "aws_s3_bucket" "hosting-redirect" {
-#   bucket = "${var.prefix}-hosting-bucket-redirect-${terraform.workspace}-${var.random_id}"
-#   acl    = "private"
-#   website {
-#     redirect_all_requests_to = "https://${var.root_domain_name}"
-#   }
-# }
+resource "aws_s3_bucket" "hosting-redirect" {
+  bucket = "ebliq-landingpage-redirect-nd23h47328420zfg"
+  acl    = "private"
+  website {
+    redirect_all_requests_to = "https://ebliq.de"
+  }
+}
 
 resource "aws_s3_bucket_policy" "public-access-website" {
   bucket     = aws_s3_bucket.landingpage.id

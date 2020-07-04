@@ -15,7 +15,7 @@ resource "aws_cloudfront_distribution" "landingpage" {
     }
   }
 
-  #   aliases = [var.root_domain_name]
+  aliases = ["ebliq.de"]
 
   comment = "Terraform configured"
 
@@ -42,19 +42,14 @@ resource "aws_cloudfront_distribution" "landingpage" {
     }
   }
 
-  tags = {
-    Environment = terraform.workspace
-  }
+
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    cloudfront_default_certificate = false
+    acm_certificate_arn            = "arn:aws:acm:us-east-1:146406953588:certificate/f9ddee3e-968b-49c7-9c74-200f1a7c739e"
+    ssl_support_method             = "sni-only"
+    minimum_protocol_version       = "TLSv1.1_2016"
   }
-  #   viewer_certificate {
-  #     cloudfront_default_certificate = false
-  #     acm_certificate_arn            = var.acm_arn_root
-  #     ssl_support_method             = "sni-only"
-  #     minimum_protocol_version       = "TLSv1.1_2016"
-  #   }
 
   custom_error_response {
     error_code            = 403
@@ -71,52 +66,48 @@ resource "aws_cloudfront_distribution" "landingpage" {
   }
 }
 
-# resource "aws_cloudfront_distribution" "redirection-to-root" {
-#   enabled         = true
-#   is_ipv6_enabled = true
+resource "aws_cloudfront_distribution" "redirection-to-root" {
+  enabled         = true
+  is_ipv6_enabled = true
 
-#   origin {
-#     domain_name = aws_s3_bucket.hosting-redirect.website_endpoint
-#     origin_id   = aws_s3_bucket.hosting-redirect.id
+  origin {
+    domain_name = aws_s3_bucket.hosting-redirect.website_endpoint
+    origin_id   = aws_s3_bucket.hosting-redirect.id
 
-#     custom_origin_config {
-#       http_port              = 80
-#       https_port             = 443
-#       origin_protocol_policy = "http-only"
-#       origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
-#     }
-#   }
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+    }
+  }
 
-#   aliases = ["www.${var.root_domain_name}"]
+  aliases = ["www.ebliq.de"]
 
-#   default_cache_behavior {
-#     allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
-#     cached_methods         = ["GET", "HEAD"]
-#     target_origin_id       = aws_s3_bucket.hosting-redirect.id
-#     viewer_protocol_policy = "allow-all"
+  default_cache_behavior {
+    allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    cached_methods         = ["GET", "HEAD"]
+    target_origin_id       = aws_s3_bucket.hosting-redirect.id
+    viewer_protocol_policy = "allow-all"
 
-#     forwarded_values {
-#       query_string = false
-#       cookies {
-#         forward = "none"
-#       }
-#     }
-#   }
+    forwarded_values {
+      query_string = false
+      cookies {
+        forward = "none"
+      }
+    }
+  }
 
-#   restrictions {
-#     geo_restriction {
-#       restriction_type = "none"
-#     }
-#   }
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
 
-#   tags = {
-#     Environment = var.stage
-#   }
-
-#   viewer_certificate {
-#     cloudfront_default_certificate = false
-#     acm_certificate_arn = var.acm_arn_root
-#     ssl_support_method = "sni-only"
-#     minimum_protocol_version = "TLSv1.1_2016"
-#   }
-# }
+  viewer_certificate {
+    cloudfront_default_certificate = false
+    acm_certificate_arn            = "arn:aws:acm:us-east-1:146406953588:certificate/f9ddee3e-968b-49c7-9c74-200f1a7c739e"
+    ssl_support_method             = "sni-only"
+    minimum_protocol_version       = "TLSv1.1_2016"
+  }
+}
