@@ -10,18 +10,20 @@ import RealTimeIcon from '../assets/realtime.svg'
 
 const features = [
   {
-    title: 'Feature 1',
-    description: 'Includes plugins for analytics, building sitemaps, and optimizing images',
+    title: 'Fokus auf Deutsche Quellen und Sprache ...',
+    description:
+      '...Wir nutzen “State-of-the-art” Deep Learning Technologien von Google, Facebook oder Microsoft. Wir haben diese Technologien jedoch auf die Deutsche Sprache angewendet und dafür KI-Modelle trainiert.',
     icon: ReportIcon,
   },
   {
-    title: 'Feautre 2',
+    title: 'Zuverlässig Informationen erhalten ...',
     description: 'Includes plugins for analytics, building sitemaps, and optimizing images',
     icon: InsightsIcon,
   },
   {
-    title: 'Feature 3',
-    description: 'Includes plugins for analytics, building sitemaps, and optimizing images',
+    title: 'Weil nur Echtzeit zählt ...',
+    description:
+      '... Wir erzeugen unsere Erkenntnisse, die Neuigkeiten und das Wissen dabei in Nahezu Echtzeit. Unsere Daten aktualisieren wir dazu alle 5 Minuten und erzeugen die Insights direkt im anschluss.',
     icon: RealTimeIcon,
   },
 ]
@@ -29,7 +31,7 @@ const features = [
 const FeatureSection: any = () => (
   <React.Fragment>
     <div id="feature" className="px-4 md:px-16 text-center py-12 ">
-      <h2>Enthaltene Features</h2>
+      <h2>Das zeichnet uns aus</h2>
       <p className="text-gray">Give a final call to action because that's what the cool kids are doing.</p>
     </div>
     {features.map((feature, index) => (
