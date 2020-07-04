@@ -12,8 +12,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      AWS_S3_BUCKET_NAME: ebliq-landingpage-prod-3b1lnce2n9l2p7bn
-      AWS_CF_DISTRIBUTION_ID: E3C3L15OTVZ3GA
+      AWS_S3_BUCKET_NAME: ebliq-landingpage-nd23h47328420zfg
+      AWS_CF_DISTRIBUTION_ID: E15ESGXLMVG93K
       working-directory: ./gatsby
     strategy:
       matrix:
