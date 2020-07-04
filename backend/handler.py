@@ -37,9 +37,16 @@ def pre_register(event, context):
         save_to_gsheet(raw_mail, raw_score)
 
     except Exception as e:
+        print(e)
         return respond_bad_request(repr(e))
 
     return {
         "statusCode": 200,
+        "headers": {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Methods': 'POST'
+        },
         "body": json.dumps({'message': 'email successful added', 'value': raw_mail})
     }

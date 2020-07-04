@@ -5,8 +5,7 @@ import React from 'react'
 function validateEmail(email) {
   return /\S+@\S+\.\S+/.test(email)
 }
-const url = 'https://lt66s7h15b.execute-api.eu-central-1.amazonaws.com/dev'
-//const url = 'https://postman-echo.com/post'
+const url = 'https://07are33q3i.execute-api.eu-central-1.amazonaws.com/prod/'
 export const useRegister = ref => {
   const [loading, setLoading] = React.useState<boolean>(false)
   const [error, setError] = React.useState<string | null>(null)

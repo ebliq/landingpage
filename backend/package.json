@@ -11,6 +11,7 @@
     "serverless": "^1.72.0"
   },
   "dependencies": {
+    "serverless-deployment-bucket": "^1.1.2",
     "serverless-python-requirements": "^5.1.0"
   }
 }
