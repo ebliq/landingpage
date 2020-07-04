@@ -69,3 +69,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 .terraform
+
+__pycache__
+.pytest_cache
+.vscode

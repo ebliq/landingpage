@@ -1,33 +1,14 @@
-service: serverless-qa-bert
+service: ebliq-landingpage-backend
 
 provider:
   name: aws
   runtime: python3.8
   region: eu-central-1
-  timeout: 60
-  iamRoleStatements:
-    - Effect: "Allow"
-      Action:
-        - s3:getObject
-      Resource: arn:aws:s3:::philschmid-models/qa_english/*
+  timeout: 5
 
 custom:
   pythonRequirements:
     dockerizePip: true
-    zip: true
-    slim: true
-    strip: false
-    noDeploy:
-      - docutils
-      - jmespath
-      - pip
-      - python-dateutil
-      - setuptools
-      - six
-      - tensorboard
-    useStaticCache: true
-    useDownloadCache: true
-    cacheLocation: "./cache"
 package:
   individually: false
   exclude:
@@ -45,7 +26,6 @@ functions:
   predict_answer:
     handler: handler.pre_register
     memorySize: 128
-    timeout: 60
     events:
       - http:
           path: ""

@@ -7,9 +7,9 @@ from urllib.parse import parse_qs
 import re
 
 # Custom stuff
-from saveToGSheet import save_to_gsheet
-from validateInput import validate_input
-from recaptcha import validate_robot
+from utils.saveToGSheet import save_to_gsheet
+from utils.validateInput import validate_input
+from utils.recaptcha import validate_robot
 
 
 def respond_bad_request(message: str):

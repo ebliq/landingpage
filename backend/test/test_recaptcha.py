@@ -1,5 +1,5 @@
 
-from recaptcha import validate_robot
+from utils.recaptcha import validate_robot
 
 
 def test_recaptcha():

@@ -1,4 +1,4 @@
-from saveToGSheet import save_to_gsheet
+from utils.saveToGSheet import save_to_gsheet
 import pytest
 
 
