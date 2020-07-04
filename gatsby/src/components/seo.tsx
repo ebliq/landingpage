@@ -88,7 +88,7 @@ function SEO() {
       title={`${siteMetadata.title}`}
       titleTemplate={`%s | ${siteMetadata.title}`}
       meta={metaTags}>
-      <script src="https://www.google.com/recaptcha/api.js?render=6LcceP8UAAAAAFkGrW_vEhNa-Ho7Y1QbWCCpVIXU" />
+      <script async src="https://www.google.com/recaptcha/api.js?render=6LcceP8UAAAAAFkGrW_vEhNa-Ho7Y1QbWCCpVIXU" />
     </Helmet>
   )
 }
