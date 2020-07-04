@@ -2,6 +2,7 @@ service: ebliq-landingpage-backend
 
 provider:
   name: aws
+  stage: prod
   runtime: python3.8
   region: eu-central-1
   timeout: 5

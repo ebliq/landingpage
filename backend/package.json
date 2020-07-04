@@ -4,9 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "sls": "serverless"
+    "sls": "serverless",
+    "deploy": "serverless deploy"
   },
   "devDependencies": {
     "serverless": "^1.72.0"
+  },
+  "dependencies": {
+    "serverless-python-requirements": "^5.1.0"
   }
 }
