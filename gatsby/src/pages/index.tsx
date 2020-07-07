@@ -9,7 +9,7 @@ import Header from '../components/header'
 import Register from '../components/register'
 import Features from '../components/featureSection'
 import CallToAction from '../components/ContactUs'
-import LogoImage from '../assets/logo-text.svg'
+import LogoImage from '../assets/header_icon.svg'
 import BackgroundImage from '../images/background.png'
 import UsecaseSection from '../components/useCaseSection'
 
@@ -22,11 +22,11 @@ const IndexPage = () => (
         backgroundImage: `url(${BackgroundImage})`,
       }}>
       <div className=" max-w-4xl m-auto flex-row flex justify-center items-center flex-wrap">
-        <div className="w-full md:w-2/3 ">
+        <div className="w-full md:w-1/2 ">
           <Header />
         </div>
 
-        <LogoImage className="h-0 w-0  md:p-12 md:w-1/3 md:h-full" />
+        <LogoImage className="h-0 w-0  md:p-12 md:w-1/2 md:h-full" />
       </div>
 
       <Register />

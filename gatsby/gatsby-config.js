@@ -2,8 +2,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Ebliq Landingpage`,
-    description: `A barebone landing page starter with some minimal styles.`,
+    title: `Ebliq`,
+    description: `Entdecke Erkenntnisse zu wirtschaftlich relevanten Themen. Die Inhalte werden dabei in Echtzeit bereitgestellt. ebliq analysiert für dich öffentlich zugängliche deutsche Nachrichtenquellen.`,
     author: `Ebliq`,
     siteUrl: `https://ebliq.de`,
     keywords: ['SaaS'],
