@@ -5,7 +5,7 @@ module.exports = {
     title: `Ebliq Landingpage`,
     description: `A barebone landing page starter with some minimal styles.`,
     author: `Ebliq`,
-    siteUrl: `https://d1ai9rv3pcocry.cloudfront.net`,
+    siteUrl: `https://ebliq.de`,
     keywords: ['SaaS'],
   },
   plugins: [
@@ -19,6 +19,27 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ebliq Landingpage`,
+        short_name: `ebliq`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        icon: `src/assets/logo.svg`,
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://ebliq.de',
+        sitemap: 'https://ebliq.de/sitemap.xml',
+        policy: [{userAgent: '*', allow: '/'}],
       },
     },
     {
