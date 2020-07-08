@@ -9,7 +9,7 @@ import Header from '../components/header'
 import Register from '../components/register'
 import Features from '../components/featureSection'
 import CallToAction from '../components/ContactUs'
-import LogoImage from '../assets/logo-text.svg'
+import LogoImage from '../assets/header_icon.svg'
 import BackgroundImage from '../images/background.png'
 import UsecaseSection from '../components/useCaseSection'
 

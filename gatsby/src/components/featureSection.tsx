@@ -12,12 +12,13 @@ const features = [
   {
     title: 'Fokus auf Deutsche Quellen und Sprache ...',
     description:
-      '...Wir nutzen “State-of-the-art” Deep Learning Technologien von Google, Facebook oder Microsoft. Wir haben diese Technologien jedoch auf die Deutsche Sprache angewendet und dafür KI-Modelle trainiert.',
+      '...Wir nutzen “State-of-the-art” Deep Learning Technologien von Google, Facebook und Microsoft. Wir haben diese Technologien auf die Deutsche Sprache übertragem und dafür eigene deutsche KI-Modelle trainiert.',
     icon: ReportIcon,
   },
   {
     title: 'Zuverlässig Informationen erhalten ...',
-    description: 'Includes plugins for analytics, building sitemaps, and optimizing images',
+    description:
+      'Verstehe die Einflussfaktor, welche Nachricht in den Massenmedien erscheint, welche berichtswert diese hat. Wir generieren die Stimmung für Artikel. Extrahieren den Benefits für einzelne Unternehmen. Lieferen Kundenspezifische Kennzahlen. ',
     icon: InsightsIcon,
   },
   {
@@ -31,6 +32,7 @@ const features = [
   /* <div className=" text-center py-24 bg-primary">    </div> */
 }
 const FeatureSection: any = () => (
+<<<<<<< HEAD
   <section id="feature" className="">
     <div className=" text-center py-24 bg-primary">
       <h1 className="text-white">Das zeichnet uns aus</h1>
@@ -46,6 +48,12 @@ const FeatureSection: any = () => (
           orientation={index}
         />
       ))}
+=======
+  <React.Fragment>
+    <div id="feature" className="px-4 md:px-16 text-center py-12 ">
+      <h1>Das zeichnet uns aus</h1>
+      <p className="text-gray">Give a final call to action because that's what the cool kids are doing.</p>
+>>>>>>> d26a9aef1780f05ca1d35b82a0332ae5bd288c6c
     </div>
   </section>
 )
