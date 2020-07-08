@@ -5,6 +5,9 @@ module.exports = {
     mode: 'all',
     content: ['src/**/*.{html,js,jsx,ts,tsx}'],
   },
+  corePlugins: {
+    container: false,
+  },
   prefix: '',
   important: false,
   separator: ':',
@@ -38,7 +41,7 @@ module.exports = {
       white: '#fff',
       black: '#000',
       'light-gray': '#edf2f7',
-      gray: '#A0A4A6',
+      gray: '#555',
       mediumGray: '#B0B8BA',
       error: '#ff0000',
     },
@@ -52,5 +55,34 @@ module.exports = {
       colors: theme('colors'),
     }),
   },
-  plugins: [require('tailwindcss-ripple')()],
+  plugins: [
+    require('tailwindcss-ripple')(),
+    function({addComponents}) {
+      addComponents({
+        '.container': {
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: '2rem',
+          paddingRight: '2rem',
+          '@screen sm': {
+            // background: 'blue',
+            maxWidth: '640px',
+          },
+          '@screen md': {
+            // background: 'green',
+            maxWidth: '768px',
+          },
+          '@screen lg': {
+            // background: 'yellow',
+            maxWidth: '1024px',
+          },
+          '@screen xl': {
+            // background: 'red',
+            maxWidth: '1024px',
+          },
+        },
+      })
+    },
+  ],
 }

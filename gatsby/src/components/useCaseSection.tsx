@@ -21,26 +21,26 @@ const usecases = [
     icon: ScaleIcon,
   },
   {
-    title: 'dein Anwendungsfall',
+    title: 'Dein Anwendungsfall',
     description: 'Komme auf uns zu wenn du das Gefühl hast ebliq könnte genau das richtige für dich sein.',
     icon: SentimentIcon,
   },
 ]
 
 const UsecaseSection: any = () => (
-  <React.Fragment>
-    <div id="usecase" className="px-4 md:px-16 text-center py-12 ">
-      <h2>So könntest du ebliq verwenden und davon profitieren</h2>
-      <p className="text-gray">
+  <section id="usecase">
+    <div className=" text-center py-24 bg-primary px-4">
+      <h1 className="text-white max-w-screen-md mx-auto ">So könntest du ebliq verwenden und davon profitieren</h1>
+      <p className="text-white">
         Die App ermöglicht Ihnen Informationen zu Kunden in Echtzeit zu generieren und verarbieten
       </p>
-      <div className=" w-full md:flex-row flex justify-center items-stretch flex-wrap py-8 px-4 ">
-        {usecases.map((feature, index) => (
-          <UseCaseCard title={feature.title} description={feature.description} icon={feature.icon} key={index} />
-        ))}
-      </div>
     </div>
-  </React.Fragment>
+    <div className=" w-full md:flex-row flex justify-center items-stretch flex-wrap px-4 container ">
+      {usecases.map((feature, index) => (
+        <UseCaseCard title={feature.title} description={feature.description} icon={feature.icon} key={index} />
+      ))}
+    </div>
+  </section>
 )
 
 export default UsecaseSection

@@ -9,7 +9,7 @@ const Register = () => {
   const ref = React.useRef(null)
   const {submit, error, loading} = useRegister(ref)
   return (
-    <section className="container mx-auto max-w-4xl">
+    <section className="container mx-auto">
       <div id="demo" className="flex justify-center flex-col px-4 md:px-16 text-center py-12">
         <h3>
           Sei teil unserer kostenloser Alpha <br /> Start Ende August!

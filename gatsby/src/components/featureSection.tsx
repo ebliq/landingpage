@@ -27,23 +27,27 @@ const features = [
     icon: RealTimeIcon,
   },
 ]
-
+{
+  /* <div className=" text-center py-24 bg-primary">    </div> */
+}
 const FeatureSection: any = () => (
-  <React.Fragment>
-    <div id="feature" className="px-4 md:px-16 text-center py-12 ">
-      <h2>Das zeichnet uns aus</h2>
-      <p className="text-gray">Give a final call to action because that's what the cool kids are doing.</p>
+  <section id="feature" className="">
+    <div className=" text-center py-24 bg-primary">
+      <h1 className="text-white">Das zeichnet uns aus</h1>
+      <p className="text-white">Give a final call to action because that's what the cool kids are doing.</p>
     </div>
-    {features.map((feature, index) => (
-      <FeatureCard
-        title={feature.title}
-        description={feature.description}
-        icon={feature.icon}
-        key={index}
-        orientation={index}
-      />
-    ))}
-  </React.Fragment>
+    <div className="container">
+      {features.map((feature, index) => (
+        <FeatureCard
+          title={feature.title}
+          description={feature.description}
+          icon={feature.icon}
+          key={index}
+          orientation={index}
+        />
+      ))}
+    </div>
+  </section>
 )
 
 export default FeatureSection

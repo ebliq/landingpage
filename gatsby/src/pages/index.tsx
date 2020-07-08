@@ -21,12 +21,12 @@ const IndexPage = () => (
       style={{
         backgroundImage: `url(${BackgroundImage})`,
       }}>
-      <div className=" max-w-4xl m-auto flex-row flex justify-center items-center flex-wrap">
-        <div className="w-full md:w-2/3 ">
+      <div className=" m-auto flex-row flex justify-center items-center flex-wrap container">
+        <div className="w-full md:w-3/5 ">
           <Header />
         </div>
 
-        <LogoImage className="h-0 w-0  md:p-12 md:w-1/3 md:h-full" />
+        <LogoImage className="h-0 w-0  md:p-12 md:w-2/5 md:h-full" />
       </div>
 
       <Register />
