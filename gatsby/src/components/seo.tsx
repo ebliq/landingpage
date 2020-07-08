@@ -22,6 +22,7 @@ function SEO() {
     `,
   )
   const fullURL: any = path => (path ? `${siteMetadata.siteUrl}${path}` : siteMetadata.siteUrl)
+
   const metaTags: any = [
     {charset: 'utf-8'},
     {
@@ -87,9 +88,8 @@ function SEO() {
       }}
       title={`${siteMetadata.title}`}
       titleTemplate={`%s | Behalten Sie die Themen im Blick!`}
-      meta={metaTags}>
-      <script async src="https://www.google.com/recaptcha/api.js?render=6LcceP8UAAAAAFkGrW_vEhNa-Ho7Y1QbWCCpVIXU" />
-    </Helmet>
+      meta={metaTags}
+    />
   )
 }
 
