@@ -10,9 +10,9 @@ export default function HTML(props) {
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <script async src="https://www.google.com/recaptcha/api.js?render=6LcceP8UAAAAAFkGrW_vEhNa-Ho7Y1QbWCCpVIXU" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
         <script async src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js" />
+        <script async src="https://www.google.com/recaptcha/api.js?render=6LcceP8UAAAAAFkGrW_vEhNa-Ho7Y1QbWCCpVIXU" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172367707-1" />
         {props.headComponents}
       </head>
 
