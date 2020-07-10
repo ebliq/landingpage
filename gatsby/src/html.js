@@ -37,7 +37,7 @@ export default function HTML(props) {
           if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
             // creates new tracker with same client_id as the last time the user visited
             gtag('js', new Date())
-            gtag('config', 'GA_MEASUREMENT_ID', {
+            gtag('config', 'UA-172367707-1', {
               send_page_view: true,
               client_storage: 'none',
               client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
@@ -47,7 +47,7 @@ export default function HTML(props) {
             window.localStorage.setItem(GA_LOCAL_STORAGE_KEY, uuidv4())
             // creates new tracker with the new client_id
             gtag('js', new Date())
-            gtag('config', 'GA_MEASUREMENT_ID', {
+            gtag('config', 'UA-172367707-1', {
               send_page_view: true,
               client_storage: 'none',
               client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
