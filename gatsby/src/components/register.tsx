@@ -4,6 +4,7 @@ import React from 'react'
 import PaperPlane from '../assets/paper-plane.svg'
 import Loader from '../assets/loader.svg'
 import {useRegister} from '../hooks/useRegister'
+const ReactGA = require('react-ga')
 
 const Register = () => {
   const ref = React.useRef(null)
@@ -26,6 +27,12 @@ const Register = () => {
             <input
               type="email"
               ref={ref}
+              onFocus={() => {
+                ReactGA.event({
+                  category: 'Beta',
+                  action: 'Focused Input Field',
+                })
+              }}
               className="h-full bg-light-gray w-4/5 md:2/3 rounded-full px-4 outline-none"
               placeholder="Max.Mustermann@email.de"
             />

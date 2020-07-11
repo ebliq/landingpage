@@ -1,6 +1,7 @@
 /** @format */
 
 import React from 'react'
+const ReactGA = require('react-ga')
 
 function validateEmail(email) {
   return /\S+@\S+\.\S+/.test(email)
@@ -19,6 +20,11 @@ export const useRegister = ref => {
     const validEmail = validateEmail(email)
     if (!validEmail) {
       setError('Keine Valide Email')
+      ReactGA.event({
+        category: 'Beta',
+        action: 'no valid Email',
+        value: email,
+      })
       return
     }
     setLoading(true)
@@ -51,7 +57,11 @@ export const useRegister = ref => {
       .then(response => response.json())
       .then(data => {
         setLoading(false)
-        console.log(data)
+        ReactGA.event({
+          category: 'Beta',
+          action: 'register successfully',
+          value: email,
+        })
       })
   }
 

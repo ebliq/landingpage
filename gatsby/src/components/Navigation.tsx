@@ -3,6 +3,7 @@
 import React from 'react'
 import LogoImage from '../assets/logo-text.svg'
 import {Link} from 'gatsby'
+const ReactGA = require('react-ga')
 
 const items = [
   {id: 'demo', label: 'Demo'},
@@ -32,7 +33,13 @@ const Navigation = () => {
               onClick={() => {
                 setCheckedIndex(index)
               }}>
-              <a href={`#${item.id}`}>{item.label}</a>
+              <a
+                href={`#${item.id}`}
+                onClick={() => {
+                  ReactGA.pageview(window.location.pathname + item.id)
+                }}>
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
