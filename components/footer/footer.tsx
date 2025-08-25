@@ -239,13 +239,13 @@ export function Footer() {
             </div>
 
             {/* Legal Links */}
-            <div className="hidden md:flex items-center gap-4 text-sm">
+            <div className="md:flex items-center gap-4 text-sm">
               <Link href="/impressum" className="hover:opacity-80">
                 Impressum
               </Link>
-              <Link href="/impressum" className="hover:opacity-80">
+              {/* <Link href="/impressum" className="hover:opacity-80">
                 Geschäftsbedingungen
-              </Link>
+              </Link> */}
             </div>
 
             {/* Back to Top Button */}

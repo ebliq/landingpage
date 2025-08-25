@@ -23,19 +23,22 @@ import {
 
 const agentsWithIcon = [
   {
+    href: "/features/anamnese-bot",
     image: "/agent1.png",
-    headline: "AnamnesaBot",
-    text: "Unser AnamnesaBot stellt die richtigen Fragen zur optimalen Patientenaufnahme – vollständig, effizient und dokumentationssicher. Ideal zur Vorbereitung auf den Arztbesuch.",
+    headline: "Anamnese Bot",
+    text: "Der Anamnese Bot unterstütz den Arzt bei der optimalen Patientenaufnahme – vollständig, effizient und dokumentationssicher. Ideal bei der Patientenaufnahme.",
   },
   {
+    href: "/features/arztbrief-generator",
     image: "/agent2.png",
     headline: "Arztbrief Generator",
     text: "Mit eBiq schreiben sich Arztbriefe fast von selbst. Der Generator übernimmt wichtige Inhalte automatisch – strukturiert, korrekt und zeitsparend.",
   },
   {
+    href: "/features/ai-assistant",
     image: "/agent3.png",
-    headline: "Dokumentenprüfer",
-    text: "Mit dem Dokumentenprüfer behalten Sie alle Formulare im Griff. Vollautomatische Prüfung auf Vollständigkeit und Plausibilität – direkt am Patienten.",
+    headline: "AI Assistant",
+    text: "Mit dem AI Assistant können Patienten wie mit einem echten Teammitglied sprechen. Der Assistent beantwortet Fragen, gibt Informationen und leitet Anfragen weiter",
   },
 ];
 
@@ -157,7 +160,7 @@ export default function FeaturesSection() {
   //   },
   // ];
   return (
-    <section className="py-16 px-4 relative overflow-hidden">
+    <section className="py-16 px-4 relative overflow-hidden" id="features">
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -181,6 +184,7 @@ export default function FeaturesSection() {
               imageUrl={agent.image}
               headline={agent.headline}
               text={agent.text}
+              href={agent.href}
             ></AgentCardWithBackground>
           ))}
         </AgentGrid>

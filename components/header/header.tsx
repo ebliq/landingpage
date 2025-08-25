@@ -77,7 +77,7 @@ export default function Header() {
                 <li className="menu-item">
                   <Link
                     className="lg:py-7 ud-menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary hover:text-blue-700"
-                    href="/"
+                    href="/#features"
                     onClick={handleLinkClick}
                   >
                     Features

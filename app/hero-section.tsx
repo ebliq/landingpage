@@ -4,13 +4,13 @@ import { PlayCircleIcon, LucideImagePlay } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full lg:h-screen">
       <Image
         src="/hero_doc.png"
         alt="Hero Background"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 w-full h-full z-0"
+        className="absolute inset-0 w-full h-full z-0 object-left lg:object-center"
       />
 
       <div className="relative z-10 container mx-auto h-full flex items-center">

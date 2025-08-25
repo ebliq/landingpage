@@ -1,7 +1,7 @@
 import React from "react";
 import { User } from "lucide-react"; // Or any other icon
 import Image from "next/image";
-
+import Link from "next/link";
 export function AgentGrid({
   children,
   cols,
@@ -12,7 +12,7 @@ export function AgentGrid({
   className?: string;
 }) {
   return (
-    <div className={`grid grid-cols-2 lg:grid-cols-${cols} gap-4 ${className}`}>
+    <div className={`grid grid-cols-1 lg:grid-cols-${cols} gap-4 ${className}`}>
       {children}
     </div>
   );
@@ -37,31 +37,39 @@ export function AgentCard({
 }
 
 export function AgentCardWithBackground({
+  href,
   imageUrl,
   headline,
   text,
 }: {
+  href: string;
   imageUrl: string;
   headline: string;
   text: string;
 }) {
   return (
-    <div className="relative flex flex-col items-center p-4 rounded-lg shadow-md min-h-[400px] text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={imageUrl}
-          alt={headline}
-          fill
-          style={{ objectFit: "cover" }}
-          quality={90}
-          priority={false}
-        />
-        <div className="absolute inset-0"></div>
+    <Link href={href}>
+      <div className="relative flex flex-col items-center p-4 rounded-lg shadow-md min-h-[400px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group">
+        <div className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110">
+          <Image
+            src={imageUrl}
+            alt={headline}
+            fill
+            style={{ objectFit: "cover" }}
+            quality={90}
+            priority={false}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 group-hover:bg-opacity-40"></div>
+        </div>
+        <div className="relative z-10 flex flex-col items-center text-center p-4 rounded bg-white bg-opacity-80 mt-auto w-full transition-all duration-300 group-hover:bg-opacity-90">
+          <h3 className="text-xl font-semibold mb-2 text-black transition-colors duration-300 group-hover:text-blue-600">
+            {headline}
+          </h3>
+          <p className="text-md text-black transition-colors duration-300 group-hover:text-gray-700">
+            {text}
+          </p>
+        </div>
       </div>
-      <div className="relative z-10 flex flex-col items-center text-center p-4 rounded bg-white bg-opacity-80 mt-auto w-full">
-        <h3 className="text-xl font-semibold mb-2 text-black">{headline}</h3>
-        <p className="text-md text-black">{text}</p>
-      </div>
-    </div>
+    </Link>
   );
 }

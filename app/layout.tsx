@@ -28,14 +28,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
+    <html
+      lang="de"
+      className={`scroll-smooth ${geistSans.variable} ${geistMono.variable}`}
+    >
       {/* <GoogleAnalytics gaId="G-BE6TC9HB85" /> */}
       <PostHogProvider>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
         >
           <Header />
-          <main className="min-h-screen w-full bg-gradient-to-b from-blue-50 to-white pt-20">
+          <main className="min-h-screen w-full bg-gradient-to-b from-blue-50 to-white pt-14 lg:pt-20 ">
             {children}
           </main>
           <Footer />
