@@ -19,22 +19,27 @@ const geistMono = Geist_Mono({
 */
 
 // Outfit lokal für Headlines / Branding
-const outfit = localFont({
+const brandfont = localFont({
   src: [
+    {
+      path: "../public/assets/typo/outfit-v15-latin_latin-ext-200.woff2",
+      weight: "200",
+      style: "thin",
+    },
     {
       path: "../public/assets/typo/outfit-v15-latin_latin-ext-300.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/assets/typo/outfit-v15-latin_latin-ext-600.woff2",
-      weight: "600",
-      style: "normal",
+      path: "../public/assets/typo/outfit-v15-latin_latin-ext-500.woff2",
+      weight: "500",
+      style: "medium",
     },
     {
       path: "../public/assets/typo/outfit-v15-latin_latin-ext-700.woff2",
       weight: "700",
-      style: "normal",
+      style: "bold",
     },
   ],
   variable: "--font-sans",
@@ -54,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`scroll-smooth ${outfit.variable}`}
+      className={`scroll-smooth ${brandfont.variable}`}
     >
       {/* <GoogleAnalytics gaId="G-BE6TC9HB85" /> */}
       <PostHogProvider>

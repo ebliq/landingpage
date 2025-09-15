@@ -19,33 +19,29 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Link className="block max-w-[34px] sm:max-w-[34px]" href="/">
+              <Link className="block max-w-[50px] sm:max-w-[50px]" href="/">
                 <Image
                   alt="Logo"
-                  width="34"
-                  height="34"
+                  width="50"
+                  height="50"
                   decoding="async"
                   data-nimg="1"
                   className="block dark:hidden"
                   src="/logo.svg"
                   style={{
                     color: "transparent",
-                    width: "auto",
-                    height: "auto",
                   }}
                 />
                 <Image
                   alt="Logo"
-                  width="34"
-                  height="34"
+                  width="50"
+                  height="50"
                   decoding="async"
                   data-nimg="1"
                   className="hidden dark:block"
                   src="/logo.svg"
                   style={{
                     color: "transparent",
-                    width: "auto",
-                    height: "auto",
                   }}
                 />
               </Link>

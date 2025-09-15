@@ -1,16 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="708.859" height="627.761" viewBox="0 0 708.859 627.761">
-  <g id="network" transform="translate(0.001 0)">
-    <g id="Gruppe_50" data-name="Gruppe 50" transform="translate(-519.585 -207.509)">
-      <path id="Pfad_244" data-name="Pfad 244" d="M1052.38,835.27h-320.8c-25.8-1.181-50.17-21.839-73.141-51.438-31.971-41.2-60.592-99.716-80.906-147.151l366.088.388Z" fill="#5ab1ba" fill-rule="evenodd"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 709 628" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="network" transform="matrix(1,0,0,1,0.001,0)">
+        <g id="Gruppe_50" transform="matrix(1,0,0,1,-519.585,-207.509)">
+            <path id="Pfad_244" d="M1052.38,835.27L731.58,835.27C705.78,834.089 681.41,813.431 658.439,783.832C626.468,742.632 597.847,684.116 577.533,636.681L943.621,637.069L1052.38,835.27Z" style="fill:rgb(162,61,142);"/>
+        </g>
+        <g id="Gruppe_51" transform="matrix(1,0,0,1,-519.585,-207.509)">
+            <path id="Pfad_245" d="M696.144,207.891L807.779,410.479L655.653,657.166C632.981,701.059 635.67,741.695 655.553,780.123C605.111,708.828 563.753,634.05 528.976,556.749C511.276,523.401 520.218,489.085 542.3,454.293L696.144,207.891Z" style="fill:rgb(135,170,222);"/>
+        </g>
+        <g id="Gruppe_52" transform="matrix(1,0,0,1,-519.585,-207.509)">
+            <path id="Pfad_246" d="M807.779,410.479L696.144,207.891L1008.08,207.891C1008.08,207.891 1054.89,198.31 1097.14,275.154C1139.39,351.998 1172.64,410.342 1172.64,410.342L807.779,410.479Z" style="fill:rgb(46,95,167);"/>
+        </g>
+        <g id="Gruppe_53" transform="matrix(1,0,0,1,-519.585,-207.509)">
+            <path id="Pfad_247" d="M1052.38,835.27L943.617,637.07L1077.71,410.913C1101.68,371.95 1116.46,336.507 1108.71,296.28L1220.15,488.2C1220.15,488.2 1239.37,530.724 1219.29,567.924C1199.21,605.124 1052.38,835.27 1052.38,835.27Z" style="fill:rgb(31,63,112);"/>
+        </g>
     </g>
-    <g id="Gruppe_51" data-name="Gruppe 51" transform="translate(-519.585 -207.509)">
-      <path id="Pfad_245" data-name="Pfad 245" d="M696.144,207.891,807.779,410.479,655.653,657.166c-22.672,43.893-19.983,84.529-.1,122.957-50.442-71.295-91.8-146.073-126.577-223.374-17.7-33.348-8.758-67.664,13.324-102.456Z" fill="#ffd368" fill-rule="evenodd"/>
-    </g>
-    <g id="Gruppe_52" data-name="Gruppe 52" transform="translate(-519.585 -207.509)">
-      <path id="Pfad_246" data-name="Pfad 246" d="M807.779,410.479,696.144,207.891H1008.08s46.81-9.581,89.06,67.263,75.5,135.188,75.5,135.188Z" fill="#f6ba49" fill-rule="evenodd"/>
-    </g>
-    <g id="Gruppe_53" data-name="Gruppe 53" transform="translate(-519.585 -207.509)">
-      <path id="Pfad_247" data-name="Pfad 247" d="M1052.38,835.27l-108.763-198.2L1077.71,410.913c23.97-38.963,38.75-74.406,31-114.633L1220.15,488.2s19.22,42.524-.86,79.724S1052.38,835.27,1052.38,835.27Z" fill="#438c97" fill-rule="evenodd"/>
-    </g>
-  </g>
 </svg>

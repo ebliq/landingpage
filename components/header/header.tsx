@@ -15,33 +15,29 @@ export default function Header() {
       <div className="container relative max-w-[1400px]">
         <div className="flex items-center justify-between">
           <div className="block py-4 lg:py-0">
-            <Link className="block max-w-[34px] sm:max-w-[34px]" href="/">
+            <Link className="block max-w-[50x] sm:max-w-[50px]" href="/">
               <Image
                 alt="Logo"
-                width="34"
-                height="34"
+                width="50"
+                height="50"
                 decoding="async"
                 data-nimg="1"
                 className="block dark:hidden"
                 src="/logo.svg"
                 style={{
                   color: "transparent",
-                  width: "auto",
-                  height: "auto",
                 }}
               />
               <Image
                 alt="Logo"
-                width="34"
-                height="34"
+                width="50"
+                height="50"
                 decoding="async"
                 data-nimg="1"
                 className="hidden dark:block"
                 src="/logo.svg"
                 style={{
                   color: "transparent",
-                  width: "auto",
-                  height: "auto",
                 }}
               />
             </Link>
@@ -76,7 +72,6 @@ export default function Header() {
               <ul className="items-center space-y-3 lg:flex lg:space-x-8 lg:space-y-0 xl:space-x-10">
                 <li className="menu-item">
                   <Link
-                    className="lg:py-7 ud-menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary hover:text-blue-700"
                     href="/#features"
                     onClick={handleLinkClick}
                   >
@@ -85,7 +80,6 @@ export default function Header() {
                 </li>
                 <li className="menu-item">
                   <Link
-                    className="lg:py-7 ud-menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary hover:text-blue-700"
                     href="/about-us"
                     onClick={handleLinkClick}
                   >
@@ -94,7 +88,6 @@ export default function Header() {
                 </li>
                 <li className="menu-item">
                   <Link
-                    className="lg:py-7 ud-menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary hover:text-blue-700"
                     href="/privacy"
                     onClick={handleLinkClick}
                   >
@@ -103,7 +96,6 @@ export default function Header() {
                 </li>
                 <li className="menu-item">
                   <Link
-                    className="lg:py-7 ud-menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary hover:text-blue-700"
                     href="/pricing"
                     onClick={handleLinkClick}
                   >
@@ -113,7 +105,6 @@ export default function Header() {
                 {/*
                 <li className="menu-item">
                   <Link
-                    className="lg:py-7 ud-menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary hover:text-blue-700"
                     href="/blog"
                     onClick={handleLinkClick}
                   >
@@ -126,7 +117,8 @@ export default function Header() {
           </div>
           <div className="mr-[60px] flex items-center justify-end lg:mr-0">
             <Link
-              className="hidden px-6 py-[10px] text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary sm:inline-block hover:text-blue-700"
+              className="button"
+              target="_blank"
               href="https://app.ebliq.de/sign-in?redirect_url=https%3A%2F%2Fapp.ebliq.de%2F"
             >
               Login

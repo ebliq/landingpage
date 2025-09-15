@@ -23,3 +23,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   @apply font-sans font-bold; 
 }
+
+nav  li.menu-item a {
+  @apply lg:py-7 inline-flex items-center text-lg lg:text-xl hover:text-primary;
+}
+
+.button {
+  @apply px-6 py-2 font-medium sm:inline-block rounded-[3px] bg-primary text-white hover:bg-primary-700 border-r-[3px] border-accent border-solid
+  /*inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 px-4 py-2 h-12 gap-2 bg-blue-600 text-white hover:bg-blue-700*/
+}

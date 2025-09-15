@@ -52,6 +52,7 @@ module.exports = {
       colors: {
         // === Brandfarben ===
         blue: {
+          DEFAULT: "#2E5FA7",
           50:  "#EFF4FB",
           100: "#D7E3F4",
           200: "#AFC6E9",
@@ -64,6 +65,7 @@ module.exports = {
           900: "#122440",
         },
         violet: {
+          DEFAULT: "#A23D8E",
           50:  "#F9F0F8",
           100: "#F1DAEC",
           200: "#E3B5DA",
@@ -76,6 +78,7 @@ module.exports = {
           900: "#3B1634",
         },
         gray: {
+          DEFAULT: "#727988",
           50:  "#F6F7F8",
           100: "#EEEFF2",
           200: "#D7DAE0",
@@ -88,6 +91,7 @@ module.exports = {
           900: "#1D212B",
         },
         red: {
+          DEFAULT: "#E74B4B",
           50:  "#FDEDED",
           100: "#F9D2D2",
           200: "#F4AEAE",
@@ -100,6 +104,7 @@ module.exports = {
           900: "#510B0B",
         },
         green: {
+          DEFAULT: "#1FBF75",
           50:  "#EDFCF5",
           100: "#D3F8E7",
           200: "#A7F1CE",
@@ -112,6 +117,7 @@ module.exports = {
           900: "#0B462B",
         },
         yellow: {
+          DEFAULT: "#FFC542",
           50:  "#FFF9EB",
           100: "#FFF0CC",
           200: "#FFE3A3",
@@ -128,6 +134,7 @@ module.exports = {
 
         // === Semantic Aliases ===
         primary: {
+          DEFAULT: "#2E5FA7",
           50:  "#EFF4FB",
           100: "#D7E3F4",
           200: "#AFC6E9",
@@ -137,9 +144,10 @@ module.exports = {
           600: "#264F8C",
           700: "#1F3F70",
           800: "#183258",
-            900: "#122440",
+          900: "#122440",
         },
         secondary: {
+          DEFAULT: "#A23D8E",
           50:  "#F9F0F8",
           100: "#F1DAEC",
           200: "#E3B5DA",
@@ -184,9 +192,9 @@ module.exports = {
       },
       
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        /*lg: "var(--radius)",
+        md: "calc(var(--radius) - 1px)",
+        sm: "calc(var(--radius) - 3px)",*/
       },
       keyframes: {
         "accordion-down": {
