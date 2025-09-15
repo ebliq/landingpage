@@ -110,6 +110,7 @@ export default function Header() {
                     Preise
                   </Link>
                 </li>
+                {/*
                 <li className="menu-item">
                   <Link
                     className="lg:py-7 ud-menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary hover:text-blue-700"
@@ -119,6 +120,7 @@ export default function Header() {
                     Blog
                   </Link>
                 </li>
+                */}
               </ul>
             </nav>
           </div>

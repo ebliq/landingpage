@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: var(--color-white);   /* Soft White */
+  --black: var(--color-black);   /* Deep Navy als Near-Black */
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -15,7 +15,11 @@
 } */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-black);
+  background-color: var(--color-white); 
+  @apply font-sans text-base leading-relaxed; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans font-bold; 
 }
