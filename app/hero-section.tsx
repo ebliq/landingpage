@@ -15,14 +15,13 @@ export default function HeroSection() {
 
       <div className="relative z-10 container mx-auto h-full flex items-center">
         <div className="max-w-2xl px-6 py-12 md:py-0">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl mb-4">
-            Medizin neu denken:{" "}
-            <span className="bg-gradient-to-r from-blue-600  to-fuchsia-700 bg-clip-text text-transparent">
-              Künstliche Intelligenz
-            </span>{" "}
-            die Ärzte entlastet.
+          <h1 className="text-4xl leading-[1.1] sm:text-5xl sm:leading-[1.1] xl:text-6xl xl:leading-[1.1]">
+            Medizin neu denken:<br />
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Künstliche Intelligenz</span><br />
+              die Ärzte entlastet.
           </h1>
-          <p className="text-lg text-muted-foreground mb-4">
+          <p className="text-xl md:text-2xl my-10">
             Mit KI-gestützter Analyse bringt unsere App <br />
             Effizienz in jede Praxis: Schnelle Anamnese,
             <br /> lückenlose Dokumentation, optimale <br />
@@ -31,29 +30,28 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-4 mt-4">
             <Button
               variant={"default"}
-              className={`h-12 gap-2 bg-blue-600 text-white hover:bg-blue-700`}
+              size={"lg"}
               asChild
             >
               <a href="https://app.ebliq.de/sign-up?redirect_url=https%3A%2F%2Fapp.ebliq.de%2F">
-                <LucideImagePlay className="h-5 w-5" />
-                Jetzt kostenlos Testen
+                <LucideImagePlay className="h-5 w-5 mr-3" />
+                Jetzt kostenlos testen
               </a>
             </Button>
-
             <Button
               variant="ghost"
-              className={`h-12 gap-2 hover:text-blue-600`}
+              size={"lg"}
               asChild
             >
               <a
                 href="https://www.loom.com/share/40697f79eb1340d686eec6638283ba03?sid=82f9a33c-ca62-489d-bfdd-71fecd220b5d"
                 className="flex items-center"
               >
-                <PlayCircleIcon className="h-8 w-8" />
+                <PlayCircleIcon className="h-8 w-8 mr-3" />
                 <div className="flex flex-col items-start">
-                  <span>Demo anschauen</span>
-                  <span className="text-xs text-muted-foreground">
-                    schau dir an, wie es funktioniert
+                  <span className="font-semibold">Demo anschauen</span>
+                  <span className="text-sm">
+                    Schau dir an, wie es funktioniert
                   </span>
                 </div>
               </a>

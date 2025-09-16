@@ -13,7 +13,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="w-full bg-gradient-to-r from-blue-950 to-fuchsia-950 text-white">
+    <footer className="w-full bg-gradient-to-r from-primary-900 to-secondary-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Logo and Description */}
@@ -45,7 +45,7 @@ export function Footer() {
                   }}
                 />
               </Link>
-              <span className="text-xl font-semibold">eBliq</span>
+              <span className="text-4xl font-bold pl-4">eBliq</span>
             </div>
             <p className="text-muted-foreground">
               Mit KI-gestützter Analyse bringt unsere App Effizienz in jede
@@ -56,37 +56,25 @@ export function Footer() {
 
           {/* Navigation Columns */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Home</h3>
+            <h3 className="text-muted-foreground">Home</h3>
             <ul className="space-y-2">
-              <li className="hover:opacity-80">
-                <Link
-                  href="/"
-                  className="text-muted-foreground hover:text-primary"
-                >
+              <li className="">
+                <Link href="/">
                   Features
                 </Link>
               </li>
               <li className="hover:opacity-80">
-                <Link
-                  href="/about-us"
-                  className="text-muted-foreground hover:text-primary"
-                >
+                <Link href="/about-us">
                   Über uns
                 </Link>
               </li>
               <li className="hover:opacity-80">
-                <Link
-                  href="/privacy"
-                  className="text-muted-foreground hover:text-primary"
-                >
+                <Link href="/privacy">
                   Datenschutz
                 </Link>
               </li>
               <li className="hover:opacity-80">
-                <Link
-                  href="/pricing"
-                  className="text-muted-foreground hover:text-primary"
-                >
+                <Link href="/pricing">
                   Preise
                 </Link>
               </li>
@@ -210,9 +198,9 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-primary text-primary-foreground">
+      <div className="text-primary-foreground">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="text-sm">© 2025 eBliq. All rights reserved</div>
+          <div className="text-sm text-gray-100 font-thin">©2025 oseven GmbH. All rights reserved</div>
 
           <div className="flex items-center gap-6">
             {/* Social Links */}
@@ -236,7 +224,7 @@ export function Footer() {
 
             {/* Legal Links */}
             <div className="md:flex items-center gap-4 text-sm">
-              <Link href="/impressum" className="hover:opacity-80">
+              <Link href="/impressum" className="text-sm text-gray-100 font-thin">
                 Impressum
               </Link>
               {/* <Link href="/impressum" className="hover:opacity-80">
@@ -247,7 +235,7 @@ export function Footer() {
             {/* Back to Top Button */}
             <button
               onClick={scrollToTop}
-              className="p-2 hover:bg-primary-foreground/10 rounded-full transition-colors"
+              className="p-2 text-gray-100 bg-white/20 hover:bg-white/50 rounded-full transition-colors"
               aria-label="Back to top"
             >
               <ArrowUp size={20} />

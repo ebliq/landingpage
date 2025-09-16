@@ -22,19 +22,34 @@ const geistMono = Geist_Mono({
 const brandfont = localFont({
   src: [
     {
-      path: "../public/assets/typo/outfit-v15-latin_latin-ext-200.woff2",
-      weight: "200",
+      path: "../public/assets/typo/outfit-v15-latin_latin-ext-100.woff2",
+      weight: "100",
       style: "thin",
     },
     {
+      path: "../public/assets/typo/outfit-v15-latin_latin-ext-200.woff2",
+      weight: "200",
+      style: "extralight",
+    },
+    {
       path: "../public/assets/typo/outfit-v15-latin_latin-ext-300.woff2",
+      weight: "300",
+      style: "light",
+    },
+    {
+      path: "../public/assets/typo/outfit-v15-latin_latin-ext-regular.woff2",
       weight: "400",
-      style: "normal",
+      style: "regular",
     },
     {
       path: "../public/assets/typo/outfit-v15-latin_latin-ext-500.woff2",
       weight: "500",
       style: "medium",
+    },
+    {
+      path: "../public/assets/typo/outfit-v15-latin_latin-ext-600.woff2",
+      weight: "600",
+      style: "semibold",
     },
     {
       path: "../public/assets/typo/outfit-v15-latin_latin-ext-700.woff2",
@@ -63,11 +78,9 @@ export default function RootLayout({
     >
       {/* <GoogleAnalytics gaId="G-BE6TC9HB85" /> */}
       <PostHogProvider>
-        <body
-          className={`bg-background text-foreground font-sans antialiased`}
-        >
+        <body>
           <Header />
-          <main className="min-h-screen w-full bg-gradient-to-b from-primary-100 to-white pt-14 lg:pt-20 ">
+          <main className="min-h-screen w-full bg-gradient-to-b from-gray-50 to-white">
             {children}
           </main>
           <Footer />

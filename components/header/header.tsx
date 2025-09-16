@@ -11,36 +11,25 @@ export default function Header() {
   };
 
   return (
-    <header className="navbar left-0 top-0 z-50 w-full border-stroke bg-white dark:border-stroke-dark dark:bg-black absolute">
+    <header className="navbar left-0 top-0 z-50 w-full bg-white dark:border-stroke-dark dark:bg-black sticky shadow-md shadow-violoet-800;">
       <div className="container relative max-w-[1400px]">
         <div className="flex items-center justify-between">
-          <div className="block py-4 lg:py-0">
-            <Link className="block max-w-[50x] sm:max-w-[50px]" href="/">
+          <div className="block py-4 lg:py-0 flex items-center gap-2">
+            <Link className="max-w-[50x] sm:max-w-[50px]" href="/">
               <Image
                 alt="Logo"
                 width="50"
                 height="50"
                 decoding="async"
                 data-nimg="1"
-                className="block dark:hidden"
-                src="/logo.svg"
-                style={{
-                  color: "transparent",
-                }}
-              />
-              <Image
-                alt="Logo"
-                width="50"
-                height="50"
-                decoding="async"
-                data-nimg="1"
-                className="hidden dark:block"
+                className=""
                 src="/logo.svg"
                 style={{
                   color: "transparent",
                 }}
               />
             </Link>
+            <div className="text-4xl font-bold text-primary pl-4">eBliq</div>
           </div>
           <button
             className="navbarOpen absolute right-4 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 flex-col items-center justify-center space-y-[6px] font-bold lg:hidden"

@@ -9,8 +9,8 @@ export const plans = [
     name: "Einsteiger",
     description: "Ideal für den Start und kleinere Praxen.",
     priceTag: "€",
-    price: "69,-",
-    priceAddon: "/ Monatlich",
+    price: "69",
+    priceAddon: "/ monatlich",
     features: [
       "100 PDF mit KI imporiteren",
       "50 Anamnesegespräche mit ~10-15 min Länge",
@@ -22,8 +22,8 @@ export const plans = [
     name: "Profi",
     description: "Für etablierte Praxen mit höherem Bedarf.",
     priceTag: "€",
-    price: "279,-",
-    priceAddon: "/ Monatlich",
+    price: "279",
+    priceAddon: "/ monatlich",
     features: [
       "500 PDF mit KI imporiteren",
       "250 Anamnesegespräche mit ~10-15 min Länge",
@@ -34,9 +34,9 @@ export const plans = [
   {
     name: "Business",
     description:
-      "Individuell auf Ihre Bedürfnisse zugeschnitten. Kontaktieren Sie uns für ein maßgeschneidertes Angebot.",
+      "Individuell auf Ihre Bedürfnisse zugeschnitten.",
     priceTag: "",
-    price: "Individuell",
+    price: "auf Anfrage",
     priceAddon: "",
     features: [
       "PDF-Importe, Anamnesegespräche und Arztbriefe nach Vereinbarung",

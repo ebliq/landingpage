@@ -17,18 +17,35 @@
 body {
   color: var(--color-black);
   background-color: var(--color-white); 
-  @apply font-sans text-base leading-relaxed; 
+  @apply font-sans text-base leading-relaxed text-black antialiased text-lg; 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-sans font-bold; 
+  @apply font-sans font-bold;
 }
 
-nav  li.menu-item a {
-  @apply lg:py-7 inline-flex items-center text-lg lg:text-xl hover:text-primary;
+h2 {
+  @apply text-3xl sm:text-4xl my-2 md:my-4 text-black;
+}
+
+h3 {
+  @apply text-2xl mb-2 transition-colors text-black duration-300 group-hover:text-primary;
+}
+
+p {
+  @apply text-lg md:text-xl;
+}
+
+nav li.menu-item a {
+  @apply lg:py-7 inline-flex items-center text-lg lg:text-xl border-b-[3px] border-white text-primary-800;
+  @apply transition duration-300 hover:text-primary hover:border-accent border-solid;
 }
 
 .button {
-  @apply px-6 py-2 font-medium sm:inline-block rounded-[3px] bg-primary text-white hover:bg-primary-700 border-r-[3px] border-accent border-solid
-  /*inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 px-4 py-2 h-12 gap-2 bg-blue-600 text-white hover:bg-blue-700*/
+  @apply px-6 py-2 font-medium sm:inline-block rounded-full bg-primary text-white border-b-[3px] border-accent border-solid;
+  @apply transition duration-300 hover:bg-primary-700 hover:text-primary-100;
+}
+
+footer li a {
+  @apply text-muted-foreground hover:text-primary;
 }

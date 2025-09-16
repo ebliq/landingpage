@@ -7,12 +7,12 @@ interface HeadingProps {
 }
 
 const headingStyles = {
-  1: "text-4xl font-bold tracking-tight mb-4 mt-8",
-  2: "text-3xl font-semibold tracking-tight mb-3 mt-6",
-  3: "text-2xl font-semibold tracking-tight mb-2 mt-4",
-  4: "text-xl font-semibold tracking-tight mb-2 mt-4",
-  5: "text-lg font-semibold tracking-tight mb-2 mt-4",
-  6: "text-base font-semibold tracking-tight mb-2 mt-4",
+  1: "text-4xl font-bold mb-4 mt-8",
+  2: "text-3xl font-semibold mb-3 mt-6",
+  3: "text-2xl font-semibold mb-2 mt-4",
+  4: "text-xl font-semibold mb-2 mt-4",
+  5: "text-lg font-semibold mb-2 mt-4",
+  6: "text-base font-semibold mb-2 mt-4",
 };
 
 export const Heading: React.FC<HeadingProps> = ({
@@ -34,7 +34,7 @@ export const Paragraph: React.FC<ParagraphProps> = ({
   children,
   className,
 }) => {
-  return <p className={`mb-4 leading-relaxed ${className}`}>{children}</p>;
+  return <p className={`mb-4 ${className}`}>{children}</p>;
 };
 
 interface ListProps {

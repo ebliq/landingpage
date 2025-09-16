@@ -174,12 +174,12 @@ module.exports = {
         },
 
         muted: {
-          DEFAULT: "#E9EEFA",     // Gray-50 (blaugetönt)
-          foreground: "#6F7C99",
+          DEFAULT: "#494F5B",     
+          foreground: "#727988",
         },
         accent: {
           DEFAULT: "#A23D8E",     // helles Blau als Akzent
-          foreground: "#E3B5DA",
+          foreground: "#F1DAEC",
         },
         popover: {
           DEFAULT: "#D7E3F4",

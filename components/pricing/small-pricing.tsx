@@ -29,10 +29,10 @@ export function SmallPricingModule() {
     <section className="py-16 px-4 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="">
             Wähle den Plan der zu dir passt
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
+          <p className="max-w-3xl mx-auto">
             Wir bieten flexible Preismodelle, die auf Ihre Bedürfnisse
             zugeschnitten sind. Finden Sie den perfekten Plan, um Ihre Ziele zu
             erreichen, egal ob Sie gerade erst anfangen oder Ihr Geschäft
@@ -41,35 +41,38 @@ export function SmallPricingModule() {
         </div>
 
         {/* Free Tier Card - Consider making it selectable too if needed */}
-        <div className="mb-12 max-w-md mx-auto text-center p-6 border rounded-lg">
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold">Free Tier</h3>
-            <p className="text-muted-foreground">
-              Testen Sie unsere Kernfunktionen kostenlos.
-            </p>
-          </div>
-          <div className="mb-6">
-            <div className="flex items-baseline justify-center mb-6">
-              <span className="text-5xl font-bold">0€</span>
-              <span className="text-muted-foreground ml-2">/ Monat</span>
+        <div className="mb-12 max-w-2xl mx-auto text-center p-6 border border-secondary-200 bg-secondary-50 rounded-sm shadow-sm">
+          <div className="flex flex-wrap md:flex-nowrap">
+            <div className="mb-4">
+              <h3 className="">kostenlose Testversion</h3>
+              <p className="">
+                Nutzen Sie unsere Kernfunktionen kostenfrei.
+              </p>
+              <div className="flex items-baseline justify-center mb-6">
+                <span className="text-5xl font-bold">0 €</span>
+                <span className="text-muted-foreground ml-2">/ monatlich</span>
+              </div>
             </div>
-            <ul className="space-y-4 text-left inline-block">
-              {[
-                "10 PDF mit KI imporiteren",
-                "5 Anamnesegespräche mit ~3 min länge",
-                "5 Arztbrief geneieren",
-              ].map((feature) => (
-                <li key={feature} className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="mb-6">
+              <ul className="space-y-4 text-left inline-block">
+                {[
+                  "10 PDF mit KI auswerten",
+                  "5 Anamnesegespräche mit ~3 min länge",
+                  "5 Arztbriefe generieren",
+                ].map((feature) => (
+                  <li key={feature} className="flex items-start">
+                    <Check className="h-7 w-7 text-green mr-2 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div>
             <Button
-              variant={"outline"}
-              className={cn("w-full py-6 hover:bg-blue-600 hover:text-white")}
+              variant={"secondary"}
+              className="w-full text-md md:text-xl w-1/2"
+              size="lg"
               onClick={() => handleSelectPlan("")} // Example selection
             >
               <Link
@@ -83,7 +86,7 @@ export function SmallPricingModule() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4 mt-20 mb-10">
           {plans.map((plan) => {
             const isActive = activePlan === plan.name; // Check if this plan is active
             return (
@@ -91,24 +94,24 @@ export function SmallPricingModule() {
                 onClick={() => handleSelectPlan(plan.name)}
                 key={plan.name}
                 className={cn(
-                  "relative border rounded-lg overflow-hidden flex flex-col h-full transition-all duration-300",
+                  "relative border border-card bg-card-foreground rounded-sm overflow-hidden bg-primary-50 flex flex-col transition-all duration-300",
                   // Apply blue border and shadow if active
-                  isActive ? "border-blue-500 shadow-xl" : "border-border", // Use default border color otherwise
+                  isActive ? " border border-primary-700 shadow-lg" : "shadow-sm", // Use default border color otherwise
                   // Keep shadow for popular even if not active (optional)
-                  !isActive ? "shadow-lg" : ""
+                  plan.popular ? "m-[-1.5rem] bg-primary-100 z-50" : "z-100"
                 )}
                 // Optional: Add onClick to make cards selectable
                 // onClick={() => setActivePlan(plan.name)}
               >
                 {plan.popular && (
                   <div className="absolute top-6 right-6">
-                    <span className="text-primary font-medium bg-background px-2 py-1 rounded text-sm">
+                    <span className="text-white font-medium bg-gray-600 px-2 py-1 rounded-md text-sm">
                       Meist gewählt
                     </span>
                   </div>
                 )}
                 <CardHeader>
-                  <h3 className="text-2xl font-bold">{plan.name}</h3>
+                  <h3 className="text-3xl text-primary-700">{plan.name}</h3>
                   <p className="text-muted-foreground">{plan.description}</p>
                 </CardHeader>
                 <CardContent className="flex-grow">
@@ -124,7 +127,7 @@ export function SmallPricingModule() {
                   <ul className="space-y-4">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start">
-                        <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
+                        <Check className="h-7 w-7 text-green mr-2 shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -133,12 +136,8 @@ export function SmallPricingModule() {
                 <CardFooter>
                   <Button
                     variant={isActive ? "default" : "outline"}
-                    className={cn(
-                      "w-full py-6",
-                      isActive
-                        ? "bg-blue-600 hover:bg-blue-700 text-white" // Style for active button
-                        : "hover:bg-accent hover:text-accent-foreground" // Style for non-active button
-                    )}
+                    className="w-full"
+                    size="lg"
                   >
                     <Link
                       href={"https://calendly.com/max-oseven/30min"}

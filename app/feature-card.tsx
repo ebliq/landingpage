@@ -25,20 +25,20 @@ const agentsWithIcon = [
   {
     href: "/features/anamnese-bot",
     image: "/agent1.png",
-    headline: "Anamnese Bot",
-    text: "Der Anamnese Bot unterstütz den Arzt bei der optimalen Patientenaufnahme – vollständig, effizient und dokumentationssicher. Ideal bei der Patientenaufnahme.",
+    headline: "Anamnese-Agent",
+    text: "Der Anamnese-Agent unterstütz den Arzt bei der optimalen Patientenaufnahme – vollständig, effizient und dokumentationssicher. Ideal bei der Patientenaufnahme.",
   },
   {
     href: "/features/arztbrief-generator",
     image: "/agent2.png",
-    headline: "Arztbrief Generator",
-    text: "Mit eBiq schreiben sich Arztbriefe fast von selbst. Der Generator übernimmt wichtige Inhalte automatisch – strukturiert, korrekt und zeitsparend.",
+    headline: "Arztbrief-Generator",
+    text: "Mit eBliq schreiben sich Arztbriefe fast von selbst. Der Generator übernimmt wichtige Inhalte automatisch – strukturiert, korrekt und zeitsparend.",
   },
   {
     href: "/features/ai-assistant",
     image: "/agent3.png",
-    headline: "AI Assistant",
-    text: "Mit dem AI Assistant können Patienten wie mit einem echten Teammitglied sprechen. Der Assistent beantwortet Fragen, gibt Informationen und leitet Anfragen weiter",
+    headline: "AI-Assistent",
+    text: "Mit dem integrierten AI-Assistenten sprechen Sie wie mit einem echten Teammitglied. Er beantwortet Fragen, sucht Informationen und leitet Anfragen weiter.",
   },
 ];
 
@@ -160,13 +160,13 @@ export default function FeaturesSection() {
   //   },
   // ];
   return (
-    <section className="py-16 px-4 relative overflow-hidden" id="features">
+    <section className="py-0 px-4 relative overflow-hidden" id="features">
       <div className="max-w-6xl mx-auto relative">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        <div className="text-center my-10 md:my-20">
+          <h2 className="">
             KI-gestützte Gesundheits-App für Ärztinnen und Ärzte
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="max-w-3xl mx-auto">
             Entlaste deinen Praxisalltag: Unsere Lösung kombiniert
             automatisierte Anamnese, effizientes Dokumentenmanagement und smarte
             Arztbrief-Erstellung in einer benutzerfreundlichen App. Mit
