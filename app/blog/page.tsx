@@ -11,7 +11,7 @@ import {
 import { CalendarIcon, UserIcon } from "lucide-react";
 
 export const metadata = {
-  title: "Blog - ebliq Healthcare",
+  title: "Blog - Ebliq Healthcare",
   description: "Insights and updates about AI-powered healthcare solutions",
 };
 

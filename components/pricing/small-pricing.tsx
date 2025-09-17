@@ -77,7 +77,7 @@ export function SmallPricingModule() {
             >
               <Link
                 href={
-                  "https://app.ebliq.de/sign-in?redirect_url=https%3A%2F%2Fapp.ebliq.de%2F"
+                  "https://app.Ebliq.de/sign-in?redirect_url=https%3A%2F%2Fapp.Ebliq.de%2F"
                 }
               >
                 Kostenlos starten

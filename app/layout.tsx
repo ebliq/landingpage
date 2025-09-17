@@ -61,7 +61,7 @@ const brandfont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ebliq Healthcare App",
+  title: "Ebliq Healthcare App",
   description:
     "Für mehr Effizienz im Praxisalltag: Unsere Gesundheits-App vereint KI und benutzerfreundliches Design, damit Ärzte sofort starten können",
 };

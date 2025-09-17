@@ -32,7 +32,7 @@ const agentsWithIcon = [
     href: "/features/arztbrief-generator",
     image: "/agent2.png",
     headline: "Arztbrief-Generator",
-    text: "Mit eBliq schreiben sich Arztbriefe fast von selbst. Der Generator übernimmt wichtige Inhalte automatisch – strukturiert, korrekt und zeitsparend.",
+    text: "Mit Ebliq schreiben sich Arztbriefe fast von selbst. Der Generator übernimmt wichtige Inhalte automatisch – strukturiert, korrekt und zeitsparend.",
   },
   {
     href: "/features/ai-assistant",

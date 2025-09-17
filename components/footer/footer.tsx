@@ -45,7 +45,7 @@ export function Footer() {
                   }}
                 />
               </Link>
-              <span className="text-4xl font-bold pl-4">eBliq</span>
+              <span className="text-4xl font-bold pl-4">Ebliq</span>
             </div>
             <p className="text-muted-foreground">
               Mit KI-gestützter Analyse bringt unsere App Effizienz in jede
@@ -215,7 +215,7 @@ export function Footer() {
                 <Linkedin size={20} />
               </Link> */}
               <Link
-                href="https://www.instagram.com/ebliq_ai/"
+                href="https://www.instagram.com/Ebliq_ai/"
                 className="hover:opacity-80"
               >
                 <InstagramIcon />

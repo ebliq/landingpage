@@ -12,7 +12,7 @@ export default function Page() {
             zukunftssichere Innovationen im Gesundheitswesen
           </h2>
           <p className="text-blue-800 leading-relaxed">
-            Sicherheit steht bei ebliq im Mittelpunkt – nicht als nachträgliche
+            Sicherheit steht bei Ebliq im Mittelpunkt – nicht als nachträgliche
             Maßnahme, sondern als Grundprinzip. Unsere durchdachten Prozesse
             schützen deine Daten, wahren die Privatsphäre deines Workspaces und
             sorgen für höchste Informationsgenauigkeit.
@@ -24,7 +24,7 @@ export default function Page() {
         <div className=" max-w-6xl mx-auto">
           <h1 className="font-semibold text-white mb-4">Goverance</h1>
           <h2 className="text-blue-100 leading-10 mb-6 text-4xl font-semibold line-height:2">
-            Als Ihr Partner im Gesundheitswesen legt ebliq höchsten Wert auf
+            Als Ihr Partner im Gesundheitswesen legt Ebliq höchsten Wert auf
             Datenschutz und Informationssicherheit. Wir wissen, wie wichtig der
             verantwortungsvolle Umgang mit sensiblen Patientendaten ist – gerade
             im ärztlichen Alltag.
@@ -47,7 +47,7 @@ export default function Page() {
                 Gezielter Datenzugriff
               </span>
               <p className="text-white">
-                Bei ebliq gilt das Prinzip der minimalen Rechtevergabe: Der
+                Bei Ebliq gilt das Prinzip der minimalen Rechtevergabe: Der
                 Zugriff auf medizinische Daten ist streng auf autorisiertes
                 Fachpersonal beschränkt und wird fortlaufend überwacht. So
                 stellen wir sicher, dass Patientendaten nur von den Personen
@@ -149,11 +149,11 @@ export default function Page() {
             </h1>
             <p className="leading-relaxed mb-6">
               <strong>
-                Sicherheitsmaßnahmen von ebliq für den medizinischen Alltag
+                Sicherheitsmaßnahmen von Ebliq für den medizinischen Alltag
               </strong>
             </p>
             <p className=" leading-relaxed mb-8">
-              Bei <strong className="text-blue-700">ebliq</strong> steht der
+              Bei <strong className="text-blue-700">Ebliq</strong> steht der
               Schutz sensibler Gesundheitsdaten an oberster Stelle. Deshalb
               setzen wir auf ein umfassendes Sicherheitskonzept, das speziell
               auf die Anforderungen im Gesundheitswesen zugeschnitten ist:

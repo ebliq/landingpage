@@ -29,7 +29,7 @@ export default function Header() {
                 }}
               />
             </Link>
-            <div className="text-4xl font-bold text-primary pl-4">eBliq</div>
+            <div className="text-4xl font-bold text-primary pl-4">Ebliq</div>
           </div>
           <button
             className="navbarOpen absolute right-4 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 flex-col items-center justify-center space-y-[6px] font-bold lg:hidden"
@@ -108,7 +108,7 @@ export default function Header() {
             <Link
               className="button"
               target="_blank"
-              href="https://app.ebliq.de/sign-in?redirect_url=https%3A%2F%2Fapp.ebliq.de%2F"
+              href="https://app.Ebliq.de/sign-in?redirect_url=https%3A%2F%2Fapp.Ebliq.de%2F"
             >
               Login
             </Link>

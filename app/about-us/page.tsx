@@ -18,7 +18,7 @@ export default function Page() {
             medizinisches Fachpersonal zu optimieren.
           </p>
           <p className="text-blue-800 leading-relaxed">
-            Bei ebliq glauben wir an die Kraft der Zusammenarbeit und des
+            Bei Ebliq glauben wir an die Kraft der Zusammenarbeit und des
             kontinuierlichen Lernens, um zukunftssichere und benutzerfreundliche
             Produkte zu entwickeln, die den höchsten Standards an Sicherheit und
             Compliance entsprechen.
@@ -92,7 +92,7 @@ export default function Page() {
       <section className="py-12 px-4 mt-8">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
-            Karrieremöglichkeiten bei ebliq
+            Karrieremöglichkeiten bei Ebliq
           </h2>
           <div className="space-y-4 max-w-3xl mx-auto">
             {/* Job 1: Software Engineer */}
@@ -117,7 +117,7 @@ export default function Page() {
               <div className="text-blue-900 mt-4 space-y-3">
                 <h4 className="font-semibold text-blue-900">Über die Rolle</h4>
                 <p>
-                  Als Software Engineer bei ebliq bist Du maßgeblich an der
+                  Als Software Engineer bei Ebliq bist Du maßgeblich an der
                   Entwicklung und Wartung unserer innovativen
                   Gesundheitsplattform beteiligt. Du arbeitest in einem agilen
                   Team an der Konzeption, Implementierung und Optimierung von
@@ -207,7 +207,7 @@ export default function Page() {
               <div className="text-blue-900 mt-4 space-y-3">
                 <h4 className="font-semibold text-blue-900">Über die Rolle</h4>
                 <p>
-                  Als AI Engineer bei ebliq spielst Du eine Schlüsselrolle bei
+                  Als AI Engineer bei Ebliq spielst Du eine Schlüsselrolle bei
                   der Entwicklung und Implementierung von KI-gestützten
                   Lösungen, die das Gesundheitswesen revolutionieren. Du
                   arbeitest an der Schnittstelle von Datenwissenschaft,
@@ -307,7 +307,7 @@ export default function Page() {
               <div className="text-blue-900 mt-4 space-y-3">
                 <h4 className="font-semibold text-blue-900">Über die Rolle</h4>
                 <p>
-                  Als Arzt/Ärztin mit KI-Erfahrung bei ebliq bist Du die
+                  Als Arzt/Ärztin mit KI-Erfahrung bei Ebliq bist Du die
                   entscheidende Brücke zwischen medizinischer Praxis und
                   technologischer Innovation. Du bringst Deine klinische
                   Expertise ein, um sicherzustellen, dass unsere KI-Lösungen
@@ -401,7 +401,7 @@ export default function Page() {
               <div className="text-blue-900 mt-4 space-y-3">
                 <h4 className="font-semibold text-blue-900">Über die Rolle</h4>
                 <p>
-                  Als UX/UI Designer bei ebliq bist Du verantwortlich für die
+                  Als UX/UI Designer bei Ebliq bist Du verantwortlich für die
                   Gestaltung intuitiver, benutzerfreundlicher und ästhetisch
                   ansprechender Oberflächen für unsere digitalen
                   Gesundheitsprodukte. Du stellst sicher, dass unsere

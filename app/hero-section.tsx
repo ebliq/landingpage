@@ -33,7 +33,7 @@ export default function HeroSection() {
               size={"lg"}
               asChild
             >
-              <a href="https://app.ebliq.de/sign-up?redirect_url=https%3A%2F%2Fapp.ebliq.de%2F">
+              <a href="https://app.Ebliq.de/sign-up?redirect_url=https%3A%2F%2Fapp.Ebliq.de%2F">
                 <LucideImagePlay className="h-5 w-5 mr-3" />
                 Jetzt kostenlos testen
               </a>
