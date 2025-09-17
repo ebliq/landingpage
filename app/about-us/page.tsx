@@ -6,18 +6,18 @@ export default function Page() {
     <>
       <section className="py-20 px-4 rounded-lg text-center">
         <div className=" max-w-2xl mx-auto">
-          <h1 className="text-lg font-semibold text-blue-500 mb-2">Über uns</h1>
-          <h2 className="text-4xl font-bold text-blue-900 mb-6">
+          <h1 className="font-light text-3xl text-primary">Über uns</h1>
+          <h2 className="mb-12">
             Lernen Sie unser Team und unsere Vision kennen
           </h2>
-          <p className="text-blue-800 leading-relaxed mb-4">
+          <p className="mb-4">
             Wir sind ein engagiertes Team von Experten, das sich der
             Revolutionierung des Gesundheitswesens durch innovative
             Technologielösungen verschrieben hat. Unsere Mission ist es, die
             Patientenversorgung zu verbessern und die Arbeitsabläufe für
             medizinisches Fachpersonal zu optimieren.
           </p>
-          <p className="text-blue-800 leading-relaxed">
+          <p className="">
             Bei Ebliq glauben wir an die Kraft der Zusammenarbeit und des
             kontinuierlichen Lernens, um zukunftssichere und benutzerfreundliche
             Produkte zu entwickeln, die den höchsten Standards an Sicherheit und
@@ -25,13 +25,13 @@ export default function Page() {
           </p>
         </div>
       </section>
-      <section className="bg-gradient-to-br from-50% from-blue-950 to-fuchsia-900 py-12 px-4 rounded-lg shadow-md mt-8">
+      <section className="bg-gradient-to-br from-50% from-primary-900 to-secondary-900 py-12 px-4 shadow-md mt-8">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Unsere Gründer
           </h2>
           <div className="flex flex-wrap justify-center gap-8">
-            <div className="bg-blue-900/30 text-white rounded-lg shadow-lg p-8 w-full sm:w-1/2 lg:w-1/3 text-center">
+            <div className="bg-primary/10 text-white rounded-sm shadow-md p-8 w-full sm:w-1/2 lg:w-1/3 text-center">
               <Link
                 href="https://www.linkedin.com/in/maximilianhaensel/"
                 target="_blank"
@@ -51,15 +51,15 @@ export default function Page() {
                   href="https://www.linkedin.com/in/maximilianhaensel/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="hover:underline text-white"
                 >
                   Max Hänsel
                 </Link>
               </h3>
-              <p className="text-blue-100">Mitgründer</p>
+              <p className="text-muted-foreground">Mitgründer</p>
             </div>
 
-            <div className="bg-blue-900/30 text-white rounded-lg shadow-lg p-8 w-full sm:w-1/2 lg:w-1/3 text-center">
+            <div className="bg-primary/10 text-white rounded-sm shadow-md p-8 w-full sm:w-1/2 lg:w-1/3 text-center">
               <Link
                 href="https://www.linkedin.com/in/ddppham/"
                 target="_blank"
@@ -79,12 +79,12 @@ export default function Page() {
                   href="https://www.linkedin.com/in/ddppham/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="hover:underline text-white"
                 >
                   Phillip Pham
                 </Link>
               </h3>
-              <p className="text-blue-100">Mitgründer</p>
+              <p className="text-muted-foreground">Mitgründer</p>
             </div>
           </div>
         </div>
@@ -96,13 +96,13 @@ export default function Page() {
           </h2>
           <div className="space-y-4 max-w-3xl mx-auto">
             {/* Job 1: Software Engineer */}
-            <details className="group bg-white p-6 rounded-lg shadow cursor-pointer">
-              <summary className="flex justify-between items-center font-semibold text-blue-900 list-none">
+            <details className="group">
+              <summary className="">
                 Software Engineer
                 <span className="text-blue-900 group-open:rotate-180 transition-transform duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
+                    className="h-7 w-7"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -114,8 +114,8 @@ export default function Page() {
                   </svg>
                 </span>
               </summary>
-              <div className="text-blue-900 mt-4 space-y-3">
-                <h4 className="font-semibold text-blue-900">Über die Rolle</h4>
+              <div className="mt-4 pb-4 space-y-3">
+                <h4 className="">Über die Rolle</h4>
                 <p>
                   Als Software Engineer bei Ebliq bist Du maßgeblich an der
                   Entwicklung und Wartung unserer innovativen
@@ -124,7 +124,7 @@ export default function Page() {
                   Softwarelösungen, die einen echten Unterschied im Leben von
                   Patienten und medizinischem Fachpersonal machen.
                 </p>
-                <h4 className="font-semibold text-blue-900">Unser Ansatz</h4>
+                <h4 className="">Unser Ansatz</h4>
                 <p>
                   Wir setzen auf moderne Technologien und agile
                   Entwicklungsmethoden. Clean Code, Test-Driven Development und
@@ -133,7 +133,7 @@ export default function Page() {
                   Technologien wie TypeScript, React, Node.js, GraphQL und
                   Cloud-Plattformen zu arbeiten.
                 </p>
-                <h4 className="font-semibold text-blue-900">
+                <h4 className="">
                   Verantwortlichkeiten
                 </h4>
                 <ul className="list-disc list-inside space-y-1">
@@ -154,7 +154,7 @@ export default function Page() {
                     Beitrag zur technischen Architektur und Technologieauswahl.
                   </li>
                 </ul>
-                <h4 className="font-semibold text-blue-900">Über Dich</h4>
+                <h4 className="">Über Dich</h4>
                 <p>
                   Du bist ein leidenschaftlicher Entwickler mit einem Auge fürs
                   Detail und einem starken Wunsch, hochwertige Software zu
@@ -162,7 +162,7 @@ export default function Page() {
                   proaktive Can-Do-Einstellung mit. Du lernst gerne Neues und
                   teilst Dein Wissen mit Kollegen.
                 </p>
-                <h4 className="font-semibold text-blue-900">Qualifikationen</h4>
+                <h4 className="">Qualifikationen</h4>
                 <ul className="list-disc list-inside space-y-1">
                   <li>
                     Abgeschlossenes Studium der Informatik oder eine
@@ -186,13 +186,13 @@ export default function Page() {
             </details>
 
             {/* Job 2: AI Engineer */}
-            <details className="group bg-white p-6 rounded-lg shadow cursor-pointer">
-              <summary className="flex justify-between items-center font-semibold text-blue-900 list-none">
+            <details className="group">
+              <summary className="">
                 AI Engineer
                 <span className="text-blue-900 group-open:rotate-180 transition-transform duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
+                    className="h-7 w-7"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -204,8 +204,8 @@ export default function Page() {
                   </svg>
                 </span>
               </summary>
-              <div className="text-blue-900 mt-4 space-y-3">
-                <h4 className="font-semibold text-blue-900">Über die Rolle</h4>
+              <div className="mt-4 pb-4 space-y-3">
+                <h4 className="">Über die Rolle</h4>
                 <p>
                   Als AI Engineer bei Ebliq spielst Du eine Schlüsselrolle bei
                   der Entwicklung und Implementierung von KI-gestützten
@@ -215,7 +215,7 @@ export default function Page() {
                   Verbesserung von Diagnosen, Behandlungen und Arbeitsabläufen
                   zu schaffen.
                 </p>
-                <h4 className="font-semibold text-blue-900">Unser Ansatz</h4>
+                <h4 className="">Unser Ansatz</h4>
                 <p>
                   Wir nutzen modernste Machine-Learning- und
                   Deep-Learning-Techniken, um aus komplexen medizinischen Daten
@@ -224,7 +224,7 @@ export default function Page() {
                   verantwortungsvoller KI-Modelle. Du arbeitest eng mit
                   medizinischen Experten und Softwareentwicklern zusammen.
                 </p>
-                <h4 className="font-semibold text-blue-900">
+                <h4 className="">
                   Verantwortlichkeiten
                 </h4>
                 <ul className="list-disc list-inside space-y-1">
@@ -251,7 +251,7 @@ export default function Page() {
                     Bereich KI im Gesundheitswesen.
                   </li>
                 </ul>
-                <h4 className="font-semibold text-blue-900">Über Dich</h4>
+                <h4 className="">Über Dich</h4>
                 <p>
                   Du bist fasziniert von den Möglichkeiten der Künstlichen
                   Intelligenz und möchtest Dein Wissen im Gesundheitsbereich
@@ -260,7 +260,7 @@ export default function Page() {
                   bist motiviert, anspruchsvolle Probleme zu lösen und
                   innovative Produkte zu entwickeln.
                 </p>
-                <h4 className="font-semibold text-blue-900">Qualifikationen</h4>
+                <h4 className="">Qualifikationen</h4>
                 <ul className="list-disc list-inside space-y-1">
                   <li>
                     Abgeschlossenes Studium in Informatik, Data Science,
@@ -286,13 +286,13 @@ export default function Page() {
             </details>
 
             {/* Job 3: Doctor with AI Experience */}
-            <details className="group bg-white p-6 rounded-lg shadow cursor-pointer">
-              <summary className="flex justify-between items-center font-semibold text-blue-900 list-none">
+            <details className="group">
+              <summary className="">
                 Arzt/Ärztin mit KI-Erfahrung
                 <span className="text-blue-900 group-open:rotate-180 transition-transform duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
+                    className="h-7 w-7"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -304,8 +304,8 @@ export default function Page() {
                   </svg>
                 </span>
               </summary>
-              <div className="text-blue-900 mt-4 space-y-3">
-                <h4 className="font-semibold text-blue-900">Über die Rolle</h4>
+              <div className="mt-4 pb-4 space-y-3">
+                <h4 className="">Über die Rolle</h4>
                 <p>
                   Als Arzt/Ärztin mit KI-Erfahrung bei Ebliq bist Du die
                   entscheidende Brücke zwischen medizinischer Praxis und
@@ -314,7 +314,7 @@ export default function Page() {
                   klinisch relevant, sicher und effektiv sind und den
                   Bedürfnissen von Ärzten und Patienten entsprechen.
                 </p>
-                <h4 className="font-semibold text-blue-900">Unser Ansatz</h4>
+                <h4 className="">Unser Ansatz</h4>
                 <p>
                   Wir glauben, dass die besten digitalen Gesundheitslösungen
                   durch die enge Zusammenarbeit von Medizinern und Technologen
@@ -323,7 +323,7 @@ export default function Page() {
                   Daten zu interpretieren und die Validierung unserer Produkte
                   zu begleiten.
                 </p>
-                <h4 className="font-semibold text-blue-900">
+                <h4 className="">
                   Verantwortlichkeiten
                 </h4>
                 <ul className="list-disc list-inside space-y-1">
@@ -351,7 +351,7 @@ export default function Page() {
                     Stakeholdern.
                   </li>
                 </ul>
-                <h4 className="font-semibold text-blue-900">Über Dich</h4>
+                <h4 className="">Über Dich</h4>
                 <p>
                   Du bist approbierte/r Arzt/Ärztin mit einem starken Interesse
                   an digitalen Technologien und Künstlicher Intelligenz im
@@ -361,7 +361,7 @@ export default function Page() {
                   kannst komplexe medizinische Sachverhalte verständlich
                   erklären.
                 </p>
-                <h4 className="font-semibold text-blue-900">Qualifikationen</h4>
+                <h4 className="">Qualifikationen</h4>
                 <ul className="list-disc list-inside space-y-1">
                   <li>Abgeschlossenes Medizinstudium und Approbation.</li>
                   <li>Klinische Erfahrung in einem relevanten Fachgebiet.</li>
@@ -380,13 +380,13 @@ export default function Page() {
             </details>
 
             {/* Job 4: UX/UI Designer */}
-            <details className="group bg-white p-6 rounded-lg shadow cursor-pointer">
-              <summary className="flex justify-between items-center font-semibold text-blue-900 list-none">
+            <details className="group">
+              <summary className="">
                 UX/UI Designer
                 <span className="text-blue-900 group-open:rotate-180 transition-transform duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
+                    className="h-7 w-7"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -398,8 +398,8 @@ export default function Page() {
                   </svg>
                 </span>
               </summary>
-              <div className="text-blue-900 mt-4 space-y-3">
-                <h4 className="font-semibold text-blue-900">Über die Rolle</h4>
+              <div className="mt-4 pb-4 space-y-3">
+                <h4 className="">Über die Rolle</h4>
                 <p>
                   Als UX/UI Designer bei Ebliq bist Du verantwortlich für die
                   Gestaltung intuitiver, benutzerfreundlicher und ästhetisch
@@ -409,7 +409,7 @@ export default function Page() {
                   Personal und Patienten optimal entsprechen und eine exzellente
                   User Experience bieten.
                 </p>
-                <h4 className="font-semibold text-blue-900">Unser Ansatz</h4>
+                <h4 className="">Unser Ansatz</h4>
                 <p>
                   Wir verfolgen einen nutzerzentrierten Designprozess, der User
                   Research, Prototyping und iteratives Testing umfasst. Du
@@ -418,7 +418,7 @@ export default function Page() {
                   elegante und effektive Designlösungen zu übersetzen. Wir legen
                   Wert auf konsistente Designsysteme und Barrierefreiheit.
                 </p>
-                <h4 className="font-semibold text-blue-900">
+                <h4 className="">
                   Verantwortlichkeiten
                 </h4>
                 <ul className="list-disc list-inside space-y-1">
@@ -443,7 +443,7 @@ export default function Page() {
                   </li>
                   <li>Präsentation von Designkonzepten vor Stakeholdern.</li>
                 </ul>
-                <h4 className="font-semibold text-blue-900">Über Dich</h4>
+                <h4 className="">Über Dich</h4>
                 <p>
                   Du hast eine Leidenschaft für großartiges Design und ein
                   tiefes Verständnis für Nutzerbedürfnisse, insbesondere im
@@ -452,7 +452,7 @@ export default function Page() {
                   Kommunikationsfähigkeiten. Du kannst Designentscheidungen
                   fundiert begründen und arbeitest gerne kollaborativ im Team.
                 </p>
-                <h4 className="font-semibold text-blue-900">Qualifikationen</h4>
+                <h4 className="">Qualifikationen</h4>
                 <ul className="list-disc list-inside space-y-1">
                   <li>
                     Abgeschlossenes Studium im Bereich Design (UX/UI,
