@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="navbar left-0 top-0 z-50 w-full bg-white dark:border-stroke-dark dark:bg-black sticky shadow-md shadow-violoet-800;">
+    <header className="navbar left-0 top-0 z-50 w-full bg-white dark:border-stroke-dark dark:bg-black sticky shadow-md shadow-violoet-800 z-10;">
       <div className="container relative max-w-[1400px]">
         <div className="flex items-center justify-between">
           <div className="block py-4 lg:py-0 flex items-center gap-2">

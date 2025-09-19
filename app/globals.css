@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-sans font-bold;
 }
 
+
 h2 {
   @apply text-3xl sm:text-4xl my-2 md:my-4 text-black;
 }
