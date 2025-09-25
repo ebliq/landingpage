@@ -15,7 +15,7 @@ export default function Header() {
       <div className="container relative max-w-[1400px]">
         <div className="flex items-center justify-between">
           <div className="block py-4 lg:py-0 flex items-center gap-2">
-            <Link className="max-w-[50x] sm:max-w-[50px]" href="/">
+            <Link className="w-[30px] md:w-[50px]" href="/">
               <Image
                 alt="Logo"
                 width="50"
@@ -29,7 +29,7 @@ export default function Header() {
                 }}
               />
             </Link>
-            <div className="text-4xl font-bold text-primary pl-4">Ebliq</div>
+            <div className="text-2xl md:text-4xl font-bold text-primary pl-4">Ebliq</div>
           </div>
           <button
             className="navbarOpen absolute right-4 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 flex-col items-center justify-center space-y-[6px] font-bold lg:hidden"

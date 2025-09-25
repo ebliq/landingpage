@@ -47,7 +47,7 @@ nav li.menu-item a {
 }
 
 .button {
-  @apply px-6 py-2 font-medium sm:inline-block rounded-full bg-primary text-white border-b-[3px] border-accent border-solid;
+  @apply px-3 py-1 md:px-6 md:py-2 text-base md:text-lg font-medium sm:inline-block rounded-full bg-primary text-white border-b-[3px] border-accent border-solid;
   @apply transition duration-300 hover:bg-primary-700 hover:text-primary-100;
 }
 
