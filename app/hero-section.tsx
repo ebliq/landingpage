@@ -14,17 +14,16 @@ export default function HeroSection() {
       />
 
       <div className="relative z-10 container mx-auto h-full flex items-center">
-        <div className="max-w-2xl px-6 py-12 md:py-0">
-          <h1 className="text-4xl leading-[1.1] sm:text-5xl sm:leading-[1.1] xl:text-6xl xl:leading-[1.1]">
-            Medizin neu denken:<br />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Künstliche Intelligenz</span><br />
-              die Ärzte entlastet.
+        <div className="max-w-2xl md:px-6 py-12 lg:py-0">
+          <h1 className="text-3xl leading-[1.1] sm:text-5xl sm:leading-[1.1] xl:text-6xl xl:leading-[1.1]">
+            Medizin neu denken:<br/>
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> 
+              Künstliche Intelligenz</span><br/> die Ärzte entlastet.
           </h1>
           <p className="text-xl md:text-2xl my-10">
-            Mit KI-gestützter Analyse bringt unsere App <br />
+            Mit KI-gestützter Analyse bringt unsere App 
             Effizienz in jede Praxis: Schnelle Anamnese,
-            <br /> lückenlose Dokumentation, optimale <br />
+            lückenlose Dokumentation, optimale 
             Patientenversorgung.
           </p>
           <div className="flex flex-wrap gap-4 mt-4">

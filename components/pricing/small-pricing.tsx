@@ -98,7 +98,7 @@ export function SmallPricingModule() {
                   // Apply blue border and shadow if active
                   isActive ? " border border-primary-700 shadow-lg" : "shadow-sm", // Use default border color otherwise
                   // Keep shadow for popular even if not active (optional)
-                  plan.popular ? "m-[-1.5rem] bg-primary-100 z-50" : "z-100"
+                  plan.popular ? "md:m-[-1.5rem] bg-primary-100 z-50" : "z-100"
                 )}
                 // Optional: Add onClick to make cards selectable
                 // onClick={() => setActivePlan(plan.name)}
