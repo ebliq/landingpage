@@ -161,7 +161,7 @@ module.exports = {
         },
 
         // === Semantic Aliases ===
-        border: "#727988",        // hellblau-grau
+        border: "#2E5FA7",        // hellblau-grau
         input: "#F6F7F8",
         ring: "#2E5FA7",
 
@@ -182,19 +182,26 @@ module.exports = {
           foreground: "#F1DAEC",
         },
         popover: {
-          DEFAULT: "#D7E3F4",
+          DEFAULT: "#EFF4FB",
           foreground: "#0D1320",
         },
         card: {
           DEFAULT: "#D7E3F4",
           foreground: "#0D1320",
         },
+		chart: {
+				'1': 'hsl(var(--chart-1))',
+				'2': 'hsl(var(--chart-2))',
+				'3': 'hsl(var(--chart-3))',
+				'4': 'hsl(var(--chart-4))',
+				'5': 'hsl(var(--chart-5))'
+		}
       },
       
       borderRadius: {
-        /*lg: "var(--radius)",
-        md: "calc(var(--radius) - 1px)",
-        sm: "calc(var(--radius) - 3px)",*/
+        lg: "0.2rem",
+        md: "0.2rem",
+        sm: "0.2rem",
       },
       keyframes: {
         "accordion-down": {

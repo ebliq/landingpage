@@ -45,7 +45,11 @@ export function Footer() {
                   }}
                 />
               </Link>
-              <span className="text-4xl font-bold pl-4">Ebliq</span>
+              <div className="text-4xl font-bold pl-4">
+                Ebliq
+                <div className="text-xs md:text-sm font-light">KI für den Praxisalltag</div>
+              </div>
+              
             </div>
             <p className="text-muted-foreground">
               Mit KI-gestützter Analyse bringt unsere App Effizienz in jede
