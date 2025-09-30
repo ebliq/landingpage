@@ -162,7 +162,7 @@ export default function FeaturesSection() {
   //   },
   // ];
   return (
-    <section className="py-0 px-4 relative overflow-hidden" id="features">
+    <section className="py-12 px-4 relative shadow-xl" id="features">
       <div className="grid grid-col-2 max-w-6xl mx-auto relative">
         <AgentGrid cols={"3"} className="mb-16">
           {agentsWithIcon.map((agent, index) => (

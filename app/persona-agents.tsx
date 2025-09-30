@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 const agentsData = [
   {
-    href: "/for-you/doctos",
+    href: "/for-you/doctors",
     image: "/agent1.png",
     headline: "Sie behandeln, er erledigt den Rest.",
     text: "Der Anamnese-Agent hört live mit, strukturiert Inhalte, legt verwertbare Protokolle an und stößt Folgeaufgaben (Rezepte, Überweisungen) an.",
@@ -33,20 +33,20 @@ const agentsData = [
 
 export default function PersonaAgents() {
   return (
-    <section className="py-20 px-12 mt-0 mb-12 bg-primary-700 text-center shadow-xl">
-      <div className=" max-w-4xl mx-auto">
+    <section className="py-6 md:py-20 px-12 mt-0 bg-primary-700 text-center shadow-xl">
+      <div className="max-w-4xl mx-auto">
         <h2 className="secondary-heading !text-primary-200">
           Von Antworten zu echter Unterstützung - unsere KI-Agenten
         </h2>
-        <h3 className="text-4xl text-white">
+        <h3 className="text-2xl md:text-4xl text-white">
           Spezialisierte KI-Helfer, die Ihren Praxisalltag erleichtern
         </h3>
-        <p className="my-16 text-2xl text-white font-light">
+        <p className="my-6 md:my-16 md:text-2xl text-white font-light">
           Ebliq geht über Chatbots hinaus: Spezialisierte Agenten übernehmen Anamnese, Dokumentation und Patient:innen-Kommunikation - und entlasten so spürbar den Praxisalltag.
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-3 gap-8">
         {agentsData.map((agent, index) => (
           <Link href={agent.href}>
             <div className="relative flex flex-col items-center p-4 rounded-sm shadow-md min-h-[600px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group">
@@ -84,7 +84,7 @@ export default function PersonaAgents() {
         ))}
       </div>
 
-      <Button asChild size="xxl" variant="outlineinvers" className="mt-20">
+      <Button asChild size="xxl" variant="outlineinvers" className="mt-10 md:mt-20">
         <a href="/features" >
           alle Funktionen entdecken
           <ArrowRight className="ml-8" size="40" />

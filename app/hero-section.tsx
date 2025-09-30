@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { PlayCircleIcon, LucideImagePlay } from "lucide-react";
+import { PlayCircleIcon, Rocket } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -29,7 +29,7 @@ export default function HeroSection() {
               asChild
             >
               <a href="https://app.Ebliq.de/sign-up?redirect_url=https%3A%2F%2Fapp.Ebliq.de%2F">
-                <LucideImagePlay className="h-5 w-5 mr-3" />
+                <Rocket className="h-5 w-5 mr-3" />
                 Kostenlos starten
               </a>
             </Button>

@@ -78,7 +78,7 @@ export default function Header() {
 
                   <NavigationMenuItem className="menu-item">
                     <NavigationMenuLink asChild>
-                      <Link href="/#features">Features</Link>
+                      <Link href="/features">Features</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
@@ -102,7 +102,7 @@ export default function Header() {
                         <li className="menuHeroItem">
                           <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/for-you/aerztinnen">
+                              <Link className="flex justify-between items-center" href="/for-you/doctors">
                                 <div>
                                   <h3 className="">für Ärzt:innen</h3>
                                   <p className="">Mehr Zeit für Patient:innen</p>
@@ -115,7 +115,7 @@ export default function Header() {
                         <li className="menuHeroItem">
                           <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/for-you/hebammen">
+                              <Link className="flex justify-between items-center" href="/for-you/midwifes">
                                 <div>
                                   <h3>für Hebammen</h3>
                                   <p>Mobile Betreuung ohne Papierkram</p>
@@ -128,7 +128,7 @@ export default function Header() {
                         <li className="menuHeroItem">
                           <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/for-you/praxisteams">
+                              <Link className="flex justify-between items-center" href="/for-you/officeteams">
                                 <div>
                                   <h3>für Praxisteams</h3>
                                   <p>Weniger Klicks, mehr erledigt</p>

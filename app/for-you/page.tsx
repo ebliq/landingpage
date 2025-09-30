@@ -23,7 +23,7 @@ export default function Page() {
       </section>
 
       <section className="mx-auto w-full max-w-3xl px-4 lg:px-6py-20 px-4">
-        <Link className="flex justify-between items-center my-8" href="/for-you/aerztinnen">
+        <Link className="flex justify-between items-center my-8" href="/for-you/doctors">
           <div>
               <h3 className="">für Ärzt:innen</h3>
               <p className="">Mehr Zeit für Patient:innen</p>
@@ -31,7 +31,7 @@ export default function Page() {
           <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
         </Link>
 
-        <Link className="flex justify-between items-center my-8" href="/for-you/hebammen">
+        <Link className="flex justify-between items-center my-8" href="/for-you/midwifes">
           <div>
               <h3>für Hebammen</h3>
               <p>Mobile Betreuung ohne Papierkram</p>
@@ -39,7 +39,7 @@ export default function Page() {
           <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
         </Link>
 
-        <Link className="flex justify-between items-center my-8" href="/for-you/praxisteams">
+        <Link className="flex justify-between items-center my-8" href="/for-you/officeteams">
           <div>
               <h3>für Praxisteams</h3>
               <p>Weniger Klicks, mehr erledigt</p>

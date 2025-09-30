@@ -37,7 +37,7 @@ h4 {
   @apply text-2xl font-light text-primary-700 pt-6 mb-0;
 }
 .secondary-heading {
-  @apply font-light text-3xl text-primary
+  @apply font-light text-xl md:text-3xl text-primary
 }
 
 
