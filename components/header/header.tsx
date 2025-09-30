@@ -84,7 +84,7 @@ export default function Header() {
 
                   <NavigationMenuItem className="menu-item" >
                     <NavigationMenuTrigger className="hover:bg-transparent hover:text-accent-foreground focus:bg-transparent focus:text-foreground focus:outline-none data-[state=open]:text-foreground data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary data-[state=open]:border-accent data-[state=open]:border-solid">
-                      <a href="/fuer-sie">Für Sie</a>
+                      <a href="/for-you">Für Sie</a>
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="">
                       <NavigationMenuIndicator className="" />
@@ -92,8 +92,8 @@ export default function Header() {
                         <li className="menuHeroIntro">
                           <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                              <Link className="" href="/fuer-sie">
-                                <h2>Für wen wir Ebliq gemacht haben?</h2>
+                              <Link className="" href="/for-you">
+                                <h2>Für wen wir Ebliq geschaffen haben?</h2>
                                 <p>Spezialisierte KI-Helfer, die Ihren Alltag einfacher, sicherer und effizienter machen.</p>
                               </Link>
                             </NavigationMenuLink>
@@ -102,7 +102,7 @@ export default function Header() {
                         <li className="menuHeroItem">
                           <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/fuer-sie/aerztinnen">
+                              <Link className="flex justify-between items-center" href="/for-you/aerztinnen">
                                 <div>
                                   <h3 className="">für Ärzt:innen</h3>
                                   <p className="">Mehr Zeit für Patient:innen</p>
@@ -115,7 +115,7 @@ export default function Header() {
                         <li className="menuHeroItem">
                           <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/fuer-sie/hebammen">
+                              <Link className="flex justify-between items-center" href="/for-you/hebammen">
                                 <div>
                                   <h3>für Hebammen</h3>
                                   <p>Mobile Betreuung ohne Papierkram</p>
@@ -128,7 +128,7 @@ export default function Header() {
                         <li className="menuHeroItem">
                           <NavigationMenuItem>
                             <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/fuer-sie/praxisteams">
+                              <Link className="flex justify-between items-center" href="/for-you/praxisteams">
                                 <div>
                                   <h3>für Praxisteams</h3>
                                   <p>Weniger Klicks, mehr erledigt</p>

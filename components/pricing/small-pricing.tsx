@@ -26,7 +26,7 @@ export function SmallPricingModule() {
   };
 
   return (
-    <section className="py-16 px-4 relative overflow-hidden">
+    <section className="py-16 px-4 relative shadow-lg">
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-16">
           <h2 className="">

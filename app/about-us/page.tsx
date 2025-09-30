@@ -6,7 +6,7 @@ export default function Page() {
     <>
       <section className="py-20 px-4 rounded-lg text-center">
         <div className=" max-w-2xl mx-auto">
-          <h1 className="font-light text-3xl text-primary">Über uns</h1>
+          <h1 className="secondary-heading">Über uns</h1>
           <h2 className="mb-12">
             Lernen Sie unser Team und unsere Vision kennen
           </h2>

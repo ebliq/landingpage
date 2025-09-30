@@ -4,7 +4,7 @@ import { PlayCircleIcon, LucideImagePlay } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full lg:h-screen">
+    <section className="relative w-full lg:h-screen shadow-xl">
       <Image
         src="/hero_doc.png"
         alt="Hero Background"
@@ -16,15 +16,11 @@ export default function HeroSection() {
       <div className="relative z-10 container mx-auto h-full flex items-center">
         <div className="max-w-2xl md:px-6 py-12 lg:py-0">
           <h1 className="text-3xl leading-[1.1] sm:text-5xl sm:leading-[1.1] xl:text-6xl xl:leading-[1.1]">
-            Medizin neu denken:<br/>
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> 
-              Künstliche Intelligenz</span><br/> die Ärzte entlastet.
+              Mehr Zeit für Medizin.</span><br/> Weniger Stress mit Dokumentation.
           </h1>
           <p className="text-xl md:text-2xl my-10">
-            Mit KI-gestützter Analyse bringt unsere App 
-            Effizienz in jede Praxis: Schnelle Anamnese,
-            lückenlose Dokumentation, optimale 
-            Patientenversorgung.
+           Ebliq ist die KI-Suite für den Praxisalltag. Sie entlastet Ärzt:innen, Hebammen und Praxisteams von Bürokratie, reduziert Fehler und schafft bis zu 2 Stunden Zeitgewinn pro Tag – sicher, intuitiv und sofort einsatzbereit.
           </p>
           <div className="flex flex-wrap gap-4 mt-4">
             <Button
@@ -34,7 +30,7 @@ export default function HeroSection() {
             >
               <a href="https://app.Ebliq.de/sign-up?redirect_url=https%3A%2F%2Fapp.Ebliq.de%2F">
                 <LucideImagePlay className="h-5 w-5 mr-3" />
-                Jetzt kostenlos testen
+                Kostenlos starten
               </a>
             </Button>
             <Button
@@ -48,10 +44,7 @@ export default function HeroSection() {
               >
                 <PlayCircleIcon className="h-8 w-8 mr-3" />
                 <div className="flex flex-col items-start">
-                  <span className="font-semibold">Demo anschauen</span>
-                  <span className="text-sm">
-                    Schau dir an, wie es funktioniert
-                  </span>
+                  <span className="font-semibold">Demo ansehen</span>
                 </div>
               </a>
             </Button>

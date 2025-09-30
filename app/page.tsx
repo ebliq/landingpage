@@ -1,5 +1,8 @@
 import { SmallPricingModule } from "@/components/pricing/small-pricing";
 import FeaturesSection from "./feature-card";
+import BenefitSection from "./benefit-section";
+import SecuritySection from "./security-section";
+import PersonaAgents from "./persona-agents";
 import HeroSection from "./hero-section";
 
 export default function LandingPage() {
@@ -7,9 +10,14 @@ export default function LandingPage() {
     <>
       {/* Hero Section */}
       <HeroSection />
-      {/* Features Section */}
-      <FeaturesSection />
+
+      <BenefitSection />
+      <PersonaAgents />
+
+      {/* <FeaturesSection />  */}
       <SmallPricingModule />
+
+      <SecuritySection />
     </>
   );
 }
