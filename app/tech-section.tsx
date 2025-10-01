@@ -25,9 +25,8 @@ export default function TechSection() {
                 <Badge variant="primary" size="lg" className="">offene Standards (HL7/FIHR)</Badge>
                 <Badge variant="primary" size="lg" className="">Intuitive Bedienung</Badge>
                 <Badge variant="primary" size="lg" className="">API-fähig</Badge>
-                <Badge variant="primary" size="lg" className="">MultiDevice-PWA</Badge>
+                <Badge variant="primary" size="lg" className="">Mobile-First-PWA</Badge>
                 <Badge variant="primary" size="lg" className="">Sichere EU-Cloud</Badge>
-                <Badge variant="primary" size="lg" className="">Browser-only</Badge>
               </div>
               <p>So leistungsstark wie Ihr Lieblings-KI-Tool - jedoch speziell für Ihren Praxisalltag. Sie möchten es ganz genau wissen? Sprechen Sie uns an!</p>
             </div>

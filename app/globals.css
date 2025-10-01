@@ -47,7 +47,7 @@ p {
 
 nav li.menu-item a {
   @apply inline-flex items-center text-xl font-medium border-white text-primary-800;
-  @apply lg:py-7 lg:text-lg lg:text-xl lg:text-lg lg:border-b-[4px] lg:font-light;
+  @apply lg:py-7 lg:border-b-[4px] lg:font-light;
   @apply transition duration-300 hover:text-primary hover:border-accent focus:text-primary focus:border-accent border-solid;
 }
 

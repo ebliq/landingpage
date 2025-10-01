@@ -129,7 +129,7 @@ export default function Page() {
       <section className="w-full shadow-xl">
         <div className="z-10 bg-gray-300 bg-[url(/agent1.png)] flex items-center md:py-12 bg-blend-overlay bg-top bg-cover">
           <div className="max-w-4xl mx-6 md:mx-auto md:px-6 lg:px-0 py-12 lg:py-0 z-10">
-            <Badge variant="secondary" size="lg" className="mr-2 mb-2">KI-Diagnostik-Agent</Badge>
+            <Badge variant="secondary" size="lg" className="mr-2 mb-2">Anamnese-Agent</Badge>
             <Badge variant="outline" size="lg"  className="">für Ärzt:innen</Badge>
             <h1 className="text-3xl leading-[1.1] md:text-4xl sm:leading-[1.1] xl:text-5xl xl:leading-[1.1] mt-12">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> 
@@ -139,7 +139,7 @@ export default function Page() {
               <br/>Mehr Sicherheit in der Behandlung.
             </h1>
             <p className="text-lg md:text-2xl my-10">
-            Ebliq entlastet Ärzt:innen mit dem Diagnostik-Agenten: Ihre Gespräche werden automatisch erfasst, 
+            Ebliq entlastet Ärzt:innen mit dem Anamnese-Agenten: Ihre Gespräche werden automatisch erfasst, 
             strukturiert dokumentiert und direkt in die Patientenakte übertragen. So behalten Ärzt:innen Kopf und Hände frei.
             </p>
             <div className="flex flex-wrap gap-2 md:gap-4 md:mt-4">
@@ -178,7 +178,7 @@ export default function Page() {
       <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-primary-700 shadow-xl">
         <div className="max-w-4xl mx-auto ">
           <h2 className="secondary-heading !text-primary-200">
-              Diagnostik-Agent: Das Herzstück für Ihre Behandlungen
+              Anamnese-Agent: Das Herzstück für Ihre Behandlungen
             </h2>
             <h3 className="text-2xl md:text-4xl text-white">
               Vom ersten Wort bis zur fertigen Akte - zuverlässig, vollständig, sicher.
@@ -206,7 +206,7 @@ export default function Page() {
       <section className="px-6 lg:px-8 py-10 md:py-20 shadow-md">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
-            <h2>Mehr als Diagnostik: Ebliq-Funktionen, die Sie und Ihre Praxis entlasten.</h2>
+            <h2>Mehr als Anamnese: Ebliq-Funktionen, die Sie und Ihre Praxis entlasten.</h2>
             <p>Grundfunktionen, die Recherche, Dokumente, Übersetzung und Integration erleichtern - nahtlos in Ihren Workflow.</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6 content-center my-4">
@@ -239,7 +239,7 @@ export default function Page() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
             <h2 className="text-4xl md:text-6xl text-white mt-0">Jetzt selbst erleben</h2>
-            <p className="text-2xl md:text-3xl">Starten Sie in 2 Minuten - oder lassen Sie sich den Diagnostik-Agenten unverbindlich vorführen.</p>
+            <p className="text-2xl md:text-3xl">Starten Sie in 2 Minuten - oder lassen Sie sich den Anamnese-Agenten unverbindlich vorführen.</p>
           </div>
           <div className="flex flex-wrap gap-2 content-center my-4 md:my-8 justify-left">
             {ctaButtonStart}

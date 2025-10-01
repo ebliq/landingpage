@@ -9,9 +9,9 @@ const agentsData = [
     href: "/for-you/doctors",
     image: "/agent1.png",
     headline: "Sie behandeln, er erledigt den Rest.",
-    text: "Der Diagnostik-Agent hört live mit, strukturiert Inhalte, legt verwertbare Protokolle an und stößt Folgeaufgaben (Rezepte, Überweisungen) an.",
+    text: "Der Anamnese-Agent hört live mit, strukturiert Inhalte, legt verwertbare Protokolle an und stößt Folgeaufgaben (Rezepte, Überweisungen) an.",
     persona: "Ärzt:innen",
-    agent: "Diagnostik-Agent",
+    agent: "Anamnese-Agent",
   },
   {
     href: "/for-you/midwifes",
@@ -42,7 +42,7 @@ export default function PersonaAgents() {
           Spezialisierte KI-Helfer, die Ihren Praxisalltag erleichtern
         </h3>
         <p className="my-6 md:my-16 md:text-2xl text-white font-light">
-          Ebliq geht über Chatbots hinaus: Spezialisierte Agenten übernehmen Anamnese, Dokumentation und Patient:innen-Kommunikation - und entlasten so spürbar den Praxisalltag.
+          Ebliq geht über Chatbots hinaus: Spezialisierte Agenten unterstützen bei Anamnese, Dokumentation und Patient:innen-Kommunikation - und entlasten so spürbar den Praxisalltag.
         </p>
       </div>
 
