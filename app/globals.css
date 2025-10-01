@@ -46,12 +46,13 @@ p {
 }
 
 nav li.menu-item a {
-  @apply lg:py-7 inline-flex items-center text-lg font-light lg:text-xl border-b-[4px] border-white text-primary-800;
+  @apply inline-flex items-center text-xl font-medium border-white text-primary-800;
+  @apply lg:py-7 lg:text-lg lg:text-xl lg:text-lg lg:border-b-[4px] lg:font-light;
   @apply transition duration-300 hover:text-primary hover:border-accent focus:text-primary focus:border-accent border-solid;
 }
 
 .hoverMenu {
-  @apply grid grid-cols-2 gap-2 w-[600px] items-end;
+  @apply grid lg:grid-cols-2 gap-2 w-full lg:w-[600px] lg:items-end;
 }
 
 .menuHeroIntro {
@@ -66,7 +67,7 @@ nav li.menu-item a {
 }
 
 .menuHeroItem {
-  @apply col-span-1 row-span-1 text-left p-3 ;
+  @apply col-span-1 row-span-1 text-left pl-6 lg:p-3;
 
   h3 {
     @apply text-base mb-0;

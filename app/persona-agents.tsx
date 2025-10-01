@@ -33,7 +33,7 @@ const agentsData = [
 
 export default function PersonaAgents() {
   return (
-    <section className="py-6 md:py-20 px-12 mt-0 bg-primary-700 text-center shadow-xl">
+    <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-primary-700 text-center shadow-xl">
       <div className="max-w-4xl mx-auto">
         <h2 className="secondary-heading !text-primary-200">
           Von Antworten zu echter Unterstützung - unsere KI-Agenten
@@ -46,10 +46,10 @@ export default function PersonaAgents() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 ">
         {agentsData.map((agent, index) => (
           <Link href={agent.href}>
-            <div className="relative flex flex-col items-center p-4 rounded-sm shadow-md min-h-[600px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group">
+            <div className="relative flex flex-col items-center p-3 sm:p-4 rounded-sm shadow-md min-h-[600px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group">
               <div className="flex justify-between mb-2 z-20 w-full">
                 <Badge variant="secondary" size="lg" className="flex-none">{agent.agent}</Badge>
                 <Badge variant="transparent" className="flex-none">für {agent.persona}</Badge>

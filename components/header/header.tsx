@@ -14,6 +14,61 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 
+
+function ForYouMenuList() {return (
+  <ul className="hoverMenu block">
+    <li className="menuHeroIntro hidden lg:block">
+      <NavigationMenuItem className="hidden lg:block">
+        <NavigationMenuLink asChild >
+          <Link className="hidden lg:block" href="/for-you">
+            <h2>Für wen wir Ebliq geschaffen haben?</h2>
+            <p>Spezialisierte KI-Helfer, die Ihren Alltag einfacher, sicherer und effizienter machen.</p>
+          </Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+    </li>
+    <li className="menuHeroItem">
+      <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+          <Link className="flex justify-between items-center" href="/for-you/doctors">
+            <div>
+              <h3 className="">für Ärzt:innen</h3>
+              <p className="hidden lg:block">Mehr Zeit für Patient:innen</p>
+            </div>
+            <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary hidden lg:block"/>
+          </Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+    </li>
+    <li className="menuHeroItem">
+      <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+          <Link className="flex justify-between items-center" href="/for-you/midwifes">
+            <div>
+              <h3>für Hebammen</h3>
+              <p className="hidden lg:block">Mobile Betreuung ohne Papierkram</p>
+            </div>
+            <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary hidden lg:block"/>
+          </Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+    </li>
+    <li className="menuHeroItem">
+      <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+          <Link className="flex justify-between items-center" href="/for-you/officeteams">
+            <div>
+              <h3>für Praxisteams</h3>
+              <p className="hidden lg:block">Weniger Klicks, mehr erledigt</p>
+            </div>
+            <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary hidden lg:block"/>
+          </Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+    </li>
+  </ul>
+);}
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -71,10 +126,16 @@ export default function Header() {
               <span className="-mt-[2px] block h-[2px] w-7 -rotate-45 bg-black dark:bg-white"></span>
             </button>
             {/* Navigation - fixed overlay on mobile, static on large screens */}
-            <nav className="fixed left-0 top-0 z-[999] flex h-screen w-full items-center justify-center bg-white text-center backdrop-blur-sm dark:bg-black dark:bg-opacity-95 lg:static lg:h-auto lg:w-max lg:bg-transparent lg:bg-opacity-100 lg:backdrop-blur-0 lg:backdrop-blur-none lg:dark:bg-transparent dark:lg:bg-opacity-100">
+            <nav className="fixed left-0 top-0 z-[999] flex h-screen w-full lg:items-center lg:justify-center bg-white lg:text-center bg-opacity-90 backdrop-blur-sm dark:bg-black dark:bg-opacity-95 lg:static lg:h-auto lg:w-max lg:bg-transparent lg:bg-opacity-100 lg:backdrop-blur-0 lg:backdrop-blur-none lg:dark:bg-transparent dark:lg:bg-opacity-100">
 
-              <NavigationMenu>
-                <NavigationMenuList className="items-center space-y-3 lg:flex lg:space-x-8 lg:space-y-0 xl:space-x-10">
+              <NavigationMenu className="ml-12">
+                <NavigationMenuList className="items-start lg:items-center flex-col space-y-3 lg:flex lg:flex-row lg:space-x-8 lg:space-y-0 xl:space-x-10">
+
+                  <NavigationMenuItem className="menu-item lg:hidden pl-1">
+                    <NavigationMenuLink asChild>
+                      <Link href="/">Start</Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
 
                   <NavigationMenuItem className="menu-item">
                     <NavigationMenuLink asChild>
@@ -82,65 +143,20 @@ export default function Header() {
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
-                  <NavigationMenuItem className="menu-item" >
+                  <NavigationMenuItem className="menu-item hidden lg:block" >
                     <NavigationMenuTrigger className="hover:bg-transparent hover:text-accent-foreground focus:bg-transparent focus:text-foreground focus:outline-none data-[state=open]:text-foreground data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary data-[state=open]:border-accent data-[state=open]:border-solid">
                       <a href="/for-you">Für Sie</a>
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="">
-                      <NavigationMenuIndicator className="" />
-                      <ul className="hoverMenu">
-                        <li className="menuHeroIntro">
-                          <NavigationMenuItem>
-                            <NavigationMenuLink asChild>
-                              <Link className="" href="/for-you">
-                                <h2>Für wen wir Ebliq geschaffen haben?</h2>
-                                <p>Spezialisierte KI-Helfer, die Ihren Alltag einfacher, sicherer und effizienter machen.</p>
-                              </Link>
-                            </NavigationMenuLink>
-                          </NavigationMenuItem>
-                        </li>
-                        <li className="menuHeroItem">
-                          <NavigationMenuItem>
-                            <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/for-you/doctors">
-                                <div>
-                                  <h3 className="">für Ärzt:innen</h3>
-                                  <p className="">Mehr Zeit für Patient:innen</p>
-                                </div>
-                                <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
-                              </Link>
-                            </NavigationMenuLink>
-                          </NavigationMenuItem>
-                        </li>
-                        <li className="menuHeroItem">
-                          <NavigationMenuItem>
-                            <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/for-you/midwifes">
-                                <div>
-                                  <h3>für Hebammen</h3>
-                                  <p>Mobile Betreuung ohne Papierkram</p>
-                                </div>
-                                <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
-                              </Link>
-                            </NavigationMenuLink>
-                          </NavigationMenuItem>
-                        </li>
-                        <li className="menuHeroItem">
-                          <NavigationMenuItem>
-                            <NavigationMenuLink asChild>
-                              <Link className="flex justify-between items-center" href="/for-you/officeteams">
-                                <div>
-                                  <h3>für Praxisteams</h3>
-                                  <p>Weniger Klicks, mehr erledigt</p>
-                                </div>
-                                <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
-                              </Link>
-                            </NavigationMenuLink>
-                          </NavigationMenuItem>
-                        </li>
-                      </ul>
+                      <NavigationMenuIndicator className="hidden lg:block" />
+                      <ForYouMenuList />
                     </NavigationMenuContent>
                   </NavigationMenuItem>
+
+                  <li className="menu-item lg:hidden">
+                    <a href="/for-you">Für Sie:</a>
+                    <ForYouMenuList />
+                  </li>
 
                   <NavigationMenuItem className="menu-item">
                     <NavigationMenuLink asChild>
