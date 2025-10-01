@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function SecuritySection() {
   return (
-    <section className="shadow-xl py-12 bg-green/5 shadow-xl"  id="security">
+    <section className="py-12 bg-green/5 shadow-md"  id="security">
       <div className="max-w-4xl mx-auto">
         
         <div className="grid gap-16 sm:grid-cols-6 items-center">

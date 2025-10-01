@@ -1,6 +1,6 @@
 import FeaturesSection from "../feature-card";
 import SecuritySection from "../security-section";
-import PersonaAgents from "../persona-agents";
+import TechSection from "../tech-section";
 
 export default function Features() {
   return (
@@ -19,6 +19,7 @@ export default function Features() {
         </div>
       </section>
       <FeaturesSection />
+      <TechSection />
       <SecuritySection />
     </>
   );

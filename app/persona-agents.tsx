@@ -9,9 +9,9 @@ const agentsData = [
     href: "/for-you/doctors",
     image: "/agent1.png",
     headline: "Sie behandeln, er erledigt den Rest.",
-    text: "Der Anamnese-Agent hört live mit, strukturiert Inhalte, legt verwertbare Protokolle an und stößt Folgeaufgaben (Rezepte, Überweisungen) an.",
+    text: "Der Diagnostik-Agent hört live mit, strukturiert Inhalte, legt verwertbare Protokolle an und stößt Folgeaufgaben (Rezepte, Überweisungen) an.",
     persona: "Ärzt:innen",
-    agent: "Anamnese-Agent",
+    agent: "Diagnostik-Agent",
   },
   {
     href: "/for-you/midwifes",
@@ -19,7 +19,7 @@ const agentsData = [
     headline: "Dokumentieren unterwegs - sicher und mobil",
     text: "Sprache wird zu rechtssicheren Protokollen, Zeiten & Ereignisse werden erkannt, Einträge korrekt zugeordnet. Ideal auf Tablet & Smartphone.",
     persona: "Hebammen",
-    agent: "Hebammen-Agent",
+    agent: "Doku-Agent",
   },
   {
     href: "/for-you/officeteam",
