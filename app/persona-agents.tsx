@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 const agentsData = [
   {
     href: "/for-you/doctors",
-    image: "/agent1.png",
+    image: "/teaser_anamnese.png",
     headline: "Sie behandeln, er erledigt den Rest.",
     text: "Der Anamnese-Agent hört live mit, strukturiert Inhalte, legt verwertbare Protokolle an und stößt Folgeaufgaben (Rezepte, Überweisungen) an.",
     persona: "Ärzt:innen",
@@ -15,7 +15,7 @@ const agentsData = [
   },
   {
     href: "/for-you/midwifes",
-    image: "/agent3.png",
+    image: "/teaser_midwife.png",
     headline: "Dokumentieren unterwegs - sicher und mobil",
     text: "Sprache wird zu rechtssicheren Protokollen, Zeiten & Ereignisse werden erkannt, Einträge korrekt zugeordnet. Ideal auf Tablet & Smartphone.",
     persona: "Hebammen",
@@ -23,7 +23,7 @@ const agentsData = [
   },
   {
     href: "/for-you/officeteam",
-    image: "/agent2.png",
+    image: "/teaser_reception.png",
     headline: "Den Rückruf erledigt jetzt KI",
     text: "Nimmt Anrufe entgegen, dokumentiert Anliegen strukturiert und ruft aktiv zurück - Terminmanagement ohne Nachtelefonieren.",
     persona: "Praxis-Teams",

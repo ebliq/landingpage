@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import TechSection from "@/app/tech-section";
+import { Item, ItemContent, ItemTitle, ItemActions, ItemDescription } from "@/components/ui/item";
 import Link from "next/link";
+import Image from "next/image";
 
 import {
   Stethoscope,
@@ -174,39 +176,122 @@ export default function Page() {
         </div>
       </section> 
 
-
       <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-primary-700 shadow-xl">
         <div className="max-w-4xl mx-auto ">
-          <h2 className="secondary-heading !text-primary-200">
-              Anamnese-Agent: Das Herzstück für Ihre Behandlungen
-            </h2>
-            <h3 className="text-2xl md:text-4xl text-white">
-              Vom ersten Wort bis zur fertigen Akte - zuverlässig, vollständig, sicher.
-            </h3>
-          <div className="flex justify-between items-center gap-3">
-            <div className="">
-              <List className="my-4">
-                {agentHighlights.map((item, index) => (
-                  <ListItem className="text-background flex items-top gap-2">
-                    <Check size="30" strokeWidth={5} className="mt-1 text-green basis-2/10 w-[50px] shrink-0" />
-                    <div className="basis-8/10">
-                      <div className="font-bold">{item.title}</div>
-                      <div className="font-light">{item.text}</div>
-                    </div>
-                  </ListItem>
-                ))}
-              </List>
+          <h2 className="secondary-heading mt-0 !text-primary-200">
+            Der Ebliq Anamnese-Agent: 
+          </h2>
+          <h3 className="text-2xl md:text-4xl text-white">
+            Vom Gespräch zur fertigen Dokumentation.
+          </h3>
+          <p className="text-xl md:text-2xl text-white">
+            Ihr digitaler Assistent hört mit, erkennt relevante Aussagen und erstellt daraus strukturierte Protokolle - ganz automatisch, während Sie behandeln.
+          </p>
+          <div className="grid sm:grid-cols-12 justify-start items-start gap-4 mt-12">
+            <div className="text-[24rem]/[100%] overflow-hidden basis-1/10 text-secondary text-right col-span-2 hidden sm:block">1</div>
+            <div className="w-full basis-1/10 sm:col-span-10">
+                <Card className="border-0 border-t-2 border-secondary">
+                  <CardHeader>
+                    <CardDescription className="uppercase text-base">
+                      während Anamnese & Behandlung
+                    </CardDescription>
+                    <CardTitle className="text-primary-700 text-3xl font-bold">Zuhören, Verstehen, Merken</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>Der Agent hört mit, unterscheidet Sprecher:innen und erstellt ein Live-Transkript.</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Image
+                      src="/animation-transcript.gif"
+                      alt="Ebliq erstellt ein Live-Transcript ihres Patienten-Gesprächs."
+                      width={200}
+                      height={100}
+                      className="w-full"
+                    />
+                  </CardFooter>
+                </Card>
             </div>
-            <div className="hidden sm:block bg-white h-[300px] w-[300px]  shrink-0">TBD bild</div>
+
+            <div className="text-[24rem]/[100%] overflow-hidden basis-1/10 text-secondary text-right col-span-2 hidden sm:block">2</div>
+            <div className="w-full basis-1/10 sm:col-span-10">
+                <Card className="border-0 border-t-2 border-secondary">
+                  <CardHeader>
+                    <CardDescription className="uppercase text-base">
+                      Zusammenfassung
+                    </CardDescription>
+                    <CardTitle className="text-primary-700 text-3xl font-bold">Wissen extrahieren & strukturieren</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>Aus Sprache wird Wissen: Allergien, Termine, Befunde, Medikationen oder auch und Therapiepläne werden automatisch aus dem Gesprochenen extrahiert und aufbereitet in das Protokoll übernommen. Mit anpassbaren Gesprächsvorlagen bringt der Agent die Dokumentation genau in die von Ihnen gewünschte Form.</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Image
+                      src="/animation-summarise.gif"
+                      alt="Der Anamnese-Agent erstellt das Protokoll strukturiert entlang individueller Vorgaben."
+                      width={200}
+                      height={100}
+                      className="w-full"
+                    />
+                  </CardFooter>
+                </Card>
+            </div>
+
+            <div className="text-[24rem]/[100%] overflow-hidden basis-1/10 text-secondary text-right col-span-2  hidden sm:block">3</div>
+            <div className="w-full basis-1/10 sm:col-span-10">
+                <Card className="border-0 border-t-2 border-secondary">
+                  <CardHeader>
+                    <CardDescription className="uppercase text-base">
+                      Abschluss
+                    </CardDescription>
+                    <CardTitle className="text-primary-700 text-3xl font-bold">Dokumentieren, Prüfen & Freigeben</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>Der Anamnese-Agent erstellt automatisch ein strukturiertes Protokoll - inklusive Gesprächsverlauf & relevanter Extrakte. Sie behalten jederzeit die Kontrolle: Manuelle Prüfung, Ergänzungen & Korrekturen und anschließend die Ein-Klick-Freigabe. Erst dann wird es in Ihren bevorzugten Workflow überführt - etwa automatisch ins KIS, als sichere E-Mail an Ihr Team oder als Kopie in die Zwischenablage.</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Image
+                      src="/animation-export.gif"
+                      alt="Die strukturierte Dokumentation wird bspw. per E-Mail oder Schnittstelle nach der Freigabe versendet."
+                      width={200}
+                      height={100}
+                      className="w-full"
+                    />
+                  </CardFooter>
+                </Card>
+            </div>
+
+            <div className="text-[20rem]/[80%] overflow-hidden basis-1/10 text-secondary text-right col-span-2  hidden sm:block">+</div>
+            <div className="w-full basis-1/10 sm:col-span-10">
+                <Card className="border-0 border-t-2 border-secondary">
+                  <CardHeader>
+                    <CardDescription className="uppercase text-base">
+                      Ausblick
+                    </CardDescription>
+                    <CardTitle className="text-primary-700 text-3xl font-bold">...bald noch mehr Unterstützung für Ihre Behandlungen!</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>Freuen Sie sich in Kürze auf weitere Funktionen: <strong>automatischer Leitlinien-Check, intelligente Nachfragen & Alarme oder die Behandlungs-Fortführung in Folgeterminen</strong>. So entwickelt sich Ebliq Schritt für Schritt weiter - immer an Ihrer Seite.</p>
+                  </CardContent>
+                </Card>
+            </div>
           </div>
-          <div className="mt-6 md:mt-12">{ctaButtonStart}</div>
+
+          <Item className="bg-primary-800 mt-16">
+            <ItemContent className="">
+              <ItemTitle className="text-primary-200 text-lg">Mehr Zeit für das Wesentliche:
+                <span className="text-primary-100">Ihre Patient:innen.</span></ItemTitle>
+            </ItemContent>
+            <ItemActions>
+              {ctaButtonStart}
+            </ItemActions>
+          </Item>
         </div>
       </section>
 
       <section className="px-6 lg:px-8 py-10 md:py-20 shadow-md">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
-            <h2>Mehr als Anamnese: Ebliq-Funktionen, die Sie und Ihre Praxis entlasten.</h2>
+            <h2>Mehr als Anamnese: weitere Ebliq-Funktionen, die Sie und Ihre Praxis entlasten.</h2>
             <p>Grundfunktionen, die Recherche, Dokumente, Übersetzung und Integration erleichtern - nahtlos in Ihren Workflow.</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6 content-center my-4">

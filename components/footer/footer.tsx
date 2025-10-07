@@ -52,9 +52,7 @@ export function Footer() {
               
             </div>
             <p className="text-muted-foreground">
-              Mit KI-gestützter Analyse bringt unsere App Effizienz in jede
-              Praxis: Schnelle Anamnese, lückenlose Dokumentation, optimale
-              Patientenversorgung.
+              Ebliq ist die KI-Suite für Ihren Praxisalltag: Weniger Dokumentation. Mehr Zeit für Patient:innen.
             </p>
           </div>
 

@@ -17,8 +17,7 @@ import {
 
 function ForYouMenuList() {return (
   <ul className="hoverMenu block">
-    <li className="menuHeroIntro hidden lg:block">
-      <NavigationMenuItem className="hidden lg:block">
+      <NavigationMenuItem className="menuHeroIntro hidden lg:block">
         <NavigationMenuLink asChild >
           <Link className="hidden lg:block" href="/for-you">
             <h2>Für wen wir Ebliq geschaffen haben?</h2>
@@ -26,9 +25,7 @@ function ForYouMenuList() {return (
           </Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
-    </li>
-    <li className="menuHeroItem">
-      <NavigationMenuItem>
+      <NavigationMenuItem className="menuHeroItem">
         <NavigationMenuLink asChild>
           <Link className="flex justify-between items-center" href="/for-you/doctors">
             <div>
@@ -39,9 +36,7 @@ function ForYouMenuList() {return (
           </Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
-    </li>
-    <li className="menuHeroItem">
-      <NavigationMenuItem>
+      <NavigationMenuItem className="menuHeroItem">
         <NavigationMenuLink asChild>
           <Link className="flex justify-between items-center" href="/for-you/midwifes">
             <div>
@@ -52,9 +47,7 @@ function ForYouMenuList() {return (
           </Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
-    </li>
-    <li className="menuHeroItem">
-      <NavigationMenuItem>
+      <NavigationMenuItem className="menuHeroItem">
         <NavigationMenuLink asChild>
           <Link className="flex justify-between items-center" href="/for-you/officeteams">
             <div>
@@ -65,7 +58,6 @@ function ForYouMenuList() {return (
           </Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
-    </li>
   </ul>
 );}
 
