@@ -129,7 +129,7 @@ export default function Page() {
   return (
     <>
       <section className="w-full shadow-xl">
-        <div className="z-10 bg-gray-300 bg-[url(/agent1.png)] flex items-center md:py-12 bg-blend-overlay bg-top bg-cover">
+        <div className="z-10 bg-gray-300 bg-[url(/header_anamnese.png)] flex items-center md:py-12 bg-blend-overlay bg-top bg-cover">
           <div className="max-w-4xl mx-6 md:mx-auto md:px-6 lg:px-0 py-12 lg:py-0 z-10">
             <Badge variant="secondary" size="lg" className="mr-2 mb-2">Anamnese-Agent</Badge>
             <Badge variant="outline" size="lg"  className="">für Ärzt:innen</Badge>
@@ -201,13 +201,20 @@ export default function Page() {
                     <p>Der Agent hört mit, unterscheidet Sprecher:innen und erstellt ein Live-Transkript.</p>
                   </CardContent>
                   <CardFooter>
-                    <Image
-                      src="/animation-transcript.gif"
-                      alt="Ebliq erstellt ein Live-Transcript ihres Patienten-Gesprächs."
-                      width={200}
-                      height={100}
-                      className="w-full"
-                    />
+                    <div className="w-full">
+                      <video
+                        className="h-full w-full object-cover rounded-none border-none"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="none"
+                      >
+                        <source src="/assets/video/live-transcription.webm" type="video/webm" />
+                        <source src="/assets/video/live-transcription.mp4" type="video/mp4" />
+                        Ebliq erstellt ein Live-Transcript eines Patienten-Gesprächs.
+                      </video>
+                    </div>
                   </CardFooter>
                 </Card>
             </div>
@@ -225,13 +232,20 @@ export default function Page() {
                     <p>Aus Sprache wird Wissen: Allergien, Termine, Befunde, Medikationen oder auch und Therapiepläne werden automatisch aus dem Gesprochenen extrahiert und aufbereitet in das Protokoll übernommen. Mit anpassbaren Gesprächsvorlagen bringt der Agent die Dokumentation genau in die von Ihnen gewünschte Form.</p>
                   </CardContent>
                   <CardFooter>
-                    <Image
-                      src="/animation-summarise.gif"
-                      alt="Der Anamnese-Agent erstellt das Protokoll strukturiert entlang individueller Vorgaben."
-                      width={200}
-                      height={100}
-                      className="w-full"
-                    />
+                    <div className="w-full">
+                      <video
+                        className="h-full w-full object-cover rounded-none border-none"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="none"
+                      >
+                        <source src="/assets/video/result-extract.mp4" type="video/mp4" />
+                        <source src="/assets/video/result-extract.webm" type="video/webm" />
+                        Der Anamnese-Agent erstellt das Protokoll strukturiert entlang individueller Vorgaben.
+                      </video>
+                    </div>
                   </CardFooter>
                 </Card>
             </div>
@@ -246,16 +260,21 @@ export default function Page() {
                     <CardTitle className="text-primary-700 text-3xl font-bold">Dokumentieren, Prüfen & Freigeben</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Der Anamnese-Agent erstellt automatisch ein strukturiertes Protokoll - inklusive Gesprächsverlauf & relevanter Extrakte. Sie behalten jederzeit die Kontrolle: Manuelle Prüfung, Ergänzungen & Korrekturen und anschließend die Ein-Klick-Freigabe. Erst dann wird es in Ihren bevorzugten Workflow überführt - etwa automatisch ins KIS, als sichere E-Mail an Ihr Team oder als Kopie in die Zwischenablage.</p>
+                    <p>Der Anamnese-Agent erstellt automatisch ein nach FIHR-strukturiertes Protokoll - inklusive Gesprächsverlauf & relevanter Extrakte. Sie behalten jederzeit die Kontrolle: Manuelle Prüfung, Ergänzungen & Korrekturen und anschließend die Ein-Klick-Freigabe. Erst dann wird es in Ihren bevorzugten Workflow überführt - etwa automatisch ins KIS, als sichere E-Mail an Ihr Team und zukünftig auch an die ePA.</p>
                   </CardContent>
                   <CardFooter>
-                    <Image
-                      src="/animation-export.gif"
-                      alt="Die strukturierte Dokumentation wird bspw. per E-Mail oder Schnittstelle nach der Freigabe versendet."
-                      width={200}
-                      height={100}
-                      className="w-full"
-                    />
+                      <video
+                        className="h-full w-full object-cover rounded-none border-none"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="none"
+                      >
+                        <source src="/assets/video/approve-anamnese.mp4" type="video/mp4" />
+                        <source src="/assets/video/approve-anamnese.webm" type="video/webm" />
+                        Die strukturierte Dokumentation wird korrigiert und bspw. per E-Mail oder Schnittstelle nach der Freigabe versendet.
+                      </video>
                   </CardFooter>
                 </Card>
             </div>
