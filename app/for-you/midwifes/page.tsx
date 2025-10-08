@@ -4,16 +4,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import TechSection from "@/app/tech-section";
 import { Item, ItemContent, ItemTitle, ItemActions, ItemDescription } from "@/components/ui/item";
 import Link from "next/link";
-import Image from "next/image";
 
 import {
-  Stethoscope,
-  ClipboardPenLine,
   ClockArrowUp,
-  Smile,
   PlayCircleIcon, 
   Rocket,
-  Check,
   ArrowRight,
   BotMessageSquare,
   FileSearch,
@@ -21,6 +16,9 @@ import {
   Cable,
   TabletSmartphone,
   Phone,
+  FolderCheck,
+  Handshake,
+  Check,
 } from "lucide-react";
 
 import { List, ListItem } from "@/components/typography/typography";
@@ -28,70 +26,70 @@ import { List, ListItem } from "@/components/typography/typography";
 const benefits = [
   {
     headline: "Zeit gewinnen",
-    text: "Bis zu 2 Std./Tag weniger Schreibarbeit.",
+    text: "Dokumentieren Sie während der Betreuung, nicht abends.",
     icon: ClockArrowUp,
   },
   {
-    headline: "Bessere Behandlungen",
-    text: "Mehr Fokus & der Agent prüft parallel die Akte.",
-    icon: Stethoscope,
+    headline: "Gesetzeskonform protokollieren",
+    text: "Vollständig, nachvollziehbar, HebG- & DSGVO-konform.",
+    icon: FolderCheck,
   },
   {
-    headline: "Zufriedenere Patient:innen",
-    text: "Mehr Wertschätzung, mehr Aufmerksamkeit, weniger Fehler.",
-    icon: Smile,
+    headline: "Mobil dokumentieren",
+    text: "Unterwegs, im Geburtshaus oder zu Hause, mit Tablet oder Smartphone.",
+    icon: TabletSmartphone,
   },
   {
-    headline: "Automatisch konform dokumentiert",
-    text: "KV-, DSGVO- und G-BA-konform - lückenlos.",
-    icon: ClipboardPenLine,
+    headline: "Bessere Zusammenarbeit",
+    text: "Einfache Übergabe an Ärzt:innen, Kliniken und Kassen.",
+    icon: Handshake,
   },
 ];
 
 const featureHighlights = [
   {
-    headline: "Praxis-KI-Chat & Wissenssuche",
-    text: "Antworten statt Akten wälzen: Praxisdaten, Leitlinien und Quellen direkt während der Behandlung abrufen.",
+    headline: "KI-Chat & Wissenssuche",
+    text: "Antworten statt Akten wälzen: Fragen beantworten, Inhalte aus Ihren Unterlagen abrufen und Formulierungen vorschlagen.",
     icon: BotMessageSquare,
   },
   {
     headline: "Dokumenten-Analyse & Abgleich",
-    text: "Befunde automatisch prüfen, Informationen abgleichen und Ergebnisse strukturiert anzeigen.",
+    text: "Arztbriefe, Befunde, Protokolle oder Leitlinien einbinden: Ebliq hebt das Wesentliche hervor, erstellt Zusammenfassungen und verknüpft Inhalte.",
     icon: FileSearch,
   },
   {
     headline: "Mehrsprachigkeit & Übersetzer",
-    text: "Versteht und übersetzt mehrere Sprachen - bessere Betreuung unabhängig von der Muttersprache.",
+    text: "Unterstützung für Familien mit unterschiedlichen Sprachen: Erklärungen übersetzen, Fachbegriffe erläutern und Inhalte bei Bedarf in einfacher Sprache ausgeben.",
     icon: Languages,
   },
   {
     headline: "Integration & Schnittstellen (z. B. FHIR)",
-    text: "Export ins PVS/KIS, per E-Mail oder Speicherung in Ebliq - ohne Brüche im Workflow.",
+    text: "Anbindungen an gängige Systeme - z. B. für Abrechnung, Kliniken und Praxen. Export als PDF oder FHIR-Note für reibungslose Übergaben.",
     icon: Cable,
   },
   {
     headline: "Flexible Hardware & einfache Nutzung",
-    text: "Tablet oder PC, freihändig arbeiten, sofort einsatzbereit - kein IT-Projekt nötig.",
+    text: "Ebliq läuft auf Tablet, Smartphone oder Laptop - ideal für Hausbesuche, Geburtshaus und unterwegs.",
     icon: TabletSmartphone,
   },
 ];
 
-const agentHighlights = [
+const conformityHighlights = [
   {
-    title: "Echtzeit-Sprachdokumentation",
-    text: "Hört live mit und strukturiert automatisch.",
+    title: "Pflichtfelder vollständig",
+    text: "Sofort erkennen, wenn Angaben fehlen.",
   },
   {
-    title: "Automatische Extraktion relevanter Informationen",
-    text: "Allergien, Medikation, Impfungen und Termine - zuverlässig erkannt und dokumentiert.",
+    title: "Zeit- & Datumsmarke automatisch",
+    text: "Nachvollziehbarkeit sichergestellt.",
   },
   {
-    title: "Gesprächsvorlagen für Fachbereiche & Situationen",
-    text: "Pädiatrie, Chirurgie, Urologie u. a. - individuelle Templates reduzieren Nacharbeit und sichern Standards.",
+    title: "Sichere Speicherung",
+    text: "Zertifizierte Cloud-Infrastruktur, Ende-zu-Ende-verschlüsselt.",
   },
   {
-    title: "Visuelle Unterstützung & Nachfragen",
-    text: "Der Agent weist auf fehlende Angaben hin, fragt aktiv nach, fasst zusammen und visualisiert.",
+    title: "Export & Übergabe",
+    text: "Vollständige, konforme PDFs und FHIR-Notes, einfacher Datenaustausch.Der Agent weist auf fehlende Angaben hin, fragt aktiv nach, fasst zusammen und visualisiert.",
   },
 ];
 
@@ -128,25 +126,24 @@ const ctaButtonDemo = (
 export default function Page() {
   return (
     <>
-      <section className="w-full shadow-xl">
-        <div className="z-10 bg-gray-300 bg-[url(/header_anamnese.png)] flex items-center md:py-12 bg-blend-overlay bg-top bg-cover">
+      <section className="w-full shadow-lg">
+        <div className="z-10 bg-gray-300 bg-[url(/header_midwife.png)] flex items-center md:py-12 bg-blend-overlay bg-top bg-cover">
           <div className="max-w-4xl mx-6 md:mx-auto md:px-6 lg:px-0 py-12 lg:py-0 z-10">
-            <Badge variant="secondary" size="lg" className="mr-2 mb-2">Anamnese-Agent</Badge>
-            <Badge variant="outline" size="lg"  className="">für Ärzt:innen</Badge>
+            <Badge variant="secondary" size="lg" className="mr-2 mb-2">Doku-Agent</Badge>
+            <Badge variant="outline" size="lg"  className="">für Hebammen</Badge>
             <h1 className="text-3xl leading-[1.1] md:text-4xl sm:leading-[1.1] xl:text-5xl xl:leading-[1.1] mt-12">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> 
-                Mehr Zeit für Patienten.
+                Mehr Zeit für Familien.
               </span>
-              <br/>Weniger Stress mit Dokumentation. 
-              <br/>Mehr Sicherheit in der Behandlung.
+              <br/>Weniger Papierkram.
+              <br/>Mehr Sicherheit bei jeder Betreuung.
             </h1>
             <p className="text-lg md:text-2xl my-10">
-            Ebliq entlastet Ärzt:innen mit dem Anamnese-Agenten: Ihre Gespräche werden automatisch erfasst, 
-            strukturiert dokumentiert und direkt in die Patientenakte übertragen. So behalten Ärzt:innen Kopf und Hände frei.
+              Ebliq unterstützt Hebammen bei der Dokumentation - einfach, konform und mobil. Damit Sie sich auf das Wesentliche konzentrieren können: Ihre Arbeit mit Mutter und Kind.
             </p>
             <div className="flex flex-wrap gap-2 md:gap-4 md:mt-4">
               {ctaButtonStart}
-              {ctaButtonDemo}
+              { /* ctaButtonDemo */ }
             </div>
             <div className="hidden sm:block text-base my-2">Kein IT-Projekt. Start in 2 Minuten.</div>
           </div>
@@ -154,11 +151,11 @@ export default function Page() {
       </section>
 
 
-      <section className="px-6 lg:px-8 py-10 md:py-20 shadow-lg">
-        <div className="max-w-4xl mx-auto">
+      <section className="shadow-lg ">
+        <div className="px-6 lg:px-0 py-10 md:py-20 max-w-4xl mx-auto">
           <div className="mb-6">
-            <h2>Vorteile für Ärzt:innen auf einen Blick.</h2>
-            <p>Ebliq entlastet dort, wo es zählt: Dokumentation, Kommunikation und Behandlungsqualität.</p>
+            <h2>Vorteile für Hebammen auf einen Blick.</h2>
+            <p>Ebliq entlastet Hebammen bei Dokumentation, Kommunikation und Organisation.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-2 content-center my-4">
             {benefits.map((benefit, index) => (
@@ -176,16 +173,16 @@ export default function Page() {
         </div>
       </section> 
 
-      <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-primary-700 shadow-xl">
-        <div className="max-w-4xl mx-auto ">
+      <section className="bg-primary-700 shadow-lg ">
+        <div className="py-6 md:py-20 px-6 md:px-6 mt-0 max-w-4xl mx-auto ">
           <h2 className="secondary-heading mt-0 !text-primary-200">
-            Der Ebliq Anamnese-Agent: 
+            Der Ebliq Doku-Agent für Hebammen: 
           </h2>
           <h3 className="text-2xl md:text-4xl text-white">
-            Vom Gespräch zur fertigen Dokumentation.
+            Von Fürsorge zum fertigen Protokoll
           </h3>
           <p className="text-xl md:text-2xl text-white">
-            Ihr digitaler Assistent hört mit, erkennt relevante Aussagen und erstellt daraus strukturierte Protokolle - ganz automatisch, während Sie behandeln.
+            Ebliq hört mit, erkennt relevante Aussagen und strukturiert daraus Ihre Dokumentation - automatisch, konsistent und gesetzeskonform.
           </p>
           <div className="grid sm:grid-cols-12 justify-start items-start gap-4 mt-12">
             <div className="text-[24rem]/[100%] overflow-hidden basis-1/10 text-secondary text-right col-span-2 hidden sm:block">1</div>
@@ -193,12 +190,12 @@ export default function Page() {
                 <Card className="border-0 border-t-2 border-secondary">
                   <CardHeader>
                     <CardDescription className="uppercase text-base">
-                      während Anamnese & Behandlung
+                      während der Betreuung
                     </CardDescription>
-                    <CardTitle className="text-primary-700 text-3xl font-bold">Zuhören, Verstehen, Merken</CardTitle>
+                    <CardTitle className="text-primary-700 text-3xl font-bold">Zuhören, Erfassen, Zeitmarken setzen</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Der Agent hört mit, unterscheidet Sprecher:innen und erstellt ein Live-Transkript.</p>
+                    <p>So einfach wie nur möglich: Mit einem Klick auf <strong>„Aufnahme starten“</strong> geht es los - ohne Menü-Geklicke.  Der Doku-Agent protokolliert dann live mit - inklusive automatischer Zeit- und Ereigniserkennung (z.-B. „vor 30 Minuten“) sowie Spracherkennung optimiert für Fachbegriffe.</p>
                   </CardContent>
                   <CardFooter>
                     <div className="w-full">
@@ -210,9 +207,9 @@ export default function Page() {
                         playsInline
                         preload="none"
                       >
-                        <source src="/assets/video/live-transcription.webm" type="video/webm" />
-                        <source src="/assets/video/live-transcription.mp4" type="video/mp4" />
-                        Ebliq erstellt ein Live-Transcript eines Patienten-Gesprächs.
+                        <source src="/assets/video/xxx.webm" type="video/webm" />
+                        <source src="/assets/video/xxx.mp4" type="video/mp4" />
+                        
                       </video>
                     </div>
                   </CardFooter>
@@ -224,12 +221,12 @@ export default function Page() {
                 <Card className="border-0 border-t-2 border-secondary">
                   <CardHeader>
                     <CardDescription className="uppercase text-base">
-                      Zusammenfassung
+                      automatische Zusammenfassung
                     </CardDescription>
                     <CardTitle className="text-primary-700 text-3xl font-bold">Wissen extrahieren & strukturieren</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Aus Sprache wird Wissen: Allergien, Termine, Befunde, Medikationen oder auch und Therapiepläne werden automatisch aus dem Gesprochenen extrahiert und aufbereitet in das Protokoll übernommen. Mit anpassbaren Gesprächsvorlagen bringt der Agent die Dokumentation genau in die von Ihnen gewünschte Form.</p>
+                    <p>Betreuungsgespräch, Befunde, Maßnahmen, Verlauf - alles wird aus der Sprache extrahiert und in eine klare Form gebracht. Ergebnis: <strong>Ihr digitales Geburts- und Wochenbettprotokoll</strong>.</p>
                   </CardContent>
                   <CardFooter>
                     <div className="w-full">
@@ -241,9 +238,9 @@ export default function Page() {
                         playsInline
                         preload="none"
                       >
-                        <source src="/assets/video/result-extract.mp4" type="video/mp4" />
-                        <source src="/assets/video/result-extract.webm" type="video/webm" />
-                        Der Anamnese-Agent erstellt das Protokoll strukturiert entlang individueller Vorgaben.
+                        <source src="/assets/video/xxx.mp4" type="video/mp4" />
+                        <source src="/assets/video/xxx.webm" type="video/webm" />
+                        
                       </video>
                     </div>
                   </CardFooter>
@@ -257,10 +254,10 @@ export default function Page() {
                     <CardDescription className="uppercase text-base">
                       Abschluss
                     </CardDescription>
-                    <CardTitle className="text-primary-700 text-3xl font-bold">Dokumentieren, Prüfen & Freigeben</CardTitle>
+                    <CardTitle className="text-primary-700 text-3xl font-bold">Dokumentieren, Zuordnen & Freigeben</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Der Anamnese-Agent erstellt automatisch ein nach FIHR-strukturiertes Protokoll - inklusive Gesprächsverlauf & relevanter Extrakte. Sie behalten jederzeit die Kontrolle: Manuelle Prüfung, Ergänzungen & Korrekturen und anschließend die Ein-Klick-Freigabe. Erst dann wird es in Ihren bevorzugten Workflow überführt - etwa automatisch ins PVS/KIS, als sichere E-Mail an Ihr Team und zukünftig auch an die ePA.</p>
+                    <p>Der Doku-Agent schlägt automatisch passende Zuordnungen zu Mutter oder Bettenbelegung vor. Sie prüfen, bestätigen oder ändern mit einem Klick - ergänzen falls nötig und geben das Protokoll frei. Die Übergabe erfolgt automatisch in Ihrem Wunsch-Workflow, etwa an KIS, PSV oder per E-Mail.</p>
                   </CardContent>
                   <CardFooter>
                       <video
@@ -271,9 +268,9 @@ export default function Page() {
                         playsInline
                         preload="none"
                       >
-                        <source src="/assets/video/approve-anamnese.mp4" type="video/mp4" />
-                        <source src="/assets/video/approve-anamnese.webm" type="video/webm" />
-                        Die strukturierte Dokumentation wird korrigiert und bspw. per E-Mail oder Schnittstelle nach der Freigabe versendet.
+                        <source src="/assets/video/xxx.mp4" type="video/mp4" />
+                        <source src="/assets/video/xxx.webm" type="video/webm" />
+                        
                       </video>
                   </CardFooter>
                 </Card>
@@ -286,10 +283,10 @@ export default function Page() {
                     <CardDescription className="uppercase text-base">
                       Ausblick
                     </CardDescription>
-                    <CardTitle className="text-primary-700 text-3xl font-bold">...bald noch mehr Unterstützung für Ihre Behandlungen!</CardTitle>
+                    <CardTitle className="text-primary-700 text-3xl font-bold">...bald noch mehr Unterstützung für Ihre Fürsorge!</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Freuen Sie sich in Kürze auf weitere Funktionen: <strong>automatischer Leitlinien-Check, intelligente Nachfragen & Alarme oder die Behandlungs-Fortführung in Folgeterminen</strong>. So entwickelt sich Ebliq Schritt für Schritt weiter - immer an Ihrer Seite.</p>
+                    <p>Freuen Sie sich in Kürze auf weitere Funktionen: <strong>automatischer Leitlinien-Check, intelligente Nachfragen & Alarme für Nachsorgetermine</strong>. So entwickelt sich Ebliq Schritt für Schritt weiter - immer an Ihrer Seite.</p>
                   </CardContent>
                 </Card>
             </div>
@@ -297,8 +294,8 @@ export default function Page() {
 
           <Item className="bg-secondary mt-16">
             <ItemContent className="">
-              <ItemTitle className="text-secondary-100 text-lg">Mehr Zeit für das Wesentliche:
-                <span className="text-secondary-50">Ihre Patient:innen.</span></ItemTitle>
+              <ItemTitle className="text-secondary-200 text-lg">Mehr Zeit für das Wesentliche:
+                <span className="text-secondary-50">Ihre Familien.</span></ItemTitle>
             </ItemContent>
             <ItemActions>
               {ctaButtonStart}
@@ -307,11 +304,12 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="px-6 lg:px-8 py-10 md:py-20 shadow-md">
+      <section className="px-6 lg:px-8 py-10 md:py-20 shadow-xl ">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-6">
-            <h2>Mehr als Anamnese: weitere Ebliq-Funktionen, die Sie und Ihre Praxis entlasten.</h2>
-            <p>Grundfunktionen, die Recherche, Dokumente, Übersetzung und Integration erleichtern - nahtlos in Ihren Workflow.</p>
+          <div className="mb-8">
+            <h2>Mehr als Dokumentation: weitere Ebliq-Funktionen für Hebammen.</h2>
+            <p className="mb-4">Ebliq kann mehr - passgenau für den Hebammen-Alltag.</p>
+            <p>Der Doku-Agent ist das Herzstück, aber nicht alles. Ebliq bietet zusätzliche Funktionen, die sich nahtlos in Ihren Alltag einfügen und Abläufe konform, übersichtlich und effizient machen.</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6 content-center my-4">
             {featureHighlights.map((feature, index) => (
@@ -339,11 +337,38 @@ export default function Page() {
         </div>
       </section> 
 
-      <section className="px-6 lg:px-8 py-10 md:py-20 shadow-lg bg-gradient-to-br from-secondary-400 via-primary-600 via-40% to-85% to-secondary-900 text-primary-100">
+      <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-green-50 shadow-lg ">
+        <div className="max-w-4xl mx-auto ">
+          <h2 className="secondary-heading mt-0 !2text-primary-900">
+              Konformität ohne Zusatzaufwand
+            </h2>
+            <h3 className="text-2xl md:text-4xl">
+              Verlässlich dokumentiert - für Sie und Ihre Klientinnen.
+            </h3>
+          <div className="flex justify-between items-center gap-3">
+            <div className="">
+              <List className="my-4">
+                {conformityHighlights.map((item, index) => (
+                  <ListItem className="flex items-top gap-2">
+                    <Check size="30" strokeWidth={5} className="mt-1 text-green basis-2/10 w-[50px] shrink-0" />
+                    <div className="basis-8/10">
+                      <div className="font-bold">{item.title}</div>
+                      <div className="font-light">{item.text}</div>
+                    </div>
+                  </ListItem>
+                ))}
+              </List>
+            </div>
+          </div>
+          <div className="mt-6 text-muted text-sm">Erfüllt die Anforderungen des Hebammengesetzes (HebG) und der DSGVO - ohne Mehraufwand.</div>
+        </div>
+      </section>
+
+      <section className="px-6 lg:px-8 py-10 md:py-20 shadow-lg bg-gradient-to-br from-secondary-400 via-primary-600 via-40% to-85% to-secondary-900 text-primary-100 ">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
             <h2 className="text-4xl md:text-6xl text-white mt-0">Jetzt selbst erleben</h2>
-            <p className="text-2xl md:text-3xl">Starten Sie in 2 Minuten - oder lassen Sie sich den Anamnese-Agenten unverbindlich vorführen.</p>
+            <p className="text-2xl md:text-3xl">Starten Sie in 2 Minuten - oder lassen Sie sich den Doku-Agenten unverbindlich vorführen.</p>
           </div>
           <div className="flex flex-wrap gap-2 content-center my-4 md:my-8 justify-left">
             {ctaButtonStart}
@@ -361,8 +386,6 @@ export default function Page() {
           <div className="text-primary-200 text-base">Kein Abo. Jederzeit kündbar. Gesetzeskonform. Keine Patientendaten fürs Training.</div>
         </div>
       </section> 
-
-      <TechSection />
 
     </>
   );
