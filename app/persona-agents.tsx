@@ -21,6 +21,7 @@ const agentsData = [
     persona: "Hebammen",
     agent: "Doku-Agent",
   },
+  /*
   {
     href: "/for-you/officeteam",
     image: "/teaser_reception.png",
@@ -29,6 +30,7 @@ const agentsData = [
     persona: "Praxis-Teams",
     agent: "Tele-Agent",
   },
+  */
 ];
 
 export default function PersonaAgents() {
@@ -46,7 +48,7 @@ export default function PersonaAgents() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 ">
+      <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 ">
         {agentsData.map((agent, index) => (
           <Link href={agent.href}>
             <div className="relative flex flex-col items-center p-3 sm:p-4 rounded-sm shadow-md min-h-[600px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group">

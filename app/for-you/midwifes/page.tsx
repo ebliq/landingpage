@@ -207,8 +207,8 @@ export default function Page() {
                         playsInline
                         preload="none"
                       >
-                        <source src="/assets/video/xxx.webm" type="video/webm" />
-                        <source src="/assets/video/xxx.mp4" type="video/mp4" />
+                        <source src="/assets/video/doku-start.mp4" type="video/mp4" />
+                        <source src="/assets/video/doku-start.webm" type="video/webm" />
                         
                       </video>
                     </div>
@@ -238,8 +238,8 @@ export default function Page() {
                         playsInline
                         preload="none"
                       >
-                        <source src="/assets/video/xxx.mp4" type="video/mp4" />
-                        <source src="/assets/video/xxx.webm" type="video/webm" />
+                        <source src="/assets/video/doku-result.mp4" type="video/mp4" />
+                        <source src="/assets/video/doku-result.webm" type="video/webm" />
                         
                       </video>
                     </div>
@@ -268,8 +268,8 @@ export default function Page() {
                         playsInline
                         preload="none"
                       >
-                        <source src="/assets/video/xxx.mp4" type="video/mp4" />
-                        <source src="/assets/video/xxx.webm" type="video/webm" />
+                        <source src="/assets/video/doku-finish.mp4" type="video/mp4" />
+                        <source src="/assets/video/doku-finish.webm" type="video/webm" />
                         
                       </video>
                   </CardFooter>

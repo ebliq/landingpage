@@ -39,6 +39,7 @@ export default function Page() {
           <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
         </Link>
 
+        {/*
         <Link className="flex justify-between items-center my-8" href="/for-you/officeteams">
           <div>
               <h3>für Praxisteams</h3>
@@ -46,6 +47,7 @@ export default function Page() {
           </div>
           <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
         </Link>
+        */}
 
       </section> 
     </>
