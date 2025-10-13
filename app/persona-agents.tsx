@@ -50,13 +50,13 @@ export default function PersonaAgents() {
 
       <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 ">
         {agentsData.map((agent, index) => (
-          <Link href={agent.href}>
-            <div className="relative flex flex-col items-center p-3 sm:p-4 rounded-sm shadow-md min-h-[600px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group">
-              <div className="flex justify-between mb-2 z-20 w-full">
-                <Badge variant="secondary" size="lg" className="flex-none">{agent.agent}</Badge>
-                <Badge variant="transparent" className="flex-none">für {agent.persona}</Badge>
-              </div>
-              <div className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110">
+          <div className="relative flex flex-col items-center p-3 sm:p-4 rounded-sm shadow-md min-h-[600px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group">
+            <div className="flex justify-between mb-2 z-20 w-full">
+              <Badge variant="secondary" size="lg" className="flex-none">{agent.agent}</Badge>
+              <Badge variant="transparent" className="flex-none">für {agent.persona}</Badge>
+            </div>
+            <div className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110">
+              <Link href={agent.href}>
                 <Image
                   src={agent.image}
                   alt={agent.headline}
@@ -66,23 +66,25 @@ export default function PersonaAgents() {
                   priority={false}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 group-hover:bg-opacity-40"></div>
-              </div>
-              <div className="relative z-10 flex flex-col items-center text-center p-4 rounded-sm bg-primary-50 bg-opacity-80 mt-auto w-full transition-all duration-300 group-hover:bg-opacity-90">
+              </Link>
+            </div>
+            <div className="relative z-10 flex flex-col items-center text-center p-4 rounded-sm bg-primary-50 bg-opacity-80 mt-auto w-full transition-all duration-300 group-hover:bg-opacity-90">
+              <Link href={agent.href}>
                 <h3 className="">
                   {agent.headline}
                 </h3>
                 <p className="text-md text-black transition-colors duration-300 group-hover:text-gray-700">
                   {agent.text}
                 </p>
-                <Button asChild variant="default" className="my-4 place-self">
-                  <a href={agent.href} >
-                    alle Vorteile für {agent.persona} 
-                    <ArrowRight className="ml-2"/>
-                  </a>
-                </Button>
-              </div>
+              </Link>
+              <Button asChild variant="default" className="my-4 place-self">
+                <a href={agent.href} >
+                  alle Vorteile für {agent.persona} 
+                  <ArrowRight className="ml-2"/>
+                </a>
+              </Button>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
