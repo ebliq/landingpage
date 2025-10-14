@@ -1,13 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { CircleChevronRight } from "lucide-react";
-import {
-  Heading,
-  Paragraph,
-  List,
-  ListItem,
-} from "../../components/typography/typography";
+import { Paragraph } from "../../components/typography/typography";
 
 export default function Page() {
   return (

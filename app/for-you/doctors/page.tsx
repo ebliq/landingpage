@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import TechSection from "@/app/tech-section";
-import { Item, ItemContent, ItemTitle, ItemActions, ItemDescription } from "@/components/ui/item";
+import { Item, ItemContent, ItemTitle, ItemActions } from "@/components/ui/item";
 import Link from "next/link";
-import Image from "next/image";
 
 import {
   Stethoscope,
@@ -13,7 +12,6 @@ import {
   Smile,
   PlayCircleIcon, 
   Rocket,
-  Check,
   ArrowRight,
   BotMessageSquare,
   FileSearch,
@@ -22,8 +20,6 @@ import {
   TabletSmartphone,
   Phone,
 } from "lucide-react";
-
-import { List, ListItem } from "@/components/typography/typography";
 
 const benefits = [
   {
@@ -73,25 +69,6 @@ const featureHighlights = [
     headline: "Flexible Hardware & einfache Nutzung",
     text: "Tablet oder PC, freihändig arbeiten, sofort einsatzbereit - kein IT-Projekt nötig.",
     icon: TabletSmartphone,
-  },
-];
-
-const agentHighlights = [
-  {
-    title: "Echtzeit-Sprachdokumentation",
-    text: "Hört live mit und strukturiert automatisch.",
-  },
-  {
-    title: "Automatische Extraktion relevanter Informationen",
-    text: "Allergien, Medikation, Impfungen und Termine - zuverlässig erkannt und dokumentiert.",
-  },
-  {
-    title: "Gesprächsvorlagen für Fachbereiche & Situationen",
-    text: "Pädiatrie, Chirurgie, Urologie u. a. - individuelle Templates reduzieren Nacharbeit und sichern Standards.",
-  },
-  {
-    title: "Visuelle Unterstützung & Nachfragen",
-    text: "Der Agent weist auf fehlende Angaben hin, fragt aktiv nach, fasst zusammen und visualisiert.",
   },
 ];
 
@@ -161,8 +138,8 @@ export default function Page() {
             <p>Ebliq entlastet dort, wo es zählt: Dokumentation, Kommunikation und Behandlungsqualität.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-2 content-center my-4">
-            {benefits.map((benefit, index) => (
-              <Card className="bg-primary-50 border-none px-4 py-2 ">
+            {benefits.map((benefit) => (
+              <Card key={benefit.headline} className="bg-primary-50 border-none px-4 py-2 ">
                 <CardContent className="flex justify-start gap-4 items-top p-0">
                   <benefit.icon size="60" strokeWidth={1} className="text-primary-600 basis-2/10 w-[60px] shrink-0" />
                   <div className="basis-8/10">
@@ -314,8 +291,11 @@ export default function Page() {
             <p>Grundfunktionen, die Recherche, Dokumente, Übersetzung und Integration erleichtern - nahtlos in Ihren Workflow.</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6 content-center my-4">
-            {featureHighlights.map((feature, index) => (
-              <Card className="bg-primary-50 border-none px-4 py-2 shadow-md hover:shadow-lg">
+            {featureHighlights.map((feature) => (
+              <Card
+                key={feature.headline}
+                className="bg-primary-50 border-none px-4 py-2 shadow-md hover:shadow-lg"
+              >
                 <CardContent className="flex justify-start gap-4 items-center p-0">
                   <feature.icon size="60" strokeWidth={1} className="text-primary-600 basis-2/10 w-[60px] shrink-0" />
                   <div className="basis-8/10">
