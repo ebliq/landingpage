@@ -1,13 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import TechSection from "@/app/tech-section";
-import { Item, ItemContent, ItemTitle, ItemActions, ItemDescription } from "@/components/ui/item";
+import { Item, ItemContent, ItemTitle, ItemActions } from "@/components/ui/item";
 import Link from "next/link";
 
 import {
   ClockArrowUp,
-  PlayCircleIcon, 
   Rocket,
   ArrowRight,
   BotMessageSquare,
@@ -105,24 +103,6 @@ const ctaButtonStart = (
     </a>}
   </Button>
 );
-const ctaButtonDemo = (
-  <Button
-    variant="ghost"
-    size="lg"
-    asChild
-  >
-    <a
-      href="https://www.loom.com/share/40697f79eb1340d686eec6638283ba03?sid=82f9a33c-ca62-489d-bfdd-71fecd220b5d"
-      className="flex items-center"
-    >
-      <PlayCircleIcon className="h-8 w-8 mr-3" />
-      <div className="flex flex-col items-start">
-        <span className="font-semibold">Demo ansehen</span>
-      </div>
-    </a>
-  </Button>
-);
-
 export default function Page() {
   return (
     <>
@@ -158,8 +138,8 @@ export default function Page() {
             <p>Ebliq entlastet Hebammen bei Dokumentation, Kommunikation und Organisation.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-2 content-center my-4">
-            {benefits.map((benefit, index) => (
-              <Card className="bg-primary-50 border-none px-4 py-2 ">
+            {benefits.map((benefit) => (
+              <Card key={benefit.headline} className="bg-primary-50 border-none px-4 py-2 ">
                 <CardContent className="flex justify-start gap-4 items-top p-0">
                   <benefit.icon size="60" strokeWidth={1} className="text-primary-600 basis-2/10 w-[60px] shrink-0" />
                   <div className="basis-8/10">
@@ -312,8 +292,11 @@ export default function Page() {
             <p>Der Doku-Agent ist das Herzstück, aber nicht alles. Ebliq bietet zusätzliche Funktionen, die sich nahtlos in Ihren Alltag einfügen und Abläufe konform, übersichtlich und effizient machen.</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6 content-center my-4">
-            {featureHighlights.map((feature, index) => (
-              <Card className="bg-primary-50 border-none px-4 py-2 shadow-md hover:shadow-lg">
+            {featureHighlights.map((feature) => (
+              <Card
+                key={feature.headline}
+                className="bg-primary-50 border-none px-4 py-2 shadow-md hover:shadow-lg"
+              >
                 <CardContent className="flex justify-start gap-4 items-center p-0">
                   <feature.icon size="60" strokeWidth={1} className="text-primary-600 basis-2/10 w-[60px] shrink-0" />
                   <div className="basis-8/10">
@@ -348,8 +331,8 @@ export default function Page() {
           <div className="flex justify-between items-center gap-3">
             <div className="">
               <List className="my-4">
-                {conformityHighlights.map((item, index) => (
-                  <ListItem className="flex items-top gap-2">
+                {conformityHighlights.map((item) => (
+                  <ListItem key={item.title} className="flex items-top gap-2">
                     <Check size="30" strokeWidth={5} className="mt-1 text-green basis-2/10 w-[50px] shrink-0" />
                     <div className="basis-8/10">
                       <div className="font-bold">{item.title}</div>

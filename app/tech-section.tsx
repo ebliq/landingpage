@@ -1,9 +1,4 @@
-import {
-  Cpu,
-  ArrowRight,
-  Check,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Cpu } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function TechSection() {

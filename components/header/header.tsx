@@ -66,11 +66,6 @@ function ForYouMenuList() {return (
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const handleLinkClick = () => {
-    setIsMenuOpen(false);
-  };
-
-
   return (
     <header className="navbar left-0 top-0 z-50 w-full bg-white dark:border-stroke-dark dark:bg-black sticky shadow-md shadow-violoet-800 z-10;">
       <div className="container relative max-w-[1400px]">
@@ -173,7 +168,6 @@ export default function Header() {
                 <li className="menu-item">
                   <Link
                     href="/#features"
-                    onClick={handleLinkClick}
                   >
                     Features
                   </Link>
@@ -181,7 +175,6 @@ export default function Header() {
                 <li className="menu-item">
                   <Link
                     href="/about-us"
-                    onClick={handleLinkClick}
                   >
                     Über uns
                   </Link>
@@ -189,7 +182,6 @@ export default function Header() {
                 <li className="menu-item">
                   <Link
                     href="/privacy"
-                    onClick={handleLinkClick}
                   >
                     Datenschutz
                   </Link>
@@ -197,7 +189,6 @@ export default function Header() {
                 <li className="menu-item">
                   <Link
                     href="/pricing"
-                    onClick={handleLinkClick}
                   >
                     Preise
                   </Link>
@@ -205,7 +196,6 @@ export default function Header() {
                 <li className="menu-item">
                   <Link
                     href="/blog"
-                    onClick={handleLinkClick}
                   >
                     Blog
                   </Link>

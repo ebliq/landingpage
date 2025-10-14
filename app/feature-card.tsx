@@ -15,35 +15,7 @@ import {
   BookOpen,
   BarChart3,
 } from "lucide-react";
-import {
-  AgentCard,
-  AgentCardWithBackground,
-  AgentGrid
-} from "@/components/agent-cards/agent-cards";
-
-
-
-const agentsWithIcon = [
-  {
-    href: "/features/anamnese-bot",
-    image: "/agent1.png",
-    headline: "Anamnese-Agent",
-    text: "Der Anamnese-Agent unterstütz den Arzt bei der optimalen Patientenaufnahme - vollständig, effizient und dokumentationssicher. Ideal bei der Patientenaufnahme.",
-  },
-  {
-    href: "/features/arztbrief-generator",
-    image: "/agent2.png",
-    headline: "Arztbrief-Generator",
-    text: "Mit Ebliq schreiben sich Arztbriefe fast von selbst. Der Generator übernimmt wichtige Inhalte automatisch - strukturiert, korrekt und zeitsparend.",
-  },
-  {
-    href: "/features/ai-assistant",
-    image: "/agent3.png",
-    headline: "AI-Assistent",
-    text: "Mit dem integrierten AI-Assistenten sprechen Sie wie mit einem echten Teammitglied. Er beantwortet Fragen, sucht Informationen und leitet Anfragen weiter.",
-  },
-];
-
+import { AgentCard, AgentGrid } from "@/components/agent-cards/agent-cards";
 const agents = [
   {
     icon: Stethoscope,
