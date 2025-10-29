@@ -4,6 +4,8 @@ import Link from "next/link";
 import React from "react";
 import { CircleChevronRight } from "lucide-react";
 
+import { EarlyAccessRibbon } from "@/components/early-access/ribbon";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -67,27 +69,29 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <header className="navbar left-0 top-0 z-50 w-full bg-white dark:border-stroke-dark dark:bg-black sticky shadow-md shadow-violoet-800 z-10;">
+    <header className="navbar left-0 top-0 z-50 w-full bg-white dark:border-stroke-dark dark:bg-black sticky shadow-md shadow-violoet-800 z-10 overflow-hidden">
       <div className="container relative max-w-[1400px]">
         <div className="flex items-center justify-between">
-          <Link className="block py-4 lg:py-0 flex items-center gap-2" href="/">
-            <Image
-              alt="Logo"
-              width="50"
-              height="50"
-              decoding="async"
-              data-nimg="1"
-              className="w-[35px] md:w-[50px]"
-              src="/logo.svg"
-              style={{
-                color: "transparent",
-              }}
-            />
-            <div className="text-xl md:text-2xl lg:text-3xl font-bold text-primary pl-4">
-              Ebliq
-              <div className="text-xs md:text-sm lg:text-base text-black font-light">KI für den Praxisalltag</div>
+          <div className="flex items-center">
+            <Link className="block py-4 lg:py-0 flex items-center gap-2" href="/">
+              <Image
+                alt="Logo"
+                width="50"
+                height="50"
+                decoding="async"
+                data-nimg="1"
+                className="w-[35px] md:w-[50px]"
+                src="/logo.svg"
+                style={{
+                  color: "transparent",
+                }}
+              />
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-primary pl-4">
+                Ebliq
+                <div className="text-xs md:text-sm lg:text-base text-black font-light">KI für den Praxisalltag</div>
+              </div>
+            </Link>
           </div>
-          </Link>
           
           <button
             className="navbarOpen absolute right-4 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 flex-col items-center justify-center space-y-[6px] font-bold lg:hidden"
@@ -204,7 +208,11 @@ export default function Header() {
               */}
             </nav>
           </div>
-          <div className="mr-[60px] flex items-center justify-end lg:mr-0">
+          <div className="mr-[30px] sm:mr-[60px] flex items-center justify-end lg:mr-0">
+            <EarlyAccessRibbon
+              href="/early-access"
+              className="block"
+            />
             <Link
               className="button"
               target="_blank"
