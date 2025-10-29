@@ -164,7 +164,8 @@ export default function FeaturesSection() {
   return (
     <section className="py-12 px-4 relative shadow-md" id="features">
       <div className="grid grid-col-2 max-w-6xl mx-auto relative">
-        <AgentGrid cols={"3"} className="mb-16">
+        {/*
+        <AgentGrid cols={"3"} className="mb-16">  
           {agentsWithIcon.map((agent, index) => (
             <AgentCardWithBackground
               key={index}
@@ -175,6 +176,7 @@ export default function FeaturesSection() {
             ></AgentCardWithBackground>
           ))}
         </AgentGrid>
+        */}
 
         <AgentGrid cols={"4"} className="mb-16">
           {agents.map((agent, index) => (

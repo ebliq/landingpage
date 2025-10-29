@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const agentsData = [
   {
@@ -33,27 +34,51 @@ const agentsData = [
   */
 ];
 
-export default function PersonaAgents() {
+type PersonaAgentsProps = {
+  className?: string;
+  onlyCards?: boolean;
+};
+
+export default function PersonaAgents({
+  className,
+  onlyCards = false,
+}: PersonaAgentsProps) {
   return (
-    <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-primary-700 text-center shadow-xl">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="secondary-heading !text-primary-200">
-          Von Antworten zu echter Unterstützung - unsere KI-Agenten
-        </h2>
-        <h3 className="text-2xl md:text-4xl text-white">
-          Spezialisierte KI-Helfer, die Ihren Praxisalltag erleichtern
-        </h3>
-        <p className="my-6 md:my-16 md:text-2xl text-white font-light">
-          Ebliq geht über Chatbots hinaus: Spezialisierte Agenten unterstützen bei Anamnese, Dokumentation und Patient:innen-Kommunikation - und entlasten so spürbar den Praxisalltag.
-        </p>
-      </div>
+    <section
+      className={cn(
+        "py-6 md:py-20 px-6 md:px-12 mt-0 bg-primary-700 text-center shadow-xl",
+        className,
+      )}
+    >
+      {!onlyCards && (
+        <div className="max-w-4xl mx-auto">
+          <h2 className="secondary-heading !text-primary-200">
+            Von Antworten zu echter Unterstützung - unsere KI-Agenten
+          </h2>
+          <h3 className="text-2xl md:text-4xl text-white">
+            Spezialisierte KI-Helfer, die Ihren Praxisalltag erleichtern
+          </h3>
+          <p className="my-6 md:my-16 md:text-2xl text-white font-light">
+            Ebliq geht über Chatbots hinaus: Spezialisierte Agenten unterstützen
+            bei Anamnese, Dokumentation und Patient:innen-Kommunikation - und
+            entlasten so spürbar den Praxisalltag.
+          </p>
+        </div>
+      )}
 
       <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 ">
-        {agentsData.map((agent, index) => (
-          <div className="relative flex flex-col items-center p-3 sm:p-4 rounded-sm shadow-md min-h-[600px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group">
+        {agentsData.map((agent) => (
+          <div
+            key={agent.href}
+            className="relative flex flex-col items-center p-3 sm:p-4 rounded-sm shadow-md min-h-[600px] text-white overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer group"
+          >
             <div className="flex justify-between mb-2 z-20 w-full">
-              <Badge variant="secondary" size="lg" className="flex-none">{agent.agent}</Badge>
-              <Badge variant="transparent" className="flex-none">für {agent.persona}</Badge>
+              <Badge variant="secondary" size="lg" className="flex-none">
+                {agent.agent}
+              </Badge>
+              <Badge variant="transparent" className="flex-none">
+                für {agent.persona}
+              </Badge>
             </div>
             <div className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110">
               <Link href={agent.href}>
@@ -88,12 +113,19 @@ export default function PersonaAgents() {
         ))}
       </div>
 
-      <Button asChild size="xxl" variant="outlineinvers" className="mt-10 md:mt-20">
-        <a href="/features" >
-          alle Funktionen entdecken
-          <ArrowRight className="ml-8" size="40" />
-        </a>
-      </Button>
+      {!onlyCards && (
+        <Button
+          asChild
+          size="xxl"
+          variant="outlineinvers"
+          className="mt-10 md:mt-20"
+        >
+          <a href="/features" >
+            alle Funktionen entdecken
+            <ArrowRight className="ml-8" size="40" />
+          </a>
+        </Button>
+      )}
 
     </section>
   );
