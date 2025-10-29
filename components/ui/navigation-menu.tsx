@@ -1,26 +1,65 @@
+"use client";
+
 import * as React from "react"
+import { createPortal } from "react-dom"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 import { ChevronDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
+type NavigationMenuRootElement = React.ElementRef<
+  typeof NavigationMenuPrimitive.Root
+>
+
+type NavigationMenuRootRef = React.MutableRefObject<
+  NavigationMenuRootElement | null
+>
+
+const NavigationMenuRootContext = React.createContext<
+  NavigationMenuRootRef | null
+>(null)
+
+const useNavigationMenuRootRef = () => {
+  return React.useContext(NavigationMenuRootContext)
+}
+
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
->(({ className, children, ...props }, ref) => (
-  <NavigationMenuPrimitive.Root
-    ref={ref}
-    className={cn(
-      "relative z-10 flex max-w-max flex-1 items-center justify-center",
-      className
-    )}
-    {...props}
-  >
-    {children}
-    <NavigationMenuViewport />
-  </NavigationMenuPrimitive.Root>
-))
+>(({ className, children, ...props }, ref) => {
+  const internalRef = React.useRef<NavigationMenuRootElement | null>(null)
+
+  const setRefs = React.useCallback(
+    (node: NavigationMenuRootElement | null) => {
+      internalRef.current = node
+
+      if (typeof ref === "function") {
+        ref(node)
+      } else if (ref) {
+        (ref as React.MutableRefObject<NavigationMenuRootElement | null>).current =
+          node
+      }
+    },
+    [ref],
+  )
+
+  return (
+    <NavigationMenuRootContext.Provider value={internalRef}>
+      <NavigationMenuPrimitive.Root
+        ref={setRefs}
+        className={cn(
+          "relative z-10 flex max-w-max flex-1 items-center justify-center",
+          className,
+        )}
+        {...props}
+      >
+        {children}
+        <NavigationMenuViewport />
+      </NavigationMenuPrimitive.Root>
+    </NavigationMenuRootContext.Provider>
+  )
+})
 NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName
 
 const NavigationMenuList = React.forwardRef<
@@ -82,18 +121,114 @@ const NavigationMenuLink = NavigationMenuPrimitive.Link
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
->(({ className, ...props }, ref) => (
-  <div className={cn("absolute left-0 top-full flex justify-center")}>
-    <NavigationMenuPrimitive.Viewport
-      className={cn(
-        "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
-        className
-      )}
-      ref={ref}
-      {...props}
-    />
-  </div>
-))
+>(({ className, ...props }, ref) => {
+  const rootRef = useNavigationMenuRootRef()
+
+  if (!rootRef) {
+    return (
+      <div className={cn("absolute left-0 top-full flex justify-center")}>
+        <NavigationMenuPrimitive.Viewport
+          className={cn(
+            "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+            className,
+          )}
+          ref={ref}
+          {...props}
+        />
+      </div>
+    )
+  }
+
+  const [isMounted, setIsMounted] = React.useState(false)
+  const [portalNode, setPortalNode] = React.useState<HTMLElement | null>(null)
+  const [position, setPosition] = React.useState({
+    left: 0,
+    top: 0,
+    width: 0,
+  })
+
+  const updatePosition = React.useCallback(() => {
+    if (!rootRef?.current) return
+
+    const rect = rootRef.current.getBoundingClientRect()
+    setPosition({
+      left: rect.left,
+      top: rect.bottom,
+      width: rect.width,
+    })
+  }, [rootRef])
+
+  React.useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  React.useEffect(() => {
+    if (!isMounted) return
+
+    let node = document.getElementById("navigation-menu-viewport-root")
+    if (!node) {
+      node = document.createElement("div")
+      node.id = "navigation-menu-viewport-root"
+      document.body.appendChild(node)
+    }
+
+    setPortalNode(node)
+
+    return () => {
+      if (node && node.childElementCount === 0) {
+        node.remove()
+      }
+    }
+  }, [isMounted])
+
+  React.useEffect(() => {
+    if (!isMounted) return
+
+    updatePosition()
+
+    window.addEventListener("resize", updatePosition)
+    window.addEventListener("scroll", updatePosition, true)
+
+    return () => {
+      window.removeEventListener("resize", updatePosition)
+      window.removeEventListener("scroll", updatePosition, true)
+    }
+  }, [isMounted, updatePosition])
+
+  React.useEffect(() => {
+    if (!rootRef?.current || typeof ResizeObserver === "undefined") return
+
+    const observer = new ResizeObserver(() => updatePosition())
+    observer.observe(rootRef.current)
+
+    return () => observer.disconnect()
+  }, [rootRef, updatePosition])
+
+  if (!isMounted || !portalNode) {
+    return null
+  }
+
+  return createPortal(
+    <div
+      className="pointer-events-none fixed left-0 top-0 z-[1000] flex justify-center px-4"
+      style={{
+        minWidth: position.width,
+        maxWidth: "100vw",
+        transform: `translate3d(${position.left}px, ${position.top}px, 0)`,
+      }}
+    >
+      <NavigationMenuPrimitive.Viewport
+        className={cn(
+          "pointer-events-auto origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+          className,
+        )}
+        ref={ref}
+        {...props}
+      />
+    </div>,
+    portalNode,
+  )
+})
 NavigationMenuViewport.displayName =
   NavigationMenuPrimitive.Viewport.displayName
 

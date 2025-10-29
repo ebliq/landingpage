@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllBlogPosts } from "@/lib/blog";
+//import { getAllBlogPosts } from "@/lib/blog";
 
 const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") || "https://ebliq.de";
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy",
   ];
 
-  const blogPosts = getAllBlogPosts();
+  //const blogPosts = getAllBlogPosts();
 
   return [
     ...staticPaths.map((path) => ({
