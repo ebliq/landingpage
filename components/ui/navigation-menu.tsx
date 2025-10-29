@@ -122,22 +122,10 @@ const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
 >(({ className, ...props }, ref) => {
-  const rootRef = useNavigationMenuRootRef()
-
-  if (!rootRef) {
-    return (
-      <div className={cn("absolute left-0 top-full flex justify-center")}>
-        <NavigationMenuPrimitive.Viewport
-          className={cn(
-            "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
-            className,
-          )}
-          ref={ref}
-          {...props}
-        />
-      </div>
-    )
-  }
+  const providedRootRef = useNavigationMenuRootRef()
+  const fallbackRootRef = React.useRef<NavigationMenuRootElement | null>(null)
+  const rootRef = providedRootRef ?? fallbackRootRef
+  const portalEnabled = Boolean(providedRootRef)
 
   const [isMounted, setIsMounted] = React.useState(false)
   const [portalNode, setPortalNode] = React.useState<HTMLElement | null>(null)
@@ -148,7 +136,7 @@ const NavigationMenuViewport = React.forwardRef<
   })
 
   const updatePosition = React.useCallback(() => {
-    if (!rootRef?.current) return
+    if (!rootRef.current) return
 
     const rect = rootRef.current.getBoundingClientRect()
     setPosition({
@@ -163,7 +151,7 @@ const NavigationMenuViewport = React.forwardRef<
   }, [])
 
   React.useEffect(() => {
-    if (!isMounted) return
+    if (!isMounted || !portalEnabled) return
 
     let node = document.getElementById("navigation-menu-viewport-root")
     if (!node) {
@@ -179,10 +167,10 @@ const NavigationMenuViewport = React.forwardRef<
         node.remove()
       }
     }
-  }, [isMounted])
+  }, [isMounted, portalEnabled])
 
   React.useEffect(() => {
-    if (!isMounted) return
+    if (!isMounted || !portalEnabled) return
 
     updatePosition()
 
@@ -193,16 +181,33 @@ const NavigationMenuViewport = React.forwardRef<
       window.removeEventListener("resize", updatePosition)
       window.removeEventListener("scroll", updatePosition, true)
     }
-  }, [isMounted, updatePosition])
+  }, [isMounted, portalEnabled, updatePosition])
 
   React.useEffect(() => {
-    if (!rootRef?.current || typeof ResizeObserver === "undefined") return
+    if (!portalEnabled || !rootRef.current || typeof ResizeObserver === "undefined") {
+      return
+    }
 
     const observer = new ResizeObserver(() => updatePosition())
     observer.observe(rootRef.current)
 
     return () => observer.disconnect()
-  }, [rootRef, updatePosition])
+  }, [portalEnabled, rootRef, updatePosition])
+
+  if (!portalEnabled) {
+    return (
+      <div className={cn("absolute left-0 top-full flex justify-center")}>
+        <NavigationMenuPrimitive.Viewport
+          className={cn(
+            "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+            className,
+          )}
+          ref={ref}
+          {...props}
+        />
+      </div>
+    )
+  }
 
   if (!isMounted || !portalNode) {
     return null
