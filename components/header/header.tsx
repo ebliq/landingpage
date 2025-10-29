@@ -218,10 +218,10 @@ export default function Header() {
               */}
             </nav>
           </div>
-          <div className="mr-[60px] flex items-center justify-end lg:mr-0">
+          <div className="mr-[30px] sm:mr-[60px] flex items-center justify-end lg:mr-0">
             <EarlyAccessRibbon
               href="/early-access"
-              className="hidden sm:block"
+              className="block"
             />
             <Link
               className="button"

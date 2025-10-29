@@ -26,7 +26,7 @@ export function EarlyAccessRibbon({
       <span className="sr-only">{label}</span>
       <span
         aria-hidden="true"
-        className="absolute -left-[95px] my-auto h-6 w-40 inset-0 flex -rotate-[55deg] items-center justify-center bg-green-500 text-[12px] font-light uppercase tracking-[100%] text-white shadow-md transition duration-200 ease-out group-hover:shadow-xl group-hover:font-medium group-hover:bg-green-700 group-hover:scale-[1.1] group-focus-visible:scale-[1.1]"
+        className="absolute -left-[90px] sm:-left-[95px] my-auto h-4 sm:h-6 w-40 inset-0 flex -rotate-[55deg] items-center justify-center bg-green-500 text-[9px] sm:text-[12px] font-light uppercase tracking-[100%] text-white shadow-md transition duration-200 ease-out group-hover:shadow-xl group-hover:font-medium group-hover:bg-green-700 group-hover:scale-[1.1] group-focus-visible:scale-[1.1]"
       >
         {label}
       </span>
