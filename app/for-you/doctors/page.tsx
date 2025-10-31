@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import TechSection from "@/app/tech-section";
+import CalculatorSection from "./calculator-section";
 import { Item, ItemContent, ItemTitle, ItemActions } from "@/components/ui/item";
 import Link from "next/link";
 
@@ -151,7 +152,9 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section> 
+      </section>
+
+      <CalculatorSection />
 
       <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-primary-700 shadow-xl">
         <div className="max-w-4xl mx-auto ">
