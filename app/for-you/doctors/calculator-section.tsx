@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { Rocket, Phone, ChevronDown } from "lucide-react";
+import { Rocket, Phone, ChevronDown, ArrowDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/components/utils";
@@ -266,6 +266,8 @@ const PROCESS_MATRIX: ProcessMatrix = {
   ],
 };
 
+type MaturityLevel = (typeof MATURITY_LEVELS)[number]["value"];
+
 const formatCurrency = (value: number) =>
   new Intl.NumberFormat("de-DE", {
     style: "currency",
@@ -281,10 +283,109 @@ const clamp = (value: number, min: number, max: number) =>
 export default function CalculatorSection() {
   const [doctors, setDoctors] = useState<number>(3);
   const [anamnesesPerDay, setAnamnesesPerDay] = useState<number>(10);
-  const [maturityLevel, setMaturityLevel] = useState<number>(2);
+  const [maturityLevel, setMaturityLevel] = useState<MaturityLevel>(2);
   const [practiceDays, setPracticeDays] = useState<number>(4);
   const [hourlyRate, setHourlyRate] = useState<number>(115);
   const [showAdvanced, setShowAdvanced] = useState<boolean>(false);
+  const [isMobileLayout, setIsMobileLayout] = useState<boolean>(false);
+  const [showScrollCue, setShowScrollCue] = useState<boolean>(false);
+  const parameterCardRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToResults = () => {
+    const anchor = document.getElementById("sparpotential");
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const applyLayout = (source: MediaQueryList | MediaQueryListEvent) => {
+      setIsMobileLayout(source.matches);
+    };
+
+    applyLayout(mediaQuery);
+
+    const listener = (event: MediaQueryListEvent) => applyLayout(event);
+    mediaQuery.addEventListener("change", listener);
+
+    return () => {
+      mediaQuery.removeEventListener("change", listener);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isMobileLayout) {
+      setShowScrollCue(false);
+      return;
+    }
+
+    const target = parameterCardRef.current;
+    if (!target) {
+      setShowScrollCue(false);
+      return;
+    }
+
+    const evaluate = () => {
+      const rect = target.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      const visibleHeight = Math.max(
+        0,
+        Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0),
+      );
+      const visibleRatio = rect.height > 0 ? visibleHeight / rect.height : 0;
+      const enteredRatio = rect.height > 0
+        ? Math.min(
+            Math.max((viewportHeight - rect.top) / rect.height, 0),
+            1,
+          )
+        : 0;
+      const hiddenTopRatio = rect.height > 0
+        ? Math.min(Math.max(-rect.top / rect.height, 0), 1)
+        : 0;
+
+      const meetsShowCriteria =
+        visibleRatio > 0 &&
+        enteredRatio >= 0.75 &&
+        hiddenTopRatio <= 0.2;
+
+      if (showScrollCue) {
+        if (!meetsShowCriteria || visibleRatio <= 0.25 || hiddenTopRatio >= 0.5) {
+          setShowScrollCue(false);
+        }
+      } else if (meetsShowCriteria) {
+        setShowScrollCue(true);
+      }
+    };
+
+    evaluate();
+
+    let frame: number | null = null;
+    const requestEval = () => {
+      if (frame !== null) {
+        return;
+      }
+
+      frame = window.requestAnimationFrame(() => {
+        frame = null;
+        evaluate();
+      });
+    };
+
+    window.addEventListener("scroll", requestEval, { passive: true });
+    window.addEventListener("resize", requestEval);
+    window.addEventListener("orientationchange", requestEval);
+
+    return () => {
+      if (frame !== null) {
+        window.cancelAnimationFrame(frame);
+      }
+      window.removeEventListener("scroll", requestEval);
+      window.removeEventListener("resize", requestEval);
+      window.removeEventListener("orientationchange", requestEval);
+    };
+  }, [isMobileLayout, showScrollCue]);
 
   const results = useMemo(() => {
     const steps = PROCESS_MATRIX[maturityLevel];
@@ -348,6 +449,17 @@ export default function CalculatorSection() {
 
   return (
     <>
+      {isMobileLayout && showScrollCue && (
+        <button
+          type="button"
+          onClick={scrollToResults}
+          className="fixed -right-8 top-[50%] z-30 flex w-[120px] flex-col items-center justify-center rounded-full border-4 border-secondary-800 bg-secondary-200 text-[11px] font-bold tracking-wide text-secondary-800 shadow-xl transition-transform hover:translate-x-1 md:hidden p-2 pr-8"
+          aria-label="Zum Ergebnis scrollen"
+        >
+          <span className="leading-tight">Zum Ergebnis</span>
+          <ArrowDown className="h-5 w-5" />
+        </button>
+      )}
       <section className="px-6 lg:px-8 py-12 md:py-20 bg-primary-50 shadow-inner">
         <div className="max-w-5xl mx-auto">
           <div className="mb-10">
@@ -360,7 +472,10 @@ export default function CalculatorSection() {
           </div>
           <div className="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
             <div className="space-y-8">
-              <div className="rounded-sm border border-primary-200 bg-white p-6 shadow-sm">
+              <div
+                ref={parameterCardRef}
+                className="rounded-sm border border-primary-200 bg-white p-6 shadow-sm"
+              >
                 <div className="space-y-8">
                   <div className="mb-12">
                     <div className="flex items-center justify-between">
@@ -440,7 +555,7 @@ export default function CalculatorSection() {
                     </div>
                   </div>
 
-                  <div className="">
+                  <div className="hidden md:block">
                     <button
                       type="button"
                       onClick={() => setShowAdvanced((previous) => !previous)}
@@ -529,8 +644,11 @@ export default function CalculatorSection() {
 
             <div className="flex flex-col gap-8 md:pl-4">
               <div>
-                <h3 className="text-4xl font-bold text-primary mb-0">
-                  Ihr Spar-Potential:
+                <h3
+                  id="sparpotential"
+                  className="scroll-mt-24 text-4xl font-bold text-primary mb-0"
+                >
+                  Ihr Sparpotential
                 </h3>
                 <span className="text-sm">(pro Monat, gesamtes Team)</span>
                 <div className="mt-8 space-y-6">
@@ -565,7 +683,7 @@ export default function CalculatorSection() {
               </div>
 
               <div>
-                <p className="text-xl font-bold text-black mt-12">
+                <p className="text-xl font-bold text-black mt-4 md:mt-12">
                   Glauben Sie nicht? <br/>Haben wir zuerst auch nicht...
                 </p>
                 <p>

@@ -154,8 +154,6 @@ export default function Page() {
         </div>
       </section>
 
-      <CalculatorSection />
-
       <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-primary-700 shadow-xl">
         <div className="max-w-4xl mx-auto ">
           <h2 className="secondary-heading mt-0 !text-primary-200">
@@ -286,6 +284,8 @@ export default function Page() {
           </Item>
         </div>
       </section>
+
+      <CalculatorSection />
 
       <section className="px-6 lg:px-8 py-10 md:py-20 shadow-md">
         <div className="max-w-4xl mx-auto">
