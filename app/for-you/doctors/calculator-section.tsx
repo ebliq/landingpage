@@ -464,7 +464,7 @@ export default function CalculatorSection() {
         <div className="max-w-5xl mx-auto">
           <div className="mb-10">
             <h2 className="text-3xl md:text-4xl text-primary-800 mt-0">
-              Ersparnis-Kalkulator: so viel Zeit & Geld können Sie sparen.
+              Ersparnis-Kalkulator: so viel Zeit & Geld können Sie bei Anamnese sparen.
             </h2>
             <p className="text-base md:text-lg text-primary-600 mt-2">
               Einfach Teamgröße, Anamnesen und Reifegrad wählen - und sie sehen sofort Ihr Potential.

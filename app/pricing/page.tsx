@@ -1,4 +1,5 @@
 import { SmallPricingModule } from "@/components/pricing/small-pricing";
+import CalculatorSection from "../for-you/doctors/calculator-section";
 import {
   Accordion,
   AccordionContent,
@@ -43,6 +44,8 @@ export default function Page() {
   return (
     <>
       <SmallPricingModule />
+
+      <CalculatorSection />
 
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold text-center mb-8">
