@@ -16,10 +16,9 @@ import {
   Phone,
   FolderCheck,
   Handshake,
-  Check,
 } from "lucide-react";
 
-import { List, ListItem } from "@/components/typography/typography";
+import ConformityHighlightsSection from "@/components/for-you/conformity-section";
 
 const benefits = [
   {
@@ -320,32 +319,12 @@ export default function Page() {
         </div>
       </section> 
 
-      <section className="py-6 md:py-20 px-6 md:px-12 mt-0 bg-green-50 shadow-lg ">
-        <div className="max-w-4xl mx-auto ">
-          <h2 className="secondary-heading mt-0 !2text-primary-900">
-              Konformität ohne Zusatzaufwand
-            </h2>
-            <h3 className="text-2xl md:text-4xl">
-              Verlässlich dokumentiert - für Sie und Ihre Klientinnen.
-            </h3>
-          <div className="flex justify-between items-center gap-3">
-            <div className="">
-              <List className="my-4">
-                {conformityHighlights.map((item) => (
-                  <ListItem key={item.title} className="flex items-top gap-2">
-                    <Check size="30" strokeWidth={5} className="mt-1 text-green basis-2/10 w-[50px] shrink-0" />
-                    <div className="basis-8/10">
-                      <div className="font-bold">{item.title}</div>
-                      <div className="font-light">{item.text}</div>
-                    </div>
-                  </ListItem>
-                ))}
-              </List>
-            </div>
-          </div>
-          <div className="mt-6 text-muted text-sm">Erfüllt die Anforderungen des Hebammengesetzes (HebG) und der DSGVO - ohne Mehraufwand.</div>
-        </div>
-      </section>
+      <ConformityHighlightsSection
+        title="Konformität ohne Zusatzaufwand"
+        subtitle="Verlässlich dokumentiert - für Sie und Ihre Klientinnen."
+        items={conformityHighlights}
+        footerText="Erfüllt die Anforderungen des Hebammengesetzes (HebG) und der DSGVO - ohne Mehraufwand."
+      />
 
       <section className="px-6 lg:px-8 py-10 md:py-20 shadow-lg bg-gradient-to-br from-secondary-400 via-primary-600 via-40% to-85% to-secondary-900 text-primary-100 ">
         <div className="max-w-4xl mx-auto">

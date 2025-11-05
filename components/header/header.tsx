@@ -49,6 +49,17 @@ function ForYouMenuList() {return (
           </Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
+      <NavigationMenuItem className="menuHeroItem">
+        <NavigationMenuLink asChild>
+          <Link className="flex justify-between items-center" href="/for-you/nurses">
+            <div>
+              <h3>für Pflegekräfte</h3>
+              <p className="hidden lg:block">Dokumentation während der Pflege</p>
+            </div>
+            <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary hidden lg:block"/>
+          </Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
       {/*
       <NavigationMenuItem className="menuHeroItem">
         <NavigationMenuLink asChild>

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/for-you",
     "/for-you/doctors",
     "/for-you/midwifes",
+    "/for-you/nurses",
     "/impressum",
     "/pricing",
     "/privacy",

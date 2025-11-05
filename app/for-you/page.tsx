@@ -33,6 +33,14 @@ export default function Page() {
           <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
         </Link>
 
+        <Link className="flex justify-between items-center my-8" href="/for-you/nurses">
+          <div>
+              <h3>für Pflegekräfte</h3>
+              <p>Dokumentation während der Pflege</p>
+          </div>
+          <CircleChevronRight strokeWidth="1" className="w-[40px] h-[40px] text-primary"/>
+        </Link>
+
         {/*
         <Link className="flex justify-between items-center my-8" href="/for-you/officeteams">
           <div>

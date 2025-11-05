@@ -22,6 +22,14 @@ const agentsData = [
     persona: "Hebammen",
     agent: "Doku-Agent",
   },
+  {
+    href: "/for-you/nurses",
+    image: "/teaser_nurses.png",
+    headline: "Pflege, die entlastet.",
+    text: "Der Pflege-Agent dokumentiert per Sprache, prüft Pflichtfelder automatisch und stellt Übergaben ohne Lücken bereit.",
+    persona: "Pflegekräfte",
+    agent: "Pflege-Agent",
+  },
   /*
   {
     href: "/for-you/officeteam",
